@@ -73,8 +73,12 @@ def SearchMart():
                 print("에러")
             else:
                 pass
-
-
+def MapButton():
+    photo = PhotoImage(file="map.png")
+    Mapbtn = Button(g_Tk,image=photo)
+    Mapbtn.pack()
+    Mapbtn.place(x=200, y=525)
+    #왜사진안나와
 
 
 
@@ -113,8 +117,10 @@ MartSearchCheckBox()
 SearchMart()
 InitInputLabel()
 InitSearchButton()
+MapButton()
 SearchResultRenderText()
 InitRenderText()
+
 
 
 g_Tk.mainloop()
