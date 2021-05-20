@@ -2,16 +2,19 @@ from tkinter import *
 from tkinter import font
 import tkinter.messagebox
 
+BG_COLOR = 'light blue'
+
 g_Tk = Tk()
-g_Tk.geometry("500x640+750+200")
+g_Tk.geometry("505x640+750+200")
+g_Tk.title("DANAWANG")
+g_Tk['bg'] = BG_COLOR
 DataList = []
 var1 = IntVar()
 var2 = IntVar()
 
-
 def InitTopText():
     TempFont = font.Font(g_Tk, size=24, weight='bold', family='Consolas')
-    MainText = Label(g_Tk, font=TempFont, text="[Danawang~]")
+    MainText = Label(g_Tk, font=TempFont, text="[Danawang~]", bg = BG_COLOR)
     MainText.pack()
     MainText.place(x=140)
 
@@ -33,8 +36,8 @@ def InitSearchButton():
 
 def MartSearchCheckBox():
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
-    chkbox = Checkbutton(g_Tk, font=TempFont, text='마트 검색', variable=var1, command=SearchMart)
-    chkbox2 = Checkbutton(g_Tk, font=TempFont, text='상품 검색', variable=var2)
+    chkbox = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1, command=SearchMart)
+    chkbox2 = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
     chkbox.place(x=26, y=60)
@@ -82,7 +85,7 @@ def RenderGoodsImage():
     goodsLabel = Label(g_Tk, image=goodsImg)
     goodsLabel.image = goodsImg
     goodsLabel.pack()
-    goodsLabel.place(x=17, y=125)
+    goodsLabel.place(x=15, y=125)
 
 
 def InitButton():
@@ -119,25 +122,26 @@ def SearchResultRenderText():
 def InitRenderText():
     global RenderText
 
-    RenderTextScrollbar = Scrollbar(g_Tk)
-    RenderTextScrollbar.pack()
-    RenderTextScrollbar.place(x=375, y=200)
+    frame = Frame(g_Tk)
 
-    TempFont = font.Font(g_Tk, size=10, family='Consolas')
-    RenderText = Text(g_Tk, width=30, height=28, borderwidth=6, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
-    RenderText.pack()
-    RenderText.place(x=10, y=252)
-    RenderTextScrollbar.config(command=RenderText.yview)
+    RenderTextScrollbar = Scrollbar(frame)
+    RenderTextScrollbar.pack(side = RIGHT, fill = Y)
+
+    TempFont = font.Font(frame, size=10, family='Consolas')
+    RenderText = Listbox(frame, width=28, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
+    RenderText.pack(side = LEFT)
+
+    RenderTextScrollbar['command'] = RenderText.yview
     RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
 
-    RenderText.configure(state='disabled')
-
+    frame.pack()
+    frame.place(x = 10, y = 252)
 
 def InitInputMartLabel():
     global InputMartLabel
 
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
-    MainText = Label(g_Tk, font=TempFont, text="판매점 이름을 입력하세요")
+    MainText = Label(g_Tk, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
     MainText.pack()
     MainText.place(x=245, y=252)
 
