@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import font
 import tkinter.messagebox
+import xml.etree.ElementTree as ET
 
 BG_COLOR = 'light blue'
 
@@ -8,78 +9,110 @@ g_Tk = Tk()
 g_Tk.geometry("505x640+750+200")
 g_Tk.title("DANAWANG")
 g_Tk['bg'] = BG_COLOR
-DataList = []
+
 var1 = IntVar()
 var2 = IntVar()
+searchText = StringVar()
 
+goodsTree = ET.parse('totalGoodsInfo.xml')
+goodsRoot = goodsTree.getroot()
+martTree = ET.parse('totalMartInfo.xml')
+martRoot = martTree.getroot()
+
+# DANAWANG~ text 함수
 def InitTopText():
     TempFont = font.Font(g_Tk, size=24, weight='bold', family='Consolas')
     MainText = Label(g_Tk, font=TempFont, text="[Danawang~]", bg = BG_COLOR)
     MainText.pack()
-    MainText.place(x=140)
+    MainText.place(x=160)
 
-
-def InitInputLabel():
-    global InputLabel
-    TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
-    InputLabel = Entry(g_Tk, font=TempFont, width=38, borderwidth=6, relief='ridge')
-    InputLabel.pack()
-    InputLabel.place(x=120, y=60)
-
-
+# 검색 버튼
 def InitSearchButton():
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
     SearchButton = Button(g_Tk, font=TempFont, text="검색", command=SearchButtonAction)
     SearchButton.pack()
     SearchButton.place(x=440, y=60)
 
-
+# 마트/상품 검색 버튼
 def MartSearchCheckBox():
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
-    chkbox = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1, command=SearchMart)
+    chkbox = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1)
     chkbox2 = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
     chkbox.place(x=26, y=60)
     chkbox2.place(x=26, y=90)
 
+# 마트/상품 검색 Entry 
+def InitInputEntry():
+    global InputEntry
+    TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
+    InputEntry = Entry(g_Tk, font=TempFont, width=38, borderwidth=6, relief='ridge')
+    InputEntry.pack()
+    InputEntry.place(x=120, y=60)
 
+# 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
-    global SearchListBox
+    global RenderText
+    sText = InputEntry.get()
+    s = []
+    # 마트 검색 체크
+    if var1.get() == 1:
+        for child in martRoot:
+            if sText in child[1].text:
+                s = searchText.get()
+                s += child[1].text
+                print(child[1].text)
+        searchText.set(s)
 
-    RenderText.configure(state='normal')
-    RenderText.delete(0.0, END)
-    iSearchIndex = SearchListBox.curselection()[0]
-    if iSearchIndex == 0:
-        SearchMart()
-    elif iSearchIndex == 1:
-        pass
-    elif iSearchIndex == 2:
-        pass
-    elif iSearchIndex == 3:
-        pass
+    # 상품 검색 체크
+    if var2.get() == 1:
+        for child in goodsRoot:
+            if sText in child[1].text:
+                RenderText.insert(INSERT, child[1].text)
+                print(child[1].text)
+
+        # for i in s:
+        #     RenderText.insert(END, i)
+
+    SearchResultRenderText()
+                
+        #         s = searchText.get()
+        #         s += child[1].text
+        #         print(child[1].text)
+        # searchText.set(s)
+            # for i in range(8):
+            #     print(child[i].text, end=' ')
+            # print('\n')
+
+    # global SearchListBox
+
+    # RenderText.configure(state='normal')
+    # RenderText.delete(0.0, END)
+    # iSearchIndex = SearchListBox.curselection()[0]
+    # if iSearchIndex == 0:
+    #     SearchMart()
+    # elif iSearchIndex == 1:
+    #     pass
+    # elif iSearchIndex == 2:
+    #     pass
+    # elif iSearchIndex == 3:
+    #     pass
+
+    # RenderText.configure(state='disabled')
+
+# 마트/상품 검색한 것 보여주는 함수
+def SearchResultRenderText():
+    global RenderText
+
+    TempFont = font.Font(g_Tk, size=10, family='Consolas')
+    RenderText = Text(g_Tk, width=50, height=9, borderwidth=6, relief='ridge')
+    RenderText.pack()
+    RenderText.place(x=121, y=95)
 
     RenderText.configure(state='disabled')
 
-
-def SearchMart():
-    if var1.get() == True:
-        import urllib
-        import http.client
-        conn = http.client.HTTPConnection("openapi.price.go.kr")
-        conn.request("GET",
-                     "/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey=%2BD2FzMpML7KBFXB2law50GJANbBLxxEO8U2hX1YsjNwaLBqoqG%2FsbsR6QiGzg5sk2nIa3kRWpljvOZVryafkcQ%3D%3D&goodInspectDay=20200508&entpId=100")
-        req = conn.getresponse()
-        global DataList
-        DataList.clear()
-        if req.status == 200:
-            BooksDoc = req.read().decode('utf-8')
-            if BooksDoc == None:
-                print("에러")
-            else:
-                pass
-
-
+# 상품 이미지 관련 함수
 def RenderGoodsImage():
     goodsImg = PhotoImage(file="defaultGoodsImage.png").subsample(3)
     goodsLabel = Label(g_Tk, image=goodsImg)
@@ -87,7 +120,7 @@ def RenderGoodsImage():
     goodsLabel.pack()
     goodsLabel.place(x=15, y=125)
 
-
+# 지도, 메일, 텔레그램 이미지 넣은 버튼 만드는 함수
 def InitButton():
     mapImg = PhotoImage(file="map.png")
     Mapbtn = Button(g_Tk, image=mapImg)
@@ -107,36 +140,26 @@ def InitButton():
     Telegrambtn.pack()
     Telegrambtn.place(x=387, y=525)
 
-
-def SearchResultRenderText():
-    global RenderText
-
-    TempFont = font.Font(g_Tk, size=10, family='Consolas')
-    RenderText = Text(g_Tk, width=50, height=11, borderwidth=6, relief='ridge')
-    RenderText.pack()
-    RenderText.place(x=121, y=95)
-
-    RenderText.configure(state='disabled')
-
-
-def InitRenderText():
-    global RenderText
+# 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
+def InitRenderMartText():
+    global RenderMartText
 
     frame = Frame(g_Tk)
 
-    RenderTextScrollbar = Scrollbar(frame)
-    RenderTextScrollbar.pack(side = RIGHT, fill = Y)
+    RenderMartTextScrollbar = Scrollbar(frame)
+    RenderMartTextScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(frame, size=10, family='Consolas')
-    RenderText = Listbox(frame, width=28, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
-    RenderText.pack(side = LEFT)
+    RenderMartText = Listbox(frame, width=28, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderMartTextScrollbar.set)
+    RenderMartText.pack(side = LEFT)
 
-    RenderTextScrollbar['command'] = RenderText.yview
-    RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderMartTextScrollbar['command'] = RenderMartText.yview
+    RenderMartTextScrollbar.pack(side=RIGHT, fill=BOTH)
 
     frame.pack()
     frame.place(x = 10, y = 252)
 
+# 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartLabel():
     global InputMartLabel
 
@@ -150,7 +173,7 @@ def InitInputMartLabel():
     InputMartLabel.pack()
     InputMartLabel.place(x=245, y=273)
 
-
+# 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(g_Tk, size=13, weight='bold', family='Consolas')
     selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택")
@@ -166,13 +189,12 @@ def InitSbskButton():
 
 InitTopText()
 MartSearchCheckBox()
-SearchMart()
-InitInputLabel()
+InitInputEntry()
 InitSearchButton()
 RenderGoodsImage()
 InitButton()
 SearchResultRenderText()
-InitRenderText()
+InitRenderMartText()
 InitInputMartLabel()
 InitSbskButton()
 

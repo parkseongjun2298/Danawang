@@ -1,0 +1,4629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <item>
+      <goodId>5</goodId>
+      <goodName>가그린 레귤러</goodName>
+      <productEntpCode>527</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304009</goodSmlclsCode>
+      <detailMean>250㎖, 용기 포장</detailMean>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>11</goodId>
+      <goodName>매일우유 오리지널(ESL)(1000ml)</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203005</goodSmlclsCode>
+      <detailMean>흰우유, 종이팩 1000ml정도</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>15</goodId>
+      <goodName>오비골든라거(단품)</goodName>
+      <productEntpCode>542</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <detailMean>355ml 캔</detailMean>
+      <goodTotalCnt>355</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>24</goodId>
+      <goodName>마일드참치(묶음)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030202004</goodSmlclsCode>
+      <detailMean>캔용기 150g&amp;times;3개</detailMean>
+      <goodTotalCnt>450</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>30</goodId>
+      <goodName>Neut.핸드크림</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301016</goodSmlclsCode>
+      <detailMean>기본 핸드로션, 56g정도 튜브용기</detailMean>
+      <goodTotalCnt>56</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>31</goodId>
+      <goodName>CJ 참그린 </goodName>
+      <productEntpCode>540</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302006</goodSmlclsCode>
+      <detailMean>액체형 연성세제, 플라스틱 용기 965ml</detailMean>
+      <goodTotalCnt>965</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>35</goodId>
+      <goodName>해표 꽃소금</goodName>
+      <productEntpCode>484</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204006</goodSmlclsCode>
+      <detailMean>천일염, 1kg, 호주산90% 국내산10%, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>104</goodId>
+      <goodName>도브 뷰티바</goodName>
+      <productEntpCode>466</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301006</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>111</goodId>
+      <goodName>칩포테이토 오리지날</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205003</goodSmlclsCode>
+      <detailMean>밀가루 제품, 튀김과자, 60g, 비닐 포장</detailMean>
+      <goodTotalCnt>60</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>113</goodId>
+      <goodName>아이비</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205002</goodSmlclsCode>
+      <detailMean>155g 종이박스</detailMean>
+      <goodTotalCnt>155</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>217</goodId>
+      <goodName>JB 뉴 베드타임 로션</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301001</goodSmlclsCode>
+      <detailMean>500ml</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>522</goodId>
+      <goodName>잘풀리는집 보습미용티슈</goodName>
+      <productEntpCode>505</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301022</goodSmlclsCode>
+      <detailMean>230매, 3개묶음</detailMean>
+      <goodTotalCnt>3</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>523</goodId>
+      <goodName>썬 부탄가스</goodName>
+      <productEntpCode>506</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302015</goodSmlclsCode>
+      <detailMean>220g, 4개입</detailMean>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>524</goodId>
+      <goodName>알프스가스</goodName>
+      <productEntpCode>506</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302015</goodSmlclsCode>
+      <detailMean>220g, 1개입</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>533</goodId>
+      <goodName>청정원 우리쌀 크림스프</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201019</goodSmlclsCode>
+      <detailMean>60g*1봉지</detailMean>
+      <goodTotalCnt>60</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>536</goodId>
+      <goodName>청정원 순창 쌈장</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204016</goodSmlclsCode>
+      <detailMean>500g, 플라스틱용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>538</goodId>
+      <goodName>게토레이 레몬</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206019</goodSmlclsCode>
+      <detailMean>600ml, PET 용기</detailMean>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>545</goodId>
+      <goodName>스타벅스 커피라떼</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206020</goodSmlclsCode>
+      <detailMean>200ml</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>548</goodId>
+      <goodName>매일 카페라떼 마일드</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206020</goodSmlclsCode>
+      <detailMean>200ml</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>161</goodId>
+      <goodName>뼈로가는 칼슘두유 담백한맛</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206011</goodSmlclsCode>
+      <detailMean>190ml*16개 묶음, 종이박스포장</detailMean>
+      <goodTotalCnt>3040</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>168</goodId>
+      <goodName>생야채돼지고기물만두(400g*2봉)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201005</goodSmlclsCode>
+      <detailMean>400g*2봉</detailMean>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>36</goodId>
+      <goodName>웰빙 다시다 산들애 국내산해물</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204008</goodSmlclsCode>
+      <detailMean>분말형조미료, 250g, 비닐포장</detailMean>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>44</goodId>
+      <goodName>오비골든라거 6캔</goodName>
+      <productEntpCode>542</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <detailMean>355ml 캔X6개</detailMean>
+      <goodTotalCnt>2130</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>50</goodId>
+      <goodName>쇠고기 등심(1등급)</goodName>
+      <productEntpCode>530</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101002</goodSmlclsCode>
+      <detailMean>100g, 1등급, 등심, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>53</goodId>
+      <goodName>고소한국산콩두부(부침용)(대상)</goodName>
+      <productEntpCode>471</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201008</goodSmlclsCode>
+      <detailMean>포장두부, 380g, 밀폐형 낱개포장</detailMean>
+      <goodTotalCnt>380</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>59</goodId>
+      <goodName>롯데슬라이스햄</goodName>
+      <productEntpCode>500</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203004</goodSmlclsCode>
+      <detailMean>100g, 슬라이스제품 명시, 진공압축 비닐 포장</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>61</goodId>
+      <goodName>참작 참잘만든 슬라이스햄</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203004</goodSmlclsCode>
+      <detailMean>200g, 슬라이스제품 명시, 진공압축 비닐 포장</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>62</goodId>
+      <goodName>프레시안삼호부산어묵</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202002</goodSmlclsCode>
+      <detailMean>315g </detailMean>
+      <goodTotalCnt>315</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>63</goodId>
+      <goodName>싱싱맛살</goodName>
+      <productEntpCode>546</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202003</goodSmlclsCode>
+      <detailMean>275g, 비닐포장</detailMean>
+      <goodTotalCnt>275</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>67</goodId>
+      <goodName>국산아작아작콩나물</goodName>
+      <productEntpCode>470</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102005</goodSmlclsCode>
+      <detailMean>350g 비닐 포장</detailMean>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>69</goodId>
+      <goodName>푸드림 하얀설탕</goodName>
+      <productEntpCode>521</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204007</goodSmlclsCode>
+      <detailMean>백설탕(가루형), 1kg, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>87</goodId>
+      <goodName>델몬트 스카시플러스 100</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206008</goodSmlclsCode>
+      <detailMean>오렌지주스 1.5L 페트병</detailMean>
+      <goodTotalCnt>1500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>265</goodId>
+      <goodName>참이슬 클래식</goodName>
+      <productEntpCode>472</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206013</goodSmlclsCode>
+      <detailMean>360ml 유리병</detailMean>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>98</goodId>
+      <goodName>롯데호일(25cm x 30m)</goodName>
+      <productEntpCode>533</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 25cm x 30m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>102</goodId>
+      <goodName>하선정 숯 김밥단무지</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102006</goodSmlclsCode>
+      <detailMean>김밥용 단무지, 370g, 비닐포장</detailMean>
+      <goodTotalCnt>370</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>246</goodId>
+      <goodName>돼지고기 삼겹살</goodName>
+      <productEntpCode>448</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101004</goodSmlclsCode>
+      <detailMean>100g, 삼겹살, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>247</goodId>
+      <goodName>쇠고기 불고기(1+등급)</goodName>
+      <productEntpCode>444</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101002</goodSmlclsCode>
+      <detailMean>100g, 1+등급, 불고기, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>248</goodId>
+      <goodName>쇠고기 등심(1+등급)</goodName>
+      <productEntpCode>530</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101002</goodSmlclsCode>
+      <detailMean>100g, 1+등급, 등심, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>251</goodId>
+      <goodName>대림게맛살큰잔치</goodName>
+      <productEntpCode>447</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202003</goodSmlclsCode>
+      <detailMean>500g, 비닐포장</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>252</goodId>
+      <goodName>마일드참치(단품)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030202004</goodSmlclsCode>
+      <detailMean>캔용기 150g</detailMean>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>254</goodId>
+      <goodName>맑고신선한해표식용유</goodName>
+      <productEntpCode>484</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204005</goodSmlclsCode>
+      <detailMean>콩기름 900ml, 플라스틱 용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>255</goodId>
+      <goodName>백설국내콩기름</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204005</goodSmlclsCode>
+      <detailMean>콩기름 900ml, 플라스틱 용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>257</goodId>
+      <goodName>백설 하얀설탕</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204007</goodSmlclsCode>
+      <detailMean>백설탕(가루형), 1kg, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>258</goodId>
+      <goodName>맥심모카골드</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206003</goodSmlclsCode>
+      <detailMean>커피믹스, 180포</detailMean>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>267</goodId>
+      <goodName>알뜨랑비누 핑크</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301006</goodSmlclsCode>
+      <detailMean>고체형 140g, 3개 묶음</detailMean>
+      <goodTotalCnt>3</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>269</goodId>
+      <goodName>남양유업 맛있는우유GT(1000ml)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203005</goodSmlclsCode>
+      <detailMean>흰우유, 종이팩 1000ml정도</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>242</goodId>
+      <goodName>백설부침가루(1kg)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201012</goodSmlclsCode>
+      <detailMean>부침용 곡물가루, 1kg, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>127</goodId>
+      <goodName>뽑아쓰는 크린백</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302002</goodSmlclsCode>
+      <detailMean>25cm*35cm/100매*2</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>223</goodId>
+      <goodName>오리지널 요플레(4개묶음)</goodName>
+      <productEntpCode>446</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203008</goodSmlclsCode>
+      <detailMean>딸기맛, 4개 묶음, 플라스틱 용기, 90g</detailMean>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>225</goodId>
+      <goodName>고소한참기름(오뚜기)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204004</goodSmlclsCode>
+      <detailMean>병용기, 320ml</detailMean>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>228</goodId>
+      <goodName>옛날당면</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201015</goodSmlclsCode>
+      <detailMean>고구마전분 100%, 500g 비닐포장</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>229</goodId>
+      <goodName>진간장 금F3</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204011</goodSmlclsCode>
+      <detailMean>진간장, 930ml 플라스틱 용기 </detailMean>
+      <goodTotalCnt>930</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>230</goodId>
+      <goodName>고소한골드마요네즈(오뚜기)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204012</goodSmlclsCode>
+      <detailMean>500g 비닐튜브용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>233</goodId>
+      <goodName>카스 프레쉬 6캔</goodName>
+      <productEntpCode>542</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <detailMean>355ml 캔X6개</detailMean>
+      <goodTotalCnt>2130</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>234</goodId>
+      <goodName>백설 중력밀가루(1kg)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201007</goodSmlclsCode>
+      <detailMean>중력 1등, 다목적용, 1kg</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>235</goodId>
+      <goodName>큐원 영양강화밀가루(1kg)</goodName>
+      <productEntpCode>451</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201007</goodSmlclsCode>
+      <detailMean>중력 1등, 다목적용, 1kg</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>237</goodId>
+      <goodName>삼양라면 5개입</goodName>
+      <productEntpCode>450</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030201011</goodSmlclsCode>
+      <detailMean>봉지라면, 120g,멀티팩(5개)</detailMean>
+      <goodTotalCnt>5</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>238</goodId>
+      <goodName>진라면(순한맛) 5개입</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030201011</goodSmlclsCode>
+      <detailMean>봉지라면, 120g,멀티팩(5개)</detailMean>
+      <goodTotalCnt>5</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>239</goodId>
+      <goodName>옛날국수소면</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201009</goodSmlclsCode>
+      <detailMean>밀가루 소면, 900g 비닐포장</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>241</goodId>
+      <goodName>포스트 콘푸라이트(600g)</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201010</goodSmlclsCode>
+      <detailMean>600g, 종이 상자포장</detailMean>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>144</goodId>
+      <goodName>하림 토종닭백숙(1050g)</goodName>
+      <productEntpCode>481</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101003</goodSmlclsCode>
+      <detailMean>1050g</detailMean>
+      <goodTotalCnt>1050</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>148</goodId>
+      <goodName>비타파워</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206001</goodSmlclsCode>
+      <detailMean>100ml*10</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>162</goodId>
+      <goodName>동원양반포기김치(2.2kg)</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102004</goodSmlclsCode>
+      <detailMean>2.2kg</detailMean>
+      <goodTotalCnt>2200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>163</goodId>
+      <goodName>Dr. ato(민감성건성피부보습)</goodName>
+      <productEntpCode>442</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301001</goodSmlclsCode>
+      <detailMean>350ml</detailMean>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>298</goodId>
+      <goodName>3분 쇠고기 카레</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201004</goodSmlclsCode>
+      <detailMean>200g</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>321</goodId>
+      <goodName>칸타타 원두커피 프리미엄 블렌드(275ml)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206002</goodSmlclsCode>
+      <detailMean>275ml</detailMean>
+      <goodTotalCnt>275</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>322</goodId>
+      <goodName>벡셀AA*2입</goodName>
+      <productEntpCode>439</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302001</goodSmlclsCode>
+      <detailMean>2개</detailMean>
+      <goodTotalCnt>2</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>174</goodId>
+      <goodName>비타500(묶음)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206001</goodSmlclsCode>
+      <detailMean>100ml*10</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>302</goodId>
+      <goodName>배추</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>PK</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102001</goodSmlclsCode>
+      <detailMean>배추 1개당 1500g~2000g</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>PK</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>180</goodId>
+      <goodName>페브리즈 깨끗한 무향(900)</goodName>
+      <productEntpCode>482</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302003</goodSmlclsCode>
+      <detailMean>900ml</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>305</goodId>
+      <goodName>3분 쇠고기 짜장</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201004</goodSmlclsCode>
+      <detailMean>200g</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>193</goodId>
+      <goodName>아비노베이비데일리모이스춰로션</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301001</goodSmlclsCode>
+      <detailMean>354ml</detailMean>
+      <goodTotalCnt>354</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>309</goodId>
+      <goodName>무(줄기 없는 무)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102003</goodSmlclsCode>
+      <detailMean>줄기 없는 무 1개당 1500g</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>312</goodId>
+      <goodName>오뚜기황도</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204003</goodSmlclsCode>
+      <detailMean>400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>313</goodId>
+      <goodName>맛있는 미역국</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201002</goodSmlclsCode>
+      <detailMean>18g</detailMean>
+      <goodTotalCnt>18</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>315</goodId>
+      <goodName>옥수수 마가린(200g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203002</goodSmlclsCode>
+      <detailMean>200g</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>317</goodId>
+      <goodName>크린백</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302002</goodSmlclsCode>
+      <detailMean>25cm*35cm/100매</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>206</goodId>
+      <goodName>퓨어가닉허브로션</goodName>
+      <productEntpCode>442</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301001</goodSmlclsCode>
+      <detailMean>300ml</detailMean>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>208</goodId>
+      <goodName>뉴트로지나릴렉싱바디워시</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301002</goodSmlclsCode>
+      <detailMean>950ml</detailMean>
+      <goodTotalCnt>950</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>300</goodId>
+      <goodName>맥심 티오피 마스터블렌드(275ml)</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206002</goodSmlclsCode>
+      <detailMean>275ml</detailMean>
+      <goodTotalCnt>275</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>452</goodId>
+      <goodName>까스명수(단품)</goodName>
+      <productEntpCode>486</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304001</goodSmlclsCode>
+      <detailMean>단품, 75ml</detailMean>
+      <goodTotalCnt>75</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>453</goodId>
+      <goodName>생록천(단품)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304001</goodSmlclsCode>
+      <detailMean>단품, 75ml</detailMean>
+      <goodTotalCnt>75</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>198</goodId>
+      <goodName>후레쉬랩(25cm x 50m)(3M)</goodName>
+      <productEntpCode>538</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302009</goodSmlclsCode>
+      <detailMean>가정용, 폴리에틸렌재질, 25cm x 50m</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>200</goodId>
+      <goodName>쿠킹호일(20cm x 30m)(삼아)</goodName>
+      <productEntpCode>449</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 20cm x 30m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>201</goodId>
+      <goodName>매일유업 뼈로가는 칼슘치즈(270g)</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <detailMean>슬라이스치즈, 270g 비닐포장</detailMean>
+      <goodTotalCnt>270</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>204</goodId>
+      <goodName>맑고신선한옥수수유</goodName>
+      <productEntpCode>484</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204005</goodSmlclsCode>
+      <detailMean>옥수수기름 900ml, 플라스틱 용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>212</goodId>
+      <goodName>쿠킹호일(25cm x 30m)(삼아)</goodName>
+      <productEntpCode>449</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 25cm x 30m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>334</goodId>
+      <goodName>동서현미녹차 100포</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206004</goodSmlclsCode>
+      <detailMean>1회용 티백 100포(150g)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>422</goodId>
+      <goodName>국순당 우국생</goodName>
+      <productEntpCode>2020</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206016</goodSmlclsCode>
+      <detailMean>플라스틱 용기, 750ml</detailMean>
+      <goodTotalCnt>750</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>423</goodId>
+      <goodName>서울장수생막걸리</goodName>
+      <productEntpCode>499</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206016</goodSmlclsCode>
+      <detailMean>플라스틱 용기, 750ml</detailMean>
+      <goodTotalCnt>750</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>426</goodId>
+      <goodName>무균무때(욕실용)</goodName>
+      <productEntpCode>480</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302011</goodSmlclsCode>
+      <detailMean>플라스틱 용기, 500ml</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>430</goodId>
+      <goodName>홈스타 제습과 방충을 한번에</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302012</goodSmlclsCode>
+      <detailMean>플라스틱 용기, 3개</detailMean>
+      <goodTotalCnt>3</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>610</goodId>
+      <goodName>해피바스 내추럴24핸드크림</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301016</goodSmlclsCode>
+      <detailMean>60ml, 튜브용기</detailMean>
+      <goodTotalCnt>60</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>557</goodId>
+      <goodName>곰표 다목적밀가루(1kg)</goodName>
+      <productEntpCode>522</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201007</goodSmlclsCode>
+      <detailMean>중력 1등, 다목적용, 1kg</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>585</goodId>
+      <goodName>해피바스 로즈에센스 로맨틱 바디워시</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301002</goodSmlclsCode>
+      <detailMean>900ml, 플라스틱 용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>593</goodId>
+      <goodName>엘라스틴 맥시마이징 볼륨 샴푸</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301010</goodSmlclsCode>
+      <detailMean>780ml</detailMean>
+      <goodTotalCnt>780</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>562</goodId>
+      <goodName>해찬들 사계절 쌈장</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204016</goodSmlclsCode>
+      <detailMean>500g, 플라스틱용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>591</goodId>
+      <goodName>팬틴 바운시 볼륨케어 컨디셔닝 린스</goodName>
+      <productEntpCode>482</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301011</goodSmlclsCode>
+      <detailMean>850ml</detailMean>
+      <goodTotalCnt>850</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>622</goodId>
+      <goodName>달콤한 베지밀 비</goodName>
+      <productEntpCode>504</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206011</goodSmlclsCode>
+      <detailMean>190ml*16개 묶음, 종이박스포장</detailMean>
+      <goodTotalCnt>3040</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>623</goodId>
+      <goodName>디럭스키친타올</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030302007</goodSmlclsCode>
+      <detailMean>주방전용화장지, 135매(1매당 232mm * 123mm), 4롤</detailMean>
+      <goodTotalCnt>540</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>624</goodId>
+      <goodName>참이슬 후레쉬</goodName>
+      <productEntpCode>472</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206013</goodSmlclsCode>
+      <detailMean>360ml, 유리병</detailMean>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>821</goodId>
+      <goodName>제일제면소 소면(900g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201009</goodSmlclsCode>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>832</goodId>
+      <goodName>켈로그 콘푸로스트(600g)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201010</goodSmlclsCode>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>833</goodId>
+      <goodName>오뚜기 3분 백세카레 약간 매운맛</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201004</goodSmlclsCode>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>834</goodId>
+      <goodName>오뚜기 맛있는밥</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <goodTotalCnt>210</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>836</goodId>
+      <goodName>사누끼 가쓰오 생우동</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201017</goodSmlclsCode>
+      <goodTotalCnt>466</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>840</goodId>
+      <goodName>두번 구워 김밥이 더욱 향긋한 김밥김</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030202001</goodSmlclsCode>
+      <goodTotalCnt>10</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>846</goodId>
+      <goodName>목우촌 주부9단 프랑크 소시지(500g)</goodName>
+      <productEntpCode>441</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203003</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>847</goodId>
+      <goodName>치즈명장 드빈치 체다슬라이스 치즈(200g)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>848</goodId>
+      <goodName>치즈명장 드빈치 체다슬라이스 치즈(300g)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>851</goodId>
+      <goodName>동원복숭아(황도) 슬라이스</goodName>
+      <productEntpCode>546</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204003</goodSmlclsCode>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>852</goodId>
+      <goodName>샘표 시골집 토장(900g)</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204010</goodSmlclsCode>
+      <detailMean>샘표 시골집 토장(900g)</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>853</goodId>
+      <goodName>복음자리 딸기잼</goodName>
+      <productEntpCode>443</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204015</goodSmlclsCode>
+      <goodTotalCnt>370</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>854</goodId>
+      <goodName>동서벌꿀</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204002</goodSmlclsCode>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>855</goodId>
+      <goodName>동서 아카시아꿀</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204002</goodSmlclsCode>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>856</goodId>
+      <goodName>백설 자일로스 설탕</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204007</goodSmlclsCode>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>860</goodId>
+      <goodName>CJ 행복한콩 국산콩 콩나물</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102005</goodSmlclsCode>
+      <goodTotalCnt>280</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>861</goodId>
+      <goodName>CJ하선정 포기김치(2.5Kg)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102004</goodSmlclsCode>
+      <goodTotalCnt>2500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>863</goodId>
+      <goodName>롯데 자일리톨 오리지날(87g)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205007</goodSmlclsCode>
+      <goodTotalCnt>87</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>866</goodId>
+      <goodName>몽쉘 크림</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205005</goodSmlclsCode>
+      <goodTotalCnt>384</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>869</goodId>
+      <goodName>남양 17차 티백(80입)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206004</goodSmlclsCode>
+      <goodTotalCnt>80</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>870</goodId>
+      <goodName>달콤한 삼육두유 B</goodName>
+      <productEntpCode>452</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206011</goodSmlclsCode>
+      <detailMean>3040ml</detailMean>
+      <goodTotalCnt>3040</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>871</goodId>
+      <goodName>국순당 대박 막걸리</goodName>
+      <productEntpCode>2020</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206016</goodSmlclsCode>
+      <goodTotalCnt>700</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>873</goodId>
+      <goodName>컨피던스</goodName>
+      <productEntpCode>508</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206001</goodSmlclsCode>
+      <goodTotalCnt>230</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>875</goodId>
+      <goodName>삼다수(2L 묶음)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206015</goodSmlclsCode>
+      <goodTotalCnt>12000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>876</goodId>
+      <goodName>삼다수(500ml)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206007</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>877</goodId>
+      <goodName>삼다수(500ml 묶음)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206015</goodSmlclsCode>
+      <goodTotalCnt>10000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>878</goodId>
+      <goodName>아이시스(500ml)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206007</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>882</goodId>
+      <goodName>네스카페 신선한 모카(180입)</goodName>
+      <productEntpCode>515</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206003</goodSmlclsCode>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>883</goodId>
+      <goodName>엔제리너스 카페모카</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206020</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>887</goodId>
+      <goodName>그린핑거 촉촉한자연보습 베이비로션</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301001</goodSmlclsCode>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>889</goodId>
+      <goodName>화이트 NEW시크릿홀 울트라 날개 중형</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301013</goodSmlclsCode>
+      <goodTotalCnt>36</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>894</goodId>
+      <goodName>PACE 6 면도날</goodName>
+      <productEntpCode>525</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301017</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>895</goodId>
+      <goodName>마하3 면도날</goodName>
+      <productEntpCode>473</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301017</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>898</goodId>
+      <goodName>하기스 프리미어 플러스 남아용 대형(60매 4단계)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301012</goodSmlclsCode>
+      <goodTotalCnt>60</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>899</goodId>
+      <goodName>어드밴스 캐비티(블루)120g</goodName>
+      <productEntpCode>461</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301007</goodSmlclsCode>
+      <goodTotalCnt>120</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>900</goodId>
+      <goodName>어드밴스 캐비티(블루) 120g*3입</goodName>
+      <productEntpCode>461</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301007</goodSmlclsCode>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>901</goodId>
+      <goodName>페리오 클링스 아이스민트 120GX3</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301007</goodSmlclsCode>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>902</goodId>
+      <goodName>페리오 캐비티케어(묶음)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301007</goodSmlclsCode>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>904</goodId>
+      <goodName>마미손 뷰티(중)</goodName>
+      <productEntpCode>536</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302008</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>625</goodId>
+      <goodName>쿠킹호일(25cm x 30m)(대한) </goodName>
+      <productEntpCode>520</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 25cm x 30m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>532</goodId>
+      <goodName>오뚜기 크림스프</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201019</goodSmlclsCode>
+      <detailMean>80g*1봉지</detailMean>
+      <goodTotalCnt>80</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>569</goodId>
+      <goodName>하림 자연실록백숙 830g</goodName>
+      <productEntpCode>481</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101003</goodSmlclsCode>
+      <detailMean>830g</detailMean>
+      <goodTotalCnt>830</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>547</goodId>
+      <goodName>악마의유혹 프렌치 카페오레</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206020</goodSmlclsCode>
+      <detailMean>200ml</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>578</goodId>
+      <goodName>떠먹는불가리스 딸기 오리지날(4개묶음)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203008</goodSmlclsCode>
+      <detailMean>딸기맛, 100g*4개</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>617</goodId>
+      <goodName>올에이 중형 고무장갑</goodName>
+      <productEntpCode>477</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302008</goodSmlclsCode>
+      <detailMean>주방용 고무재료, 중형</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>642</goodId>
+      <goodName>니베아 SOS 핸드 밤</goodName>
+      <productEntpCode>518</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301016</goodSmlclsCode>
+      <detailMean>50g 튜브용기</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>590</goodId>
+      <goodName>엘라스틴 맥시마이징 볼륨 컨디셔너</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301011</goodSmlclsCode>
+      <detailMean>780ml</detailMean>
+      <goodTotalCnt>780</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>587</goodId>
+      <goodName>더블리치 간편염색 (4G 자연갈색)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301020</goodSmlclsCode>
+      <detailMean>80g, 4G 자연갈색</detailMean>
+      <goodTotalCnt>80</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>640</goodId>
+      <goodName>I cant believe(60%) 저지방마가린(212.5g*2개)</goodName>
+      <productEntpCode>524</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203002</goodSmlclsCode>
+      <detailMean>425g(212.5*2개)</detailMean>
+      <goodTotalCnt>425</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>224</goodId>
+      <goodName>서울우유 흰우유(1000ml)</goodName>
+      <productEntpCode>456</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203005</goodSmlclsCode>
+      <detailMean>흰우유, 종이팩 1000ml정도</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>325</goodId>
+      <goodName>서울우유 체다슬라이스치즈(200g)</goodName>
+      <productEntpCode>456</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <detailMean>슬라이스치즈, 200g 비닐포장</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>266</goodId>
+      <goodName>처음처럼</goodName>
+      <productEntpCode>531</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206013</goodSmlclsCode>
+      <detailMean>360ml 유리병</detailMean>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>192</goodId>
+      <goodName>샘표황도</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204003</goodSmlclsCode>
+      <detailMean>400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>638</goodId>
+      <goodName>해찬들 우리쌀태양초골드</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204009</goodSmlclsCode>
+      <detailMean>1kg 플라스틱 용기</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>632</goodId>
+      <goodName>프렌치까페믹스</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206003</goodSmlclsCode>
+      <detailMean>커피믹스 180포</detailMean>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>614</goodId>
+      <goodName>참크래커</goodName>
+      <productEntpCode>475</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205002</goodSmlclsCode>
+      <detailMean>15봉, 280g 종이박스</detailMean>
+      <goodTotalCnt>280</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>830</goodId>
+      <goodName>옥수수 보노콘스프</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201019</goodSmlclsCode>
+      <goodTotalCnt>56</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>835</goodId>
+      <goodName>햇반(엄마가해주신밥 6+2개입)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <goodTotalCnt>1680</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>842</goodId>
+      <goodName>대림선어묵 부산어묵</goodName>
+      <productEntpCode>447</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202002</goodSmlclsCode>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>844</goodId>
+      <goodName>매일바이오거트(4개 묶음360g)</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203008</goodSmlclsCode>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>849</goodId>
+      <goodName>식빵위의 네모</goodName>
+      <productEntpCode>441</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203004</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>857</goodId>
+      <goodName>참진한 참기름(해표)</goodName>
+      <productEntpCode>484</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204004</goodSmlclsCode>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>858</goodId>
+      <goodName>청정원 진한 토마토 케찹</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204013</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>859</goodId>
+      <goodName>찬마루 김밥 단무지</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102006</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>868</goodId>
+      <goodName>미닛메이드 오리지날 오렌지 100</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206008</goodSmlclsCode>
+      <goodTotalCnt>1200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>872</goodId>
+      <goodName>카스 프레쉬(단품 500ml)</goodName>
+      <productEntpCode>542</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>874</goodId>
+      <goodName>삼다수(2L)</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206007</goodSmlclsCode>
+      <goodTotalCnt>2000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>879</goodId>
+      <goodName>비락식혜(1.8L)</goodName>
+      <productEntpCode>491</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206018</goodSmlclsCode>
+      <goodTotalCnt>1800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>880</goodId>
+      <goodName>파워에이드 마운틴블라스트(520ml)</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206019</goodSmlclsCode>
+      <goodTotalCnt>520</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>881</goodId>
+      <goodName>포카리스웨트(620ml)</goodName>
+      <productEntpCode>508</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206019</goodSmlclsCode>
+      <goodTotalCnt>620</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>884</goodId>
+      <goodName>크리넥스 디럭스(갤러리) 250매X3개입</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301022</goodSmlclsCode>
+      <goodTotalCnt>3</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>886</goodId>
+      <goodName>깨끗한나라 물티슈</goodName>
+      <productEntpCode>523</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301018</goodSmlclsCode>
+      <detailMean>70매*6개</detailMean>
+      <goodTotalCnt>6</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>891</goodId>
+      <goodName>아이!깨끗해 항균폼 상큼레몬향</goodName>
+      <productEntpCode>540</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301021</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>892</goodId>
+      <goodName>도브 데미지 볼륨 부스트 린스</goodName>
+      <productEntpCode>466</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301011</goodSmlclsCode>
+      <goodTotalCnt>780</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>893</goodId>
+      <goodName>미장센 펄샤이닝모이스쳐 린스</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301011</goodSmlclsCode>
+      <goodTotalCnt>780</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>897</goodId>
+      <goodName>미장센 펄샤이닝모이스쳐 샴푸</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301010</goodSmlclsCode>
+      <goodTotalCnt>780</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>903</goodId>
+      <goodName>에너자이저AA*2입</goodName>
+      <productEntpCode>462</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302001</goodSmlclsCode>
+      <goodTotalCnt>2</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>905</goodId>
+      <goodName>크린랩_고무장갑(중) (묶음)</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302008</goodSmlclsCode>
+      <goodTotalCnt>2</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>907</goodId>
+      <goodName>피죤 용기 옐로미모사(3.1L일반/드럼겸용)</goodName>
+      <productEntpCode>480</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302005</goodSmlclsCode>
+      <goodTotalCnt>3100</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>908</goodId>
+      <goodName>샤프란 케어(은은한향)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302003</goodSmlclsCode>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>911</goodId>
+      <goodName>크린지퍼백</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302002</goodSmlclsCode>
+      <goodTotalCnt>20</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>912</goodId>
+      <goodName>항균트리오</goodName>
+      <productEntpCode>461</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302006</goodSmlclsCode>
+      <goodTotalCnt>970</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>921</goodId>
+      <goodName>갈치(생물)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030103001</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>926</goodId>
+      <goodName>삼치(500~700g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030103005</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>924</goodId>
+      <goodName>고등어(생물, 300~500g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MR</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030103003</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MR</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>925</goodId>
+      <goodName>오징어(생물, 200~300g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MR</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030103004</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MR</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>927</goodId>
+      <goodName>시금치(250~400g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>DA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102007</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>DA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>928</goodId>
+      <goodName>당근(흙당근)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102008</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>929</goodId>
+      <goodName>감자(껍질 있는 감자)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102009</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>930</goodId>
+      <goodName>고구마(껍질 있는 밤고구마)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102010</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>931</goodId>
+      <goodName>양송이버섯</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102011</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>933</goodId>
+      <goodName>풋고추</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102013</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>934</goodId>
+      <goodName>애호박</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102014</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>935</goodId>
+      <goodName>대파(흙대파, 500~800g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>DA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102015</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>DA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>141</goodId>
+      <goodName>맛있는오뚜기밥(6개입) </goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <detailMean>210g, 6개 묶음, 플라스틱용기</detailMean>
+      <goodTotalCnt>1260</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>143</goodId>
+      <goodName>코카콜라(1.8L)</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206005</goodSmlclsCode>
+      <detailMean>탄산음료, PET병, 1.8L정도</detailMean>
+      <goodTotalCnt>1800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>157</goodId>
+      <goodName>쇠고기 불고기(1등급)</goodName>
+      <productEntpCode>444</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101002</goodSmlclsCode>
+      <detailMean>100g, 1등급, 불고기, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>243</goodId>
+      <goodName>오뚜기부침가루(1kg)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201012</goodSmlclsCode>
+      <detailMean>부침용 곡물가루, 1kg, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>253</goodId>
+      <goodName>오뚜기식용유(콩100%)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204005</goodSmlclsCode>
+      <detailMean>콩기름 900ml, 플라스틱 용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>14</goodId>
+      <goodName>맛선생 해물</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204008</goodSmlclsCode>
+      <detailMean>분말형조미료, 250g, 비닐포장</detailMean>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>120</goodId>
+      <goodName>고소한마요네즈(대상)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204012</goodSmlclsCode>
+      <detailMean>500g 비닐튜브용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>572</goodId>
+      <goodName>동원참치 라이트스탠다드(단품)</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030202004</goodSmlclsCode>
+      <detailMean>캔용기, 150g</detailMean>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>537</goodId>
+      <goodName>해표 순창 궁 발아콩 12가지 양념쌈장</goodName>
+      <productEntpCode>494</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204016</goodSmlclsCode>
+      <detailMean>500g, 플라스틱용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>280</goodId>
+      <goodName>순창 오리지널 우리쌀 찰고추장 </goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204009</goodSmlclsCode>
+      <detailMean>1kg 플라스틱 용기</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>333</goodId>
+      <goodName>오뚜기카레 순한맛</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204014</goodSmlclsCode>
+      <detailMean>분말카레, 100g정도, 비닐포장</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>437</goodId>
+      <goodName>뉴트로지나 Ultra Sheer Dry-Touch Sun Block</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301019</goodSmlclsCode>
+      <detailMean>SPF50+ PA+++</detailMean>
+      <goodTotalCnt>80</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>438</goodId>
+      <goodName>니베아 Face Sun Block Moisturizing Cream</goodName>
+      <productEntpCode>518</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301019</goodSmlclsCode>
+      <detailMean>SPF 50+ PA+++</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>449</goodId>
+      <goodName>페이스선블럭 화이트닝</goodName>
+      <productEntpCode>518</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301019</goodSmlclsCode>
+      <detailMean>SPA50+ PA+++</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>439</goodId>
+      <goodName>니베아 Fresh Sun Lotion</goodName>
+      <productEntpCode>518</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301019</goodSmlclsCode>
+      <detailMean>SPF47 PA++</detailMean>
+      <goodTotalCnt>125</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>445</goodId>
+      <goodName>미쟝센 쉽고빠른거품염색(3N 흑갈색)</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301020</goodSmlclsCode>
+      <detailMean>40g, 3N 흑갈색</detailMean>
+      <goodTotalCnt>40</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>553</goodId>
+      <goodName>신라면 5개입</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030201011</goodSmlclsCode>
+      <detailMean>봉지라면, 120g*5개</detailMean>
+      <goodTotalCnt>5</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>564</goodId>
+      <goodName>프레시안 주부초밥왕(320g)</goodName>
+      <productEntpCode>498</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201018</goodSmlclsCode>
+      <detailMean>320g</detailMean>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>570</goodId>
+      <goodName>드봉 스위트로즈</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301006</goodSmlclsCode>
+      <detailMean>고체형 100g, 4개</detailMean>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>573</goodId>
+      <goodName>동원참치 라이트스탠다드(묶음)</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030202004</goodSmlclsCode>
+      <detailMean>캔용기, 150g*3개</detailMean>
+      <goodTotalCnt>450</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>582</goodId>
+      <goodName>닥터 아토마일드(묶음)</goodName>
+      <productEntpCode>442</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301018</goodSmlclsCode>
+      <detailMean>60매, 6개 묶음 리필포장</detailMean>
+      <goodTotalCnt>6</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>600</goodId>
+      <goodName>해태아이스쿨</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205007</goodSmlclsCode>
+      <detailMean>69g 플라스틱 통</detailMean>
+      <goodTotalCnt>69</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>457</goodId>
+      <goodName>위청수(단품)</goodName>
+      <productEntpCode>485</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304001</goodSmlclsCode>
+      <detailMean>단품, 75ml</detailMean>
+      <goodTotalCnt>75</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>311</goodId>
+      <goodName>듀라셀 울트라 파워체크 AA*2입(피엔지)</goodName>
+      <productEntpCode>2000</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302001</goodSmlclsCode>
+      <detailMean>2개</detailMean>
+      <goodTotalCnt>2</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>167</goodId>
+      <goodName>페브리즈 깨끗한 무향(370)</goodName>
+      <productEntpCode>482</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302003</goodSmlclsCode>
+      <detailMean>370ml</detailMean>
+      <goodTotalCnt>370</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>184</goodId>
+      <goodName>롯데호일(30cm x 30m) </goodName>
+      <productEntpCode>533</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 30cm x 30m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>308</goodId>
+      <goodName>크린랩(22cm x 50m)</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302009</goodSmlclsCode>
+      <detailMean>가정용, 폴리에틸렌 재질, 22cm x 50m 정도</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>711</goodId>
+      <goodName>이오 20s (3개묶음)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203008</goodSmlclsCode>
+      <detailMean>150g, 3개 묶음</detailMean>
+      <goodTotalCnt>450</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>716</goodId>
+      <goodName>모닝버터(해바라기유)(200g)</goodName>
+      <productEntpCode>524</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203001</goodSmlclsCode>
+      <detailMean>200g</detailMean>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>719</goodId>
+      <goodName>프리미엄 산양분유 1단계(800g)</goodName>
+      <productEntpCode>468</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203006</goodSmlclsCode>
+      <detailMean>800g, 캔용기</detailMean>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>723</goodId>
+      <goodName>도브 뷰티 너리싱 바디워시</goodName>
+      <productEntpCode>466</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301002</goodSmlclsCode>
+      <detailMean>800ml</detailMean>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>724</goodId>
+      <goodName>도브 센스티브스킨 바디워시 </goodName>
+      <productEntpCode>466</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301002</goodSmlclsCode>
+      <detailMean>800ml</detailMean>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>737</goodId>
+      <goodName>리스테린 쿨민트</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304009</goodSmlclsCode>
+      <detailMean>250ml, 용기 포장</detailMean>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>742</goodId>
+      <goodName>새콤달콤 간편한 유부초밥 박사(160g*2)</goodName>
+      <productEntpCode>549</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201018</goodSmlclsCode>
+      <detailMean>160g*2</detailMean>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>759</goodId>
+      <goodName>HITE(6캔)</goodName>
+      <productEntpCode>472</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <detailMean>355ml 6캔 묶음</detailMean>
+      <goodTotalCnt>2130</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>672</goodId>
+      <goodName>세이프 유기농 발아현미 리필</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302006</goodSmlclsCode>
+      <detailMean>580ml</detailMean>
+      <goodTotalCnt>580</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>673</goodId>
+      <goodName>자연퐁 솔잎향 세균설거지(용기)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302006</goodSmlclsCode>
+      <detailMean>980ml</detailMean>
+      <goodTotalCnt>980</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>674</goodId>
+      <goodName>지퍼락 지퍼백(중)</goodName>
+      <productEntpCode>620</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302002</goodSmlclsCode>
+      <detailMean>17.8cm*20.3cm 20매</detailMean>
+      <goodTotalCnt>20</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>675</goodId>
+      <goodName>3M후레쉬백</goodName>
+      <productEntpCode>538</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302002</goodSmlclsCode>
+      <detailMean>25cm*35cm 150매</detailMean>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>679</goodId>
+      <goodName>샤프란 코튼 앤 크림</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302005</goodSmlclsCode>
+      <detailMean>4.2L</detailMean>
+      <goodTotalCnt>4200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>681</goodId>
+      <goodName>맥스 CRV 폭발방지 부탄가스</goodName>
+      <productEntpCode>507</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302015</goodSmlclsCode>
+      <detailMean>4입</detailMean>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>691</goodId>
+      <goodName>NEW하기스 네이처메이드 남아용 대형(42매 4단계)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301012</goodSmlclsCode>
+      <detailMean>남아용 42개</detailMean>
+      <goodTotalCnt>42</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>697</goodId>
+      <goodName>리엔 흑모비책크림염색 자연갈색</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301020</goodSmlclsCode>
+      <detailMean>120g</detailMean>
+      <goodTotalCnt>60</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>699</goodId>
+      <goodName>해피바스 항균 레몬그라스 핸드워시</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301021</goodSmlclsCode>
+      <detailMean>250ml 펌핑용기</detailMean>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>707</goodId>
+      <goodName>바디피트 볼록맞춤울트라중형</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301013</goodSmlclsCode>
+      <detailMean>중형, 날개형, 32P</detailMean>
+      <goodTotalCnt>32</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>709</goodId>
+      <goodName>햇바삭김 김밥김</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030202001</goodSmlclsCode>
+      <detailMean>20g, 10매 </detailMean>
+      <goodTotalCnt>10</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>710</goodId>
+      <goodName>양반 구운 김밥김</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030202001</goodSmlclsCode>
+      <detailMean>20g, 10매</detailMean>
+      <goodTotalCnt>10</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>712</goodId>
+      <goodName>자연의 시작 불가리스 사과 (4개묶음)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203008</goodSmlclsCode>
+      <detailMean>150g, 4개 묶음, 사과맛</detailMean>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>714</goodId>
+      <goodName>무가염버터(450g)</goodName>
+      <productEntpCode>456</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203001</goodSmlclsCode>
+      <detailMean>450g</detailMean>
+      <goodTotalCnt>450</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>720</goodId>
+      <goodName>롯데비앤나(400g)</goodName>
+      <productEntpCode>500</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203003</goodSmlclsCode>
+      <detailMean>400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>721</goodId>
+      <goodName>의성 마늘 프랑크(350g)</goodName>
+      <productEntpCode>500</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203003</goodSmlclsCode>
+      <detailMean>350g, 비닐 압축포장</detailMean>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>722</goodId>
+      <goodName>CJ 더 건강한햄 그릴후랑크(350g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203003</goodSmlclsCode>
+      <detailMean>350g, 비닐 압축포장</detailMean>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>669</goodId>
+      <goodName>대한웰빙호일 15m*25m</goodName>
+      <productEntpCode>520</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302010</goodSmlclsCode>
+      <detailMean>가정용, 15cm x 25m</detailMean>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>670</goodId>
+      <goodName>비트 O2 살균표백제</goodName>
+      <productEntpCode>540</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302014</goodSmlclsCode>
+      <detailMean>1.5kg</detailMean>
+      <goodTotalCnt>1500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>671</goodId>
+      <goodName>깨끗한나라 키친타올</goodName>
+      <productEntpCode>523</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030302007</goodSmlclsCode>
+      <detailMean>200매*4입</detailMean>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>736</goodId>
+      <goodName>맥스웰 하우스 오리지날</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030206003</goodSmlclsCode>
+      <detailMean>180개 커피믹스</detailMean>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>738</goodId>
+      <goodName>레쓰비 마일드(175ml)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206002</goodSmlclsCode>
+      <detailMean>175ml</detailMean>
+      <goodTotalCnt>175</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>740</goodId>
+      <goodName>아이시스(2L)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206007</goodSmlclsCode>
+      <detailMean>2L PET</detailMean>
+      <goodTotalCnt>2000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>741</goodId>
+      <goodName>스프라이트</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206006</goodSmlclsCode>
+      <detailMean>1.5L PET</detailMean>
+      <goodTotalCnt>1500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>757</goodId>
+      <goodName>세이 온더바디 고보습 아이리스</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301002</goodSmlclsCode>
+      <detailMean>900ml</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>758</goodId>
+      <goodName>HITE(단품)</goodName>
+      <productEntpCode>472</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206012</goodSmlclsCode>
+      <detailMean>355ml, 단품 캔</detailMean>
+      <goodTotalCnt>355</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>432</goodId>
+      <goodName>홈스타 곰팡이 싹</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302011</goodSmlclsCode>
+      <detailMean>플라스틱 용기, 480ml</detailMean>
+      <goodTotalCnt>480</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>272</goodId>
+      <goodName>크린랩(30cm x 50m)</goodName>
+      <productEntpCode>476</productEntpCode>
+      <goodUnitDivCode>M0</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302009</goodSmlclsCode>
+      <detailMean>가정용, 폴리에틸렌 재질, 30cm x 50m 정도</detailMean>
+      <goodTotalCnt>50</goodTotalCnt>
+      <goodTotalDivCode>M0</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>687</goodId>
+      <goodName>다우니 고농축 블루튤립과 달콤한 라일락</goodName>
+      <productEntpCode>482</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302005</goodSmlclsCode>
+      <detailMean>1L+1L</detailMean>
+      <goodTotalCnt>2000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>688</goodId>
+      <goodName>듀라셀 울트라 파워체크 AAA*2입</goodName>
+      <productEntpCode>2000</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302001</goodSmlclsCode>
+      <detailMean>2개</detailMean>
+      <goodTotalCnt>2</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>692</goodId>
+      <goodName>하이드로5 면도날</goodName>
+      <productEntpCode>457</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301017</goodSmlclsCode>
+      <detailMean>4입</detailMean>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>696</goodId>
+      <goodName>스페셜K 오리지널(480g)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201010</goodSmlclsCode>
+      <detailMean>480g, 종이 상자포장</detailMean>
+      <goodTotalCnt>480</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>702</goodId>
+      <goodName>해피바스 허브 라벤더 아로마 바</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301006</goodSmlclsCode>
+      <detailMean>100g, 4개 묶음 (고체형) </detailMean>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>270</goodId>
+      <goodName>진한참기름(CJ)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204004</goodSmlclsCode>
+      <detailMean>병용기, 320ml </detailMean>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>273</goodId>
+      <goodName>매일유업 뼈로가는 칼슘치즈(180g)</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <detailMean>슬라이스치즈, 180g 비닐포장</detailMean>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>295</goodId>
+      <goodName>양파(껍질 있는 망포장, 1500g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102002</goodSmlclsCode>
+      <detailMean>껍질 있는 망포장 1망당 1500g</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>282</goodId>
+      <goodName>순창재래식안심생된장 </goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204010</goodSmlclsCode>
+      <detailMean>1kg 플라스틱 용기</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>283</goodId>
+      <goodName>딸기잼 </goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204015</goodSmlclsCode>
+      <detailMean>병용기, 500g</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>285</goodId>
+      <goodName>백설꽃소금</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204006</goodSmlclsCode>
+      <detailMean>천일염, 1kg, 호주산90% 국내산10%, 비닐포장</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>286</goodId>
+      <goodName>토마토케찹(오뚜기)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204013</goodSmlclsCode>
+      <detailMean>500g 비닐튜브용기</detailMean>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>291</goodId>
+      <goodName>오뚜기 사과식초</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204001</goodSmlclsCode>
+      <detailMean>900ml, 플라스틱용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>292</goodId>
+      <goodName>햇반(엄마가해주신밥 단품)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <detailMean>210g, 플라스틱 용기</detailMean>
+      <goodTotalCnt>210</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>289</goodId>
+      <goodName>옥수수수염차</goodName>
+      <productEntpCode>512</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206014</goodSmlclsCode>
+      <detailMean>PET병 340ml</detailMean>
+      <goodTotalCnt>340</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>303</goodId>
+      <goodName>대상 사과식초</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204001</goodSmlclsCode>
+      <detailMean>900ml, 플라스틱용기</detailMean>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>405</goodId>
+      <goodName>풀무원 새콤달콤 유부(330g)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201018</goodSmlclsCode>
+      <detailMean>330g</detailMean>
+      <goodTotalCnt>330</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>406</goodId>
+      <goodName>사조 꽁치</goodName>
+      <productEntpCode>447</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202006</goodSmlclsCode>
+      <detailMean>캔용기, 400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>410</goodId>
+      <goodName>동원 꽁치</goodName>
+      <productEntpCode>546</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202006</goodSmlclsCode>
+      <detailMean>캔용기, 400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>411</goodId>
+      <goodName>샘표 김치찌개용 꽁치</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202006</goodSmlclsCode>
+      <detailMean>캔용기, 400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>412</goodId>
+      <goodName>오뚜기 꽁치</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202006</goodSmlclsCode>
+      <detailMean>캔용기, 400g</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>319</goodId>
+      <goodName>서울우유 체다슬라이스치즈(400g)</goodName>
+      <productEntpCode>456</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203007</goodSmlclsCode>
+      <detailMean>슬라이스치즈, 400g 비닐포장</detailMean>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>328</goodId>
+      <goodName>메로나(단품)</goodName>
+      <productEntpCode>446</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205009</goodSmlclsCode>
+      <detailMean>아이스바 80ml </detailMean>
+      <goodTotalCnt>80</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>332</goodId>
+      <goodName>해찬들 재래식 된장 </goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204010</goodSmlclsCode>
+      <detailMean>1kg 플라스틱 용기</detailMean>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>983</goodId>
+      <goodName>대림 주부초밥짱(320g)</goodName>
+      <productEntpCode>447</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201018</goodSmlclsCode>
+      <goodTotalCnt>320</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>984</goodId>
+      <goodName>오리온 포카칩 오리지날(66g)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205003</goodSmlclsCode>
+      <goodTotalCnt>66</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>985</goodId>
+      <goodName>롯데푸드 찰떡국화빵(150ml,단품)</goodName>
+      <productEntpCode>643</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205010</goodSmlclsCode>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>989</goodId>
+      <goodName>해태 바밤바(63ml,단품)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205009</goodSmlclsCode>
+      <goodTotalCnt>63</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>991</goodId>
+      <goodName>농심 새우깡(90g)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205004</goodSmlclsCode>
+      <goodTotalCnt>90</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>992</goodId>
+      <goodName>해태 오예스(28g*12개입)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205005</goodSmlclsCode>
+      <goodTotalCnt>336</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>993</goodId>
+      <goodName>오리온 초코파이(39g*18개입)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205005</goodSmlclsCode>
+      <goodTotalCnt>702</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1009</goodId>
+      <goodName>허니버터 아몬드(250g)</goodName>
+      <productEntpCode>1820</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201021</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1010</goodId>
+      <goodName>머거본 꿀땅콩(135g)</goodName>
+      <productEntpCode>1821</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201021</goodSmlclsCode>
+      <goodTotalCnt>135</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1012</goodId>
+      <goodName>생가득 우리쌀 떡국떡(700g)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201022</goodSmlclsCode>
+      <goodTotalCnt>700</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1045</goodId>
+      <goodName>퍼실 파워젤(액체,일반용,2.7L)</goodName>
+      <productEntpCode>438</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302018</goodSmlclsCode>
+      <goodTotalCnt>2700</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1051</goodId>
+      <goodName>홈키파 수성 에어졸(500ml)</goodName>
+      <productEntpCode>438</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302016</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1052</goodId>
+      <goodName>컴배트 스피드 에어졸(500ml)</goodName>
+      <productEntpCode>438</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302016</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1053</goodId>
+      <goodName>에프킬라 에어로졸 무향(500ml)</goodName>
+      <productEntpCode>620</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302016</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1056</goodId>
+      <goodName>챕스틱 딸기(4.2g)</goodName>
+      <productEntpCode>1827</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301023</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1058</goodId>
+      <goodName>오랄비 크로스액션(35모)(3개입)</goodName>
+      <productEntpCode>482</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301024</goodSmlclsCode>
+      <goodTotalCnt>3</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1059</goodId>
+      <goodName>페리오 토탈 360(4개입)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301024</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1061</goodId>
+      <goodName>해피바스 솝베리 클렌징 폼(175g)</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301025</goodSmlclsCode>
+      <goodTotalCnt>175</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1066</goodId>
+      <goodName>해태 부라보콘 화이트바닐라(140ml,단품)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205008</goodSmlclsCode>
+      <goodTotalCnt>140</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1069</goodId>
+      <goodName>칠성사이다(1.8L)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206006</goodSmlclsCode>
+      <goodTotalCnt>1800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1070</goodId>
+      <goodName>맥스웰 하우스 오리지날(200ml)</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206002</goodSmlclsCode>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1089</goodId>
+      <goodName>메소드 다목적 세정제(라벤더,828ml)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302011</goodSmlclsCode>
+      <goodTotalCnt>828</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1090</goodId>
+      <goodName>피죤 습기제로(8개입)</goodName>
+      <productEntpCode>480</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030302012</goodSmlclsCode>
+      <goodTotalCnt>8</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1094</goodId>
+      <goodName>그린핑거 알로에베라 물티슈(캡형,64매*6개입)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301018</goodSmlclsCode>
+      <goodTotalCnt>6</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1095</goodId>
+      <goodName>크리넥스 수앤수(캡형,70매*6개입)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301018</goodSmlclsCode>
+      <goodTotalCnt>6</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1098</goodId>
+      <goodName>백설 국내산 사과식초(500ml)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204001</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1099</goodId>
+      <goodName>해표 순창궁 태양초 100% 우리햅쌀 고추장(1800g)</goodName>
+      <productEntpCode>494</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204009</goodSmlclsCode>
+      <goodTotalCnt>1800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1143</goodId>
+      <goodName>삼호맛살</goodName>
+      <productEntpCode>498</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202003</goodSmlclsCode>
+      <goodTotalCnt>270</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1144</goodId>
+      <goodName>사조참치 살코기 안심따개</goodName>
+      <productEntpCode>447</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030202004</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1149</goodId>
+      <goodName>투게더 바닐라맛</goodName>
+      <productEntpCode>446</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205008</goodSmlclsCode>
+      <goodTotalCnt>900</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1153</goodId>
+      <goodName>하기스 매직핏팬티 4단계 여아용 40매</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301012</goodSmlclsCode>
+      <goodTotalCnt>40</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1156</goodId>
+      <goodName>들기름 재래 도시락김</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>PG</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030202005</goodSmlclsCode>
+      <goodTotalCnt>12</goodTotalCnt>
+      <goodTotalDivCode>PG</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1157</goodId>
+      <goodName>깨끗한나라 3겹데코 순수 프리미엄</goodName>
+      <productEntpCode>523</productEntpCode>
+      <goodUnitDivCode>LO</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301004</goodSmlclsCode>
+      <goodTotalCnt>30</goodTotalCnt>
+      <goodTotalDivCode>LO</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>937</goodId>
+      <goodName>1964 정통 크림빵</goodName>
+      <productEntpCode>440</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201001</goodSmlclsCode>
+      <goodTotalCnt>225</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>963</goodId>
+      <goodName>CJ 비비고 왕교자(910g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201005</goodSmlclsCode>
+      <goodTotalCnt>910</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>965</goodId>
+      <goodName>풀무원 국산콩두부(찌개용)(380g)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201008</goodSmlclsCode>
+      <goodTotalCnt>380</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>966</goodId>
+      <goodName>행복한콩 양념이잘배는 찌개두부</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201008</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>967</goodId>
+      <goodName>행복한콩 노릇하게잘구워지는 부침두부</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201008</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>971</goodId>
+      <goodName>삼립 아침엔밀크토스트(330g)</goodName>
+      <productEntpCode>440</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201013</goodSmlclsCode>
+      <goodTotalCnt>330</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>972</goodId>
+      <goodName>롯데 아이러브 토스트(750g)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201013</goodSmlclsCode>
+      <goodTotalCnt>750</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>973</goodId>
+      <goodName>오뚜기 맛있는 북어국(34g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201002</goodSmlclsCode>
+      <goodTotalCnt>34</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>975</goodId>
+      <goodName>청정원 카레여왕 비프카레(160g)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201004</goodSmlclsCode>
+      <goodTotalCnt>160</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>976</goodId>
+      <goodName>맛있는 오뚜기밥(210g*3개입)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <goodTotalCnt>630</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>977</goodId>
+      <goodName>CJ 햇반(210g*3개입)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201014</goodSmlclsCode>
+      <goodTotalCnt>630</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>978</goodId>
+      <goodName>CJ 가쓰오 우동(4인분)(933.2g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201017</goodSmlclsCode>
+      <goodTotalCnt>933</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>980</goodId>
+      <goodName>오뚜기 새송이 쇠고기죽(285g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201020</goodSmlclsCode>
+      <goodTotalCnt>285</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>982</goodId>
+      <goodName>동원 양반 전복죽(288g)</goodName>
+      <productEntpCode>546</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201020</goodSmlclsCode>
+      <goodTotalCnt>288</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1013</goodId>
+      <goodName>오뚜기 우리쌀 떡국떡(600g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201022</goodSmlclsCode>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1015</goodId>
+      <goodName>오뚜기 찹쌀 왕만두피(300g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201023</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1044</goodId>
+      <goodName>퍼실 파워젤(액체,드럼용,2.7L)</goodName>
+      <productEntpCode>438</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302018</goodSmlclsCode>
+      <goodTotalCnt>2700</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1047</goodId>
+      <goodName>때가 쏙 비트(액체,드럼용,3L)</goodName>
+      <productEntpCode>540</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302018</goodSmlclsCode>
+      <goodTotalCnt>3000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1048</goodId>
+      <goodName>유한락스 레귤러(1.5L)</goodName>
+      <productEntpCode>488</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302013</goodSmlclsCode>
+      <goodTotalCnt>1500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1054</goodId>
+      <goodName>니베아 에센셜 케어(4.8g)</goodName>
+      <productEntpCode>1826</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301023</goodSmlclsCode>
+      <goodTotalCnt>5</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1055</goodId>
+      <goodName>뉴트로지나 립 모이스춰라이저(4g)</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301023</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1064</goodId>
+      <goodName>동원 양반 쇠고기죽(288g)</goodName>
+      <productEntpCode>546</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201020</goodSmlclsCode>
+      <goodTotalCnt>288</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1077</goodId>
+      <goodName>오리온 통아몬드(90g)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205001</goodSmlclsCode>
+      <goodTotalCnt>90</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1079</goodId>
+      <goodName>참프레 동물복지 닭백숙(1.1kg)</goodName>
+      <productEntpCode>1837</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101003</goodSmlclsCode>
+      <goodTotalCnt>1100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1081</goodId>
+      <goodName>청정원 신안섬보배 천일염 가는소금(500g)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204006</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1084</goodId>
+      <goodName>박카스F(120ml,단품)</goodName>
+      <productEntpCode>527</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304002</goodSmlclsCode>
+      <goodTotalCnt>120</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1145</goodId>
+      <goodName>앱솔루트 명작 3단계</goodName>
+      <productEntpCode>537</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203006</goodSmlclsCode>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1155</goodId>
+      <goodName>양반 들기름이 그윽한 김</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>PG</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030202005</goodSmlclsCode>
+      <goodTotalCnt>16</goodTotalCnt>
+      <goodTotalDivCode>PG</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>936</goodId>
+      <goodName>마늘(깐마늘)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102016</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>943</goodId>
+      <goodName>고구마(껍질 있는 호박고구마)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102010</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>944</goodId>
+      <goodName>느타리버섯</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102011</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>960</goodId>
+      <goodName>샘표소면(1.1kg)</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201009</goodSmlclsCode>
+      <goodTotalCnt>1100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>964</goodId>
+      <goodName>CJ 100% 국산 햇당면(400g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201015</goodSmlclsCode>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>968</goodId>
+      <goodName>샤니 요요꿀호떡(400g)</goodName>
+      <productEntpCode>454</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201001</goodSmlclsCode>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>969</goodId>
+      <goodName>롯데 미니소보로(375g)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201001</goodSmlclsCode>
+      <goodTotalCnt>375</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>970</goodId>
+      <goodName>보노 포르치니버섯스프(51.6g)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201019</goodSmlclsCode>
+      <detailMean>17.2g*3봉지</detailMean>
+      <goodTotalCnt>52</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>974</goodId>
+      <goodName>청정원 옛날식 짜장(180g)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201004</goodSmlclsCode>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>979</goodId>
+      <goodName>풀무원 생가득 가쓰오 우동(4인분)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201017</goodSmlclsCode>
+      <goodTotalCnt>920</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>981</goodId>
+      <goodName>오뚜기 전복죽(285g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201020</goodSmlclsCode>
+      <goodTotalCnt>285</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1003</goodId>
+      <goodName>CJ 비비고 사골곰탕(500g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201026</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1006</goodId>
+      <goodName>CJ 햇반 컵반 고추장 제육덮밥(250g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201025</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1008</goodId>
+      <goodName>CJ 햇반 컵반 미역국밥(167g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201025</goodSmlclsCode>
+      <goodTotalCnt>167</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1022</goodId>
+      <goodName>바다원 조미찢은오징어(300g)</goodName>
+      <productEntpCode>1822</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202007</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1026</goodId>
+      <goodName>이금기 팬더 굴소스(255g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204017</goodSmlclsCode>
+      <goodTotalCnt>255</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1036</goodId>
+      <goodName>깻잎</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102017</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1038</goodId>
+      <goodName>생강</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102019</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1039</goodId>
+      <goodName>양배추</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>PK</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102020</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>PK</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1040</goodId>
+      <goodName>쪽파(흙쪽파)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102021</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1041</goodId>
+      <goodName>때가 쏙 비트(가루,리필형,4kg)</goodName>
+      <productEntpCode>540</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302017</goodSmlclsCode>
+      <goodTotalCnt>4000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1072</goodId>
+      <goodName>풀무원 동물복지 목초란(대란 10개)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030101001</goodSmlclsCode>
+      <detailMean>대란(52g~59g)</detailMean>
+      <goodTotalCnt>10</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1073</goodId>
+      <goodName>목초를 먹고 자란 건강한 닭이 낳은 달걀(대란 15개)</goodName>
+      <productEntpCode>479</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030101001</goodSmlclsCode>
+      <detailMean>대란(52g~59g)</detailMean>
+      <goodTotalCnt>15</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1074</goodId>
+      <goodName>CJ 알짜란(대란 15개)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030101001</goodSmlclsCode>
+      <detailMean>대란(52g~59g)</detailMean>
+      <goodTotalCnt>15</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1075</goodId>
+      <goodName>CJ 더안심 건강란(대란 15개)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030101001</goodSmlclsCode>
+      <detailMean>대란(52g~59g)</detailMean>
+      <goodTotalCnt>15</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1076</goodId>
+      <goodName>롯데 ABC 초코(65g)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205006</goodSmlclsCode>
+      <goodTotalCnt>65</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1082</goodId>
+      <goodName>남양 드빈치 버터(450g)</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203001</goodSmlclsCode>
+      <goodTotalCnt>450</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1083</goodId>
+      <goodName>박카스F(120ml*10병)</goodName>
+      <productEntpCode>527</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304002</goodSmlclsCode>
+      <goodTotalCnt>1200</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1085</goodId>
+      <goodName>영진 구론산 바몬드 오리지날(150ml,단품)</goodName>
+      <productEntpCode>1838</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304002</goodSmlclsCode>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1087</goodId>
+      <goodName>좋은느낌 좋은순면(울트라 날개 중형,36개입)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301013</goodSmlclsCode>
+      <goodTotalCnt>36</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1088</goodId>
+      <goodName>좋은느낌(울트라슬림 에어핏쿠션 날개 중형,36개입)</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301013</goodSmlclsCode>
+      <goodTotalCnt>36</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1141</goodId>
+      <goodName>동원 개성 왕만두</goodName>
+      <productEntpCode>528</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201005</goodSmlclsCode>
+      <goodTotalCnt>980</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1147</goodId>
+      <goodName>스팸</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030203004</goodSmlclsCode>
+      <goodTotalCnt>340</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>939</goodId>
+      <goodName>갈치(냉동)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030103001</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>940</goodId>
+      <goodName>참조기(200~400g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MR</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030103002</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MR</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>941</goodId>
+      <goodName>오징어(냉동, 200~300g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MR</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030103004</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MR</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>987</goodId>
+      <goodName>빙그레 참붕어 싸만코(150ml,단품)</goodName>
+      <productEntpCode>446</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205010</goodSmlclsCode>
+      <goodTotalCnt>150</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>988</goodId>
+      <goodName>롯데푸드 돼지바(70ml,단품)</goodName>
+      <productEntpCode>643</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205009</goodSmlclsCode>
+      <goodTotalCnt>70</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>994</goodId>
+      <goodName>롯데 가나 마일드(34g*3개입)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205006</goodSmlclsCode>
+      <goodTotalCnt>102</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>995</goodId>
+      <goodName>롯데 가나 마일드(34g,단품)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205006</goodSmlclsCode>
+      <goodTotalCnt>34</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>996</goodId>
+      <goodName>롯데 목캔디 허브(148g)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205001</goodSmlclsCode>
+      <goodTotalCnt>148</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>997</goodId>
+      <goodName>오뚜기 식물성 마아가린(200g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203002</goodSmlclsCode>
+      <goodTotalCnt>200</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1001</goodId>
+      <goodName>오뚜기 옛날 사골곰탕 국물(350g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201026</goodSmlclsCode>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1002</goodId>
+      <goodName>오뚜기 옛날 육개장(300g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201026</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1005</goodId>
+      <goodName>오뚜기 제육덮밥(280g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201025</goodSmlclsCode>
+      <goodTotalCnt>280</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1018</goodId>
+      <goodName>켈로그 레드베리 에너지바(25g*4개입)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205011</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1019</goodId>
+      <goodName>해태 자유시간(36g,단품)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205012</goodSmlclsCode>
+      <goodTotalCnt>36</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1021</goodId>
+      <goodName>오리온 핫브레이크 미니(714g)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205012</goodSmlclsCode>
+      <goodTotalCnt>714</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1024</goodId>
+      <goodName>금영식품 백진미오징어(300g)</goodName>
+      <productEntpCode>1824</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030202007</goodSmlclsCode>
+      <goodTotalCnt>300</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1025</goodId>
+      <goodName>청정원 프리미엄 굴소스(260g)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204017</goodSmlclsCode>
+      <goodTotalCnt>260</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1028</goodId>
+      <goodName>하선정 멸치액젓(658ml)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204018</goodSmlclsCode>
+      <goodTotalCnt>658</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1030</goodId>
+      <goodName>롯데 핫식스(250ml)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206021</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1033</goodId>
+      <goodName>트레비 레몬(500ml)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206022</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1034</goodId>
+      <goodName>씨그램 레몬(350ml)</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206022</goodSmlclsCode>
+      <goodTotalCnt>350</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1035</goodId>
+      <goodName>초정탄산수 레몬(500ml)</goodName>
+      <productEntpCode>1825</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206022</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1042</goodId>
+      <goodName>테크 (가루,리필형,4kg)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302017</goodSmlclsCode>
+      <goodTotalCnt>4000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1142</goodId>
+      <goodName>고향만두</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201005</goodSmlclsCode>
+      <detailMean>890g+150g</detailMean>
+      <goodTotalCnt>1040</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1146</goodId>
+      <goodName>임페리얼 드림 XO 3단계</goodName>
+      <productEntpCode>514</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203006</goodSmlclsCode>
+      <goodTotalCnt>800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1148</goodId>
+      <goodName>양조간장 501</goodName>
+      <productEntpCode>453</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204011</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1068</goodId>
+      <goodName>롯데 월드콘 바닐라(160ml,단품)</goodName>
+      <productEntpCode>534</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205008</goodSmlclsCode>
+      <goodTotalCnt>160</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1071</goodId>
+      <goodName>펩시콜라(1.8L)</goodName>
+      <productEntpCode>545</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206005</goodSmlclsCode>
+      <goodTotalCnt>1800</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1091</goodId>
+      <goodName>산소계표백제 유한젠(1kg)</goodName>
+      <productEntpCode>488</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302014</goodSmlclsCode>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1092</goodId>
+      <goodName>B&amp;B 안심표백제(500g)</goodName>
+      <productEntpCode>442</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302014</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1093</goodId>
+      <goodName>테크 산소크린(1.4kg*2개입)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302014</goodSmlclsCode>
+      <goodTotalCnt>2800</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1097</goodId>
+      <goodName>보솜이 디오가닉(남여아공용,특대형,36개입)</goodName>
+      <productEntpCode>523</productEntpCode>
+      <goodUnitDivCode>ME</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301012</goodSmlclsCode>
+      <goodTotalCnt>36</goodTotalCnt>
+      <goodTotalDivCode>ME</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1100</goodId>
+      <goodName>청정원 카레여왕 구운마늘&amp;양파(108g)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204014</goodSmlclsCode>
+      <goodTotalCnt>108</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1150</goodId>
+      <goodName>크리넥스 데코 앤 소프트 3겹</goodName>
+      <productEntpCode>467</productEntpCode>
+      <goodUnitDivCode>LO</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301004</goodSmlclsCode>
+      <goodTotalCnt>24</goodTotalCnt>
+      <goodTotalDivCode>LO</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1151</goodId>
+      <goodName>려 함빛 극손상케어 샴푸</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301010</goodSmlclsCode>
+      <goodTotalCnt>400</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1152</goodId>
+      <goodName>케라시스 러블리 로맨틱 퍼퓸 샴푸</goodName>
+      <productEntpCode>461</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301010</goodSmlclsCode>
+      <goodTotalCnt>600</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1154</goodId>
+      <goodName>엘라스틴 마린콜라겐 탱글볼륨 샴푸</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030301010</goodSmlclsCode>
+      <goodTotalCnt>680</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>998</goodId>
+      <goodName>농심 신라면 큰사발면(114g)</goodName>
+      <productEntpCode>517</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201024</goodSmlclsCode>
+      <goodTotalCnt>114</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>999</goodId>
+      <goodName>오뚜기 참깨라면(컵라면)(110g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201024</goodSmlclsCode>
+      <goodTotalCnt>110</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1000</goodId>
+      <goodName>팔도 왕뚜껑(110g)</goodName>
+      <productEntpCode>1819</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201024</goodSmlclsCode>
+      <goodTotalCnt>110</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1004</goodId>
+      <goodName>CJ 비비고 육개장(500g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201026</goodSmlclsCode>
+      <goodTotalCnt>500</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1007</goodId>
+      <goodName>오뚜기 맛있는 쇠고기미역국밥(162g)</goodName>
+      <productEntpCode>463</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201025</goodSmlclsCode>
+      <goodTotalCnt>162</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1016</goodId>
+      <goodName>닥터유 에너지바(40g,단품)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205011</goodSmlclsCode>
+      <goodTotalCnt>40</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1017</goodId>
+      <goodName>닥터유 에너지바(40g*4개입)</goodName>
+      <productEntpCode>464</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205011</goodSmlclsCode>
+      <goodTotalCnt>160</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1020</goodId>
+      <goodName>해태 자유시간(36g*5개입)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030205012</goodSmlclsCode>
+      <goodTotalCnt>180</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1027</goodId>
+      <goodName>백설 남해굴소스(210g)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030204017</goodSmlclsCode>
+      <goodTotalCnt>210</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1029</goodId>
+      <goodName>청정원 제주모슬포 멸치액젓(618ml)</goodName>
+      <productEntpCode>519</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030204018</goodSmlclsCode>
+      <goodTotalCnt>618</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1031</goodId>
+      <goodName>레드불 에너지 드링크(250ml)</goodName>
+      <productEntpCode>526</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206021</goodSmlclsCode>
+      <goodTotalCnt>250</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1032</goodId>
+      <goodName>몬스터 에너지(355ml)</goodName>
+      <productEntpCode>474</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030206021</goodSmlclsCode>
+      <goodTotalCnt>355</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1037</goodId>
+      <goodName>적상추</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102018</goodSmlclsCode>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1043</goodId>
+      <goodName>스파크(가루,리필형,5kg)</goodName>
+      <productEntpCode>461</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302017</goodSmlclsCode>
+      <goodTotalCnt>5000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1123</goodId>
+      <goodName>가지</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030102022</goodSmlclsCode>
+      <detailMean>국내산 가지 (100g)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>945</goodId>
+      <goodName>오이(백다다기)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030102012</goodSmlclsCode>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1011</goodId>
+      <goodName>CJ 참쌀떡국떡(1kg)</goodName>
+      <productEntpCode>539</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201022</goodSmlclsCode>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1014</goodId>
+      <goodName>해태 찹쌀 왕만두피(360g)</goodName>
+      <productEntpCode>483</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030201023</goodSmlclsCode>
+      <goodTotalCnt>360</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1046</goodId>
+      <goodName>테크 UP(액체,일반용,3L)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302018</goodSmlclsCode>
+      <goodTotalCnt>3000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1049</goodId>
+      <goodName>유한락스 후레쉬(2L)</goodName>
+      <productEntpCode>488</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302013</goodSmlclsCode>
+      <goodTotalCnt>2000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1050</goodId>
+      <goodName>홈스타 향락스(1L)</goodName>
+      <productEntpCode>541</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030302013</goodSmlclsCode>
+      <goodTotalCnt>1000</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1057</goodId>
+      <goodName>메디안 닥터 칫솔(4개입)</goodName>
+      <productEntpCode>460</productEntpCode>
+      <goodUnitDivCode>EA</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030301024</goodSmlclsCode>
+      <goodTotalCnt>4</goodTotalCnt>
+      <goodTotalDivCode>EA</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1062</goodId>
+      <goodName>뉴트로지나 딥클린 포밍 클렌저(175g)</goodName>
+      <productEntpCode>511</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030301025</goodSmlclsCode>
+      <goodTotalCnt>175</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1063</goodId>
+      <goodName>샤니 속이알찬 단팥빵(255g)</goodName>
+      <productEntpCode>454</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030201001</goodSmlclsCode>
+      <goodTotalCnt>255</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1080</goodId>
+      <goodName>파스퇴르우유 후레쉬(930ml)</goodName>
+      <productEntpCode>532</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030203005</goodSmlclsCode>
+      <goodTotalCnt>930</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1086</goodId>
+      <goodName>영진 구론산 바몬드 오리지날(150ml*10병)</goodName>
+      <productEntpCode>1838</productEntpCode>
+      <goodUnitDivCode>ML</goodUnitDivCode>
+      <goodBaseCnt>10</goodBaseCnt>
+      <goodSmlclsCode>030304002</goodSmlclsCode>
+      <goodTotalCnt>1500</goodTotalCnt>
+      <goodTotalDivCode>ML</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1120</goodId>
+      <goodName>돼지고기 목살</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>G</goodUnitDivCode>
+      <goodBaseCnt>100</goodBaseCnt>
+      <goodSmlclsCode>030101004</goodSmlclsCode>
+      <detailMean>100g, 목살, 국산, 냉장용 기준(냉동용 제외)</detailMean>
+      <goodTotalCnt>100</goodTotalCnt>
+      <goodTotalDivCode>G</goodTotalDivCode>
+    </item>
+    <item>
+      <goodId>1122</goodId>
+      <goodName>부세(200~400g)</goodName>
+      <productEntpCode>469</productEntpCode>
+      <goodUnitDivCode>MR</goodUnitDivCode>
+      <goodBaseCnt>1</goodBaseCnt>
+      <goodSmlclsCode>030103002</goodSmlclsCode>
+      <detailMean>부세 1마리(200~400g)</detailMean>
+      <goodTotalCnt>1</goodTotalCnt>
+      <goodTotalDivCode>MR</goodTotalDivCode>
+    </item>
+  </result>
