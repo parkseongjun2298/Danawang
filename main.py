@@ -2,7 +2,9 @@ from tkinter import *
 from tkinter import font
 import tkinter.messagebox
 import xml.etree.ElementTree as ET
-#from goodsbyMartParse import *
+
+
+
 
 BG_COLOR = 'light blue'
 
@@ -14,15 +16,13 @@ g_Tk['bg'] = BG_COLOR
 var1 = IntVar()
 var2 = IntVar()
 searchText = StringVar()
-selectMart = StringVar()
-
-goodsInfoUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey=bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh%2FO8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA%3D%3D"
 
 goodsTree = ET.parse('totalGoodsInfo.xml')
-goodsRoot = ('totalGoodsInfo.xml')
 goodsRoot = goodsTree.getroot()
 martTree = ET.parse('totalMartInfo.xml')
 martRoot = martTree.getroot()
+
+
 
 # DANAWANG~ text 함수
 def InitTopText():
@@ -48,7 +48,7 @@ def MartSearchCheckBox():
     chkbox.place(x=26, y=60)
     chkbox2.place(x=26, y=90)
 
-# 마트/상품 검색 Entry 
+# 마트/상품 검색 Entry
 def InitInputEntry():
     global InputEntry
     TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
@@ -58,64 +58,52 @@ def InitInputEntry():
 
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
-    global RenderText
+
+
     sText = InputEntry.get()
     s = []
+
     # 마트 검색 체크
-    if var1.get() == 1 and var2.get() == 0:
+    if var1.get() == 1:
         for child in martRoot:
             if sText in child[1].text:
                 s = searchText.get()
                 s += child[1].text
+
+                RenderText.insert(INSERT,child[1].text)
                 print(child[1].text)
-        searchText.set(s)
+                searchText.set(s)
+
+
 
     # 상품 검색 체크
-    if var2.get() == 1 and var1.get() == 0:
+    if var2.get() == 1:
         for child in goodsRoot:
             if sText in child[1].text:
                 RenderText.insert(INSERT, child[1].text)
                 print(child[1].text)
 
-        # for i in s:
-        #     RenderText.insert(END, i)
 
     SearchResultRenderText()
-                
-        #         s = searchText.get()
-        #         s += child[1].text
-        #         print(child[1].text)
-        # searchText.set(s)
-            # for i in range(8):
-            #     print(child[i].text, end=' ')
-            # print('\n')
 
-    # global SearchListBox
 
-    # RenderText.configure(state='normal')
-    # RenderText.delete(0.0, END)
-    # iSearchIndex = SearchListBox.curselection()[0]
-    # if iSearchIndex == 0:
-    #     SearchMart()
-    # elif iSearchIndex == 1:
-    #     pass
-    # elif iSearchIndex == 2:
-    #     pass
-    # elif iSearchIndex == 3:
-    #     pass
+    RenderText.configure(state='disabled')
 
-    # RenderText.configure(state='disabled')
+
+
 
 # 마트/상품 검색한 것 보여주는 함수
 def SearchResultRenderText():
     global RenderText
 
+
     TempFont = font.Font(g_Tk, size=10, family='Consolas')
-    RenderText = Text(g_Tk, width=50, height=9, borderwidth=6, relief='ridge')
+    RenderText = Text(g_Tk, width=50, height=9, borderwidth=6)
     RenderText.pack()
     RenderText.place(x=121, y=95)
-
     RenderText.configure(state='disabled')
+
+
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
@@ -126,6 +114,7 @@ def RenderGoodsImage():
     goodsLabel.place(x=15, y=125)
 
 # 지도, 메일, 텔레그램 이미지 넣은 버튼 만드는 함수
+
 def InitButton():
     mapImg = PhotoImage(file="map.png")
     Mapbtn = Button(g_Tk, image=mapImg)
@@ -134,7 +123,7 @@ def InitButton():
     Mapbtn.place(x=240, y=525)
 
     mailImg = PhotoImage(file="gmail.png").subsample(9, 9)
-    Mailbtn = Button(g_Tk, image=mailImg)
+    Mailbtn = Button(g_Tk, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
     Mailbtn.place(x=320, y=525)
@@ -166,7 +155,7 @@ def InitRenderMartText():
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartLabel():
-    global InputMartEntry
+    global InputMartLabel
 
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
     MainText = Label(g_Tk, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
@@ -174,14 +163,14 @@ def InitInputMartLabel():
     MainText.place(x=245, y=252)
 
     TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    InputMartEntry = Entry(g_Tk, textvariable = selectMart, font=TempFont, width=31, borderwidth=6, relief='ridge')
-    InputMartEntry.pack()
-    InputMartEntry.place(x=245, y=273)
+    InputMartLabel = Entry(g_Tk, font=TempFont, width=31, borderwidth=6, relief='ridge')
+    InputMartLabel.pack()
+    InputMartLabel.place(x=245, y=273)
 
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(g_Tk, size=13, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택", command = SelectBasketButton)
+    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택")
     selectbtn.pack()
     selectbtn.place(x=245, y=305)
 
@@ -190,11 +179,68 @@ def InitSbskButton():
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
+#이메일창 띄우는거
+def SendEmailTK():
+    nw = Tk()
+    nw.title("Send Email")
 
-def SelectBasketButton():
-    bskText = InputMartEntry.get()
-    print(bskText)
+    nw.geometry('300x300+300+100')
 
+    TempFont = font.Font(nw, size=20, weight='bold', family='Consolas')
+    MainText = Label(nw, font=TempFont,text="이메일을 입력하시오!!")
+    MainText.pack()
+    MainText.place(x=5)
+
+    global EmailLabel
+    TempFont = font.Font(nw, size=15, weight='bold', family='Consolas')
+    EmailLabel = Entry(nw, font=TempFont, width=20, borderwidth=6, relief='ridge')
+    EmailLabel.pack()
+    EmailLabel.place(x=5, y=35)
+
+    TempFont = font.Font(nw, size=12, weight='bold', family='Consolas')
+    SearchButton = Button(nw, font=TempFont,  text="발송",command=SendEmail)
+    SearchButton.pack()
+    SearchButton.place(x=250, y=35)
+
+    nw.mainloop()
+#이메일 보내는 함수
+def SendEmail():
+    import mimetypes
+    import mysmtplib
+    from email.mime.base import MIMEBase
+    from email.mime.text import MIMEText
+    GetEmailLabel=EmailLabel.get()
+
+    # global value
+    host = "smtp.gmail.com"  # Gmail STMP 서버 주소.
+    port = "587"
+    htmlFileName = "totalGoodsInfo.xml"
+
+    senderAddr = "bout3298@gmail.com" # 보내는 사람 email 주소.
+    recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
+
+    msg = MIMEBase("multipart", "alternative")
+    msg['Subject'] = "장바구니 내용"
+    msg['From'] = senderAddr
+    msg['To'] = recipientAddr
+
+    # MIME 문서를 생성합니다.
+    htmlFD = open(htmlFileName, 'rb')
+    HtmlPart = MIMEText(htmlFD.read(), 'html', _charset='UTF-8')
+    htmlFD.close()
+
+    # 만들었던 mime을 MIMEBase에 첨부 시킨다.
+    msg.attach(HtmlPart)
+
+    # 메일을 발송한다.
+    s = mysmtplib.MySMTP(host, port)
+    # s.set_debuglevel(1)        # 디버깅이 필요할 경우 주석을 푼다.
+    s.ehlo()
+    s.starttls()
+    s.ehlo()
+    s.login("bout3298@gmail.com","jj357741")
+    s.sendmail(senderAddr, [recipientAddr], msg.as_string())
+    s.close()
 
 
 
