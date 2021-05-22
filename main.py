@@ -110,6 +110,7 @@ def InitInputEntry():
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
     global RenderText
+    RenderText.delete(0, END)
 
     sText = InputEntry.get()
     s = []
@@ -122,20 +123,8 @@ def SearchButtonAction():
         martReq = (getParsingMartData(MartAreaData, "iros.openapi.service.vo.entpInfoVO"))
         for item in martReq:
             if sText in item:
-                s = searchText.get()
-                s += item
                 print(item)
-                searchText.set(s)
-        
-        # for child in martRoot:
-        #     if sText in child[1].text:
-        #         s = searchText.get()
-        #         s += child[1].text
-
-        #         RenderText.insert(INSERT,child[1].text)
-        #         print(child[1].text)
-        #     searchText.set(s)
-
+                RenderText.insert(0, item)
 
 
     # 상품 검색 체크
@@ -146,14 +135,8 @@ def SearchButtonAction():
         goodsReq = (getParsingGoodsData(goodsAreaData, "item"))
         for item in goodsReq:
             if sText in item:
-                s = searchText.get()
-                s += item
                 print(item)
-                searchText.set(s)        
-        # for child in goodsRoot:
-        #     if sText in child[1].text:
-        #         RenderText.insert(INSERT, child[1].text)
-        #         print(child[1].text)
+                RenderText.insert(0, item)  
 
 
     #SearchResultRenderText()
@@ -161,14 +144,21 @@ def SearchButtonAction():
 # 마트/상품 검색한 것 보여주는 함수
 def SearchResultRenderText():
     global RenderText
+    
+    rframe = Frame(g_Tk)
 
-    TempFont = font.Font(g_Tk, size=10, family='Consolas')
-    RenderText = Label(g_Tk, width=50, height=9, borderwidth=6)
-    RenderText.pack()
-    RenderText.place(x=121, y=95)
-    RenderText.configure(state='disabled')
+    RenderTextScrollbar = Scrollbar(rframe)
+    RenderTextScrollbar.pack(side = RIGHT, fill = Y)
 
+    TempFont = font.Font(rframe, size=10, family='Consolas')
+    RenderText = Listbox(rframe, width=50, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
+    RenderText.pack(side = LEFT)
 
+    RenderTextScrollbar['command'] = RenderText.yview
+    RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+
+    rframe.pack()
+    rframe.place(x = 121, y = 95)
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
