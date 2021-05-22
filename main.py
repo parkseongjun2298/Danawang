@@ -1,10 +1,8 @@
 from tkinter import *
 from tkinter import font
 import tkinter.messagebox
-import xml.etree.ElementTree as ET
-
-
-
+from xml.dom.minidom import *
+import urllib.request
 
 BG_COLOR = 'light blue'
 
@@ -17,12 +15,57 @@ var1 = IntVar()
 var2 = IntVar()
 searchText = StringVar()
 
-goodsTree = ET.parse('totalGoodsInfo.xml')
-goodsRoot = goodsTree.getroot()
-martTree = ET.parse('totalMartInfo.xml')
-martRoot = martTree.getroot()
+serverKey = "bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh/O8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA=="
 
+def base64_Encode(s):
+    return base64.b64encode(s.encode('utf-8'))
 
+def Base64_Decode(b):
+    return base64.b64decode(b).decode('utf-8')
+
+def urlencode(string):
+    return urllib.parse.quote(string)
+
+def urldecode(string):
+    return urllib.parse.quote(string)
+
+def openAPItoXML(server, key, value):
+    opener = urllib.request.build_opener()
+    opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36')]
+    # ↑ User-Agent를 입력하지 않을경우 naver.com 에서 정상적인 접근이 아닌것으로 판단하여 차단을 한다.
+    data = ""
+    urlData = server + key + value
+    with opener.open(urlData) as f:
+        data = f.read(3000000).decode('utf-8') # 300000bytes 를 utf-8로 변환하여 읽어온다.  변환이 없을경우 unicode로 받아온다.
+    return data
+
+def getParsingGoodsData(xmlData, motherData):
+    doc = parseString(xmlData)
+    goodsList = doc.getElementsByTagName(motherData)
+    goodsSize = len(goodsList)
+    list = []
+    global ContentData
+    ContentData = ""
+
+    for index in range(goodsSize):
+        mphms = goodsList[index].getElementsByTagName("goodName")
+        list.append(str("상품명 : " + mphms[0].firstChild.data))
+        ContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
+    return list
+
+def getParsingMartData(xmlData, motherData):
+    doc = parseString(xmlData)
+    MartList = doc.getElementsByTagName(motherData)
+    MartSize = len(goodsList)
+    list = []
+    global ContentData
+    ContentData = ""
+
+    # for index in range(goodsSize):
+    #     mphms = MartList[index].getElementsByTagName("goodName")
+    #     list.append(str("상품명 : " + mphms[0].firstChild.data))
+    #     ContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
+    # return list
 
 # DANAWANG~ text 함수
 def InitTopText():
@@ -58,47 +101,52 @@ def InitInputEntry():
 
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
-
+    global RenderText
 
     sText = InputEntry.get()
     s = []
 
-    # 마트 검색 체크
-    if var1.get() == 1:
-        for child in martRoot:
-            if sText in child[1].text:
-                s = searchText.get()
-                s += child[1].text
+    goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
+    goodsServerValue = ""
+    goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
+    req = (getParsingGoodsData(goodsAreaData, "item"))
 
-                RenderText.insert(INSERT,child[1].text)
-                print(child[1].text)
-                searchText.set(s)
+    # 마트 검색 체크
+    if var1.get() == 1 and var2.get() == 0:
+        pass
+        # for child in martRoot:
+        #     if sText in child[1].text:
+        #         s = searchText.get()
+        #         s += child[1].text
+
+        #         RenderText.insert(INSERT,child[1].text)
+        #         print(child[1].text)
+        #     searchText.set(s)
 
 
 
     # 상품 검색 체크
-    if var2.get() == 1:
-        for child in goodsRoot:
-            if sText in child[1].text:
-                RenderText.insert(INSERT, child[1].text)
-                print(child[1].text)
+    if var2.get() == 1 and var1.get() == 0:
+        for item in req:
+            if sText in item:
+                s = searchText.get()
+                s += item
+                print(item)
+                searchText.set(s)        
+        # for child in goodsRoot:
+        #     if sText in child[1].text:
+        #         RenderText.insert(INSERT, child[1].text)
+        #         print(child[1].text)
 
 
-    SearchResultRenderText()
-
-
-    RenderText.configure(state='disabled')
-
-
-
+    #SearchResultRenderText()
 
 # 마트/상품 검색한 것 보여주는 함수
 def SearchResultRenderText():
     global RenderText
 
-
     TempFont = font.Font(g_Tk, size=10, family='Consolas')
-    RenderText = Text(g_Tk, width=50, height=9, borderwidth=6)
+    RenderText = Label(g_Tk, width=50, height=9, borderwidth=6)
     RenderText.pack()
     RenderText.place(x=121, y=95)
     RenderText.configure(state='disabled')
@@ -154,8 +202,8 @@ def InitRenderMartText():
     frame.place(x = 10, y = 252)
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
-def InitInputMartLabel():
-    global InputMartLabel
+def InitInputMartEntry():
+    global InputMartEntry
 
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
     MainText = Label(g_Tk, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
@@ -163,9 +211,9 @@ def InitInputMartLabel():
     MainText.place(x=245, y=252)
 
     TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    InputMartLabel = Entry(g_Tk, font=TempFont, width=31, borderwidth=6, relief='ridge')
-    InputMartLabel.pack()
-    InputMartLabel.place(x=245, y=273)
+    InputMartEntry = Entry(g_Tk, font=TempFont, width=31, borderwidth=6, relief='ridge')
+    InputMartEntry.pack()
+    InputMartEntry.place(x=245, y=273)
 
 # 장바구니 버튼
 def InitSbskButton():
@@ -179,7 +227,8 @@ def InitSbskButton():
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
-#이메일창 띄우는거
+
+#이메일창 띄우는 함수
 def SendEmailTK():
     nw = Tk()
     nw.title("Send Email")
@@ -203,6 +252,7 @@ def SendEmailTK():
     SearchButton.place(x=250, y=35)
 
     nw.mainloop()
+
 #이메일 보내는 함수
 def SendEmail():
     import mimetypes
@@ -243,7 +293,6 @@ def SendEmail():
     s.close()
 
 
-
 InitTopText()
 MartSearchCheckBox()
 InitInputEntry()
@@ -252,7 +301,7 @@ RenderGoodsImage()
 InitButton()
 SearchResultRenderText()
 InitRenderMartText()
-InitInputMartLabel()
+InitInputMartEntry()
 InitSbskButton()
 
 g_Tk.mainloop()
