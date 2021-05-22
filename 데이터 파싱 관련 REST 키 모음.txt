@@ -12,16 +12,20 @@ print(req.read().decode('utf-8'))
 
 
 # 단일 상품 정보 조회 (goodsInfo)
-/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?goodId=상품아이디&ServiceKey=서비스키
+http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?goodId=상품아이디&ServiceKey=서비스키
 
 # 전체 상품 정보 조회
-/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey=서비스키
+http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey=bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh%2FO8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA%3D%3D
+
 
 # 단일 판매업체 정보 조회 (StoreInfo)
-/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?entpId=115&ServiceKey=서비스키
+http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?entpId=115&ServiceKey=서비스키
 
 # 전체 상품 정보 조회
-/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey=서비스키
+http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey=서비스키
+
+
+
 
 
 (상품 기준 조회)

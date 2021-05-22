@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import font
 import tkinter.messagebox
 import xml.etree.ElementTree as ET
+#from goodsbyMartParse import *
 
 BG_COLOR = 'light blue'
 
@@ -13,8 +14,12 @@ g_Tk['bg'] = BG_COLOR
 var1 = IntVar()
 var2 = IntVar()
 searchText = StringVar()
+selectMart = StringVar()
+
+goodsInfoUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey=bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh%2FO8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA%3D%3D"
 
 goodsTree = ET.parse('totalGoodsInfo.xml')
+goodsRoot = ('totalGoodsInfo.xml')
 goodsRoot = goodsTree.getroot()
 martTree = ET.parse('totalMartInfo.xml')
 martRoot = martTree.getroot()
@@ -57,7 +62,7 @@ def SearchButtonAction():
     sText = InputEntry.get()
     s = []
     # 마트 검색 체크
-    if var1.get() == 1:
+    if var1.get() == 1 and var2.get() == 0:
         for child in martRoot:
             if sText in child[1].text:
                 s = searchText.get()
@@ -66,7 +71,7 @@ def SearchButtonAction():
         searchText.set(s)
 
     # 상품 검색 체크
-    if var2.get() == 1:
+    if var2.get() == 1 and var1.get() == 0:
         for child in goodsRoot:
             if sText in child[1].text:
                 RenderText.insert(INSERT, child[1].text)
@@ -161,7 +166,7 @@ def InitRenderMartText():
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartLabel():
-    global InputMartLabel
+    global InputMartEntry
 
     TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
     MainText = Label(g_Tk, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
@@ -169,14 +174,14 @@ def InitInputMartLabel():
     MainText.place(x=245, y=252)
 
     TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    InputMartLabel = Entry(g_Tk, font=TempFont, width=31, borderwidth=6, relief='ridge')
-    InputMartLabel.pack()
-    InputMartLabel.place(x=245, y=273)
+    InputMartEntry = Entry(g_Tk, textvariable = selectMart, font=TempFont, width=31, borderwidth=6, relief='ridge')
+    InputMartEntry.pack()
+    InputMartEntry.place(x=245, y=273)
 
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(g_Tk, size=13, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택")
+    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택", command = SelectBasketButton)
     selectbtn.pack()
     selectbtn.place(x=245, y=305)
 
@@ -185,6 +190,12 @@ def InitSbskButton():
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
+
+def SelectBasketButton():
+    bskText = InputMartEntry.get()
+    print(bskText)
+
+
 
 
 InitTopText()
