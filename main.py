@@ -43,29 +43,37 @@ def getParsingGoodsData(xmlData, motherData):
     doc = parseString(xmlData)
     goodsList = doc.getElementsByTagName(motherData)
     goodsSize = len(goodsList)
-    list = []
-    global ContentData
-    ContentData = ""
+    goodslist = []
+    global goodsContentData
+    goodsContentData = ""
 
     for index in range(goodsSize):
         mphms = goodsList[index].getElementsByTagName("goodName")
-        list.append(str("상품명 : " + mphms[0].firstChild.data))
-        ContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
-    return list
+        goodslist.append(str("상품명 : " + mphms[0].firstChild.data))
+        goodsContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
+    return goodslist
 
 def getParsingMartData(xmlData, motherData):
     doc = parseString(xmlData)
     MartList = doc.getElementsByTagName(motherData)
-    MartSize = len(goodsList)
-    list = []
-    global ContentData
-    ContentData = ""
+    MartSize = len(MartList)
+    martlist = []
+    global martContentData
+    martContentData = ""
 
-    # for index in range(goodsSize):
-    #     mphms = MartList[index].getElementsByTagName("goodName")
-    #     list.append(str("상품명 : " + mphms[0].firstChild.data))
-    #     ContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
-    # return list
+    for index in range(MartSize):
+        mphms = MartList[index].getElementsByTagName("entpName")
+        martlist.append(str("판매점 이름 : " + mphms[0].firstChild.data))
+        martContentData += str("판매점 이름 : " + mphms[0].firstChild.data) + str('\n')
+
+        # mphms = MartList[index].getElementsByTagName("roadAddrBasic")
+        # martlist.append(str("판매점 주소 : " + mphms[0].firstChild.data))
+        # martContentData += str("판매점 주소 : " + mphms[0].firstChild.data) + str(' ')
+
+        # mphms = MartList[index].getElementsByTagName("roadAddrDetail")
+        # martlist.append(str("( " + mphms[0].firstChild.data) + str("  )"))
+        # martContentData += str("( " + mphms[0].firstChild.data) + str("  )\n")        
+    return martlist
 
 # DANAWANG~ text 함수
 def InitTopText():
@@ -106,14 +114,19 @@ def SearchButtonAction():
     sText = InputEntry.get()
     s = []
 
-    goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
-    goodsServerValue = ""
-    goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
-    req = (getParsingGoodsData(goodsAreaData, "item"))
-
-    # 마트 검색 체크
+   # 마트 검색 체크
     if var1.get() == 1 and var2.get() == 0:
-        pass
+        MartServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey="
+        MartServerValue = ""
+        MartAreaData = openAPItoXML(MartServerUrl, serverKey, MartServerValue)
+        martReq = (getParsingMartData(MartAreaData, "iros.openapi.service.vo.entpInfoVO"))
+        for item in martReq:
+            if sText in item:
+                s = searchText.get()
+                s += item
+                print(item)
+                searchText.set(s)
+        
         # for child in martRoot:
         #     if sText in child[1].text:
         #         s = searchText.get()
@@ -127,7 +140,11 @@ def SearchButtonAction():
 
     # 상품 검색 체크
     if var2.get() == 1 and var1.get() == 0:
-        for item in req:
+        goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
+        goodsServerValue = ""
+        goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
+        goodsReq = (getParsingGoodsData(goodsAreaData, "item"))
+        for item in goodsReq:
             if sText in item:
                 s = searchText.get()
                 s += item
