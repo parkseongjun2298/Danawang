@@ -36,7 +36,7 @@ def openAPItoXML(server, key, value):
     data = ""
     urlData = server + key + value
     with opener.open(urlData) as f:
-        data = f.read(3000000).decode('utf-8') # 300000bytes 를 utf-8로 변환하여 읽어온다.  변환이 없을경우 unicode로 받아온다.
+        data = f.read(10000000).decode('utf-8') # 300000bytes 를 utf-8로 변환하여 읽어온다.  변환이 없을경우 unicode로 받아온다.
     return data
 
 def getParsingGoodsData(xmlData, motherData):
@@ -62,15 +62,15 @@ def getParsingMartData(xmlData, motherData):
     martContentData = ""
 
     for index in range(MartSize):
-        mphms = MartList[index].getElementsByTagName("entpName")
-        martlist.append(str("판매점 이름 : " + mphms[0].firstChild.data))
-        martContentData += str("판매점 이름 : " + mphms[0].firstChild.data) + str('\n')
+        mphmsName = MartList[index].getElementsByTagName("entpName")
+        mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
+        martlist.append(str("판매점 이름 : " + mphmsName[0].firstChild.data + ' \n' + "판매점 주소 : " + mphmsAddr[0].firstChild.data))
+        martContentData += (str("판매점 이름 : " + mphmsName[0].firstChild.data + ' \n' + "판매점 주소 : " + mphmsAddr[0].firstChild.data + '\n'))
 
-        # mphms = MartList[index].getElementsByTagName("roadAddrBasic")
         # martlist.append(str("판매점 주소 : " + mphms[0].firstChild.data))
-        # martContentData += str("판매점 주소 : " + mphms[0].firstChild.data) + str(' ')
+        # martContentData += str("판매점 주소 : " + mphms[0].firstChild.data) + str('\n\n')
 
-        # mphms = MartList[index].getElementsByTagName("roadAddrDetail")
+        # mphms = MartList[index].getElementsByTagName("areaDetailCode")
         # martlist.append(str("( " + mphms[0].firstChild.data) + str("  )"))
         # martContentData += str("( " + mphms[0].firstChild.data) + str("  )\n")        
     return martlist
@@ -144,21 +144,21 @@ def SearchButtonAction():
 # 마트/상품 검색한 것 보여주는 함수
 def SearchResultRenderText():
     global RenderText
-    
+
     rframe = Frame(g_Tk)
 
-    RenderTextScrollbar = Scrollbar(rframe)
-    RenderTextScrollbar.pack(side = RIGHT, fill = Y)
+    RenderTextYScrollbar = Scrollbar(rframe)
+    RenderTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(rframe, size=10, family='Consolas')
-    RenderText = Listbox(rframe, width=50, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
-    RenderText.pack(side = LEFT)
+    RenderText = Listbox(rframe, width=47, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextYScrollbar.set)
+    RenderText.pack(side = TOP)
 
-    RenderTextScrollbar['command'] = RenderText.yview
-    RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderTextYScrollbar['command'] = RenderText.yview
+    RenderTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     rframe.pack()
-    rframe.place(x = 121, y = 95)
+    rframe.place(x = 118, y = 95)
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
@@ -195,18 +195,19 @@ def InitRenderMartText():
 
     frame = Frame(g_Tk)
 
-    RenderMartTextScrollbar = Scrollbar(frame)
-    RenderMartTextScrollbar.pack(side = RIGHT, fill = Y)
+    RenderMartTextYScrollbar = Scrollbar(frame)
+    RenderMartTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(frame, size=10, family='Consolas')
-    RenderMartText = Listbox(frame, width=28, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderMartTextScrollbar.set)
+    RenderMartText = Listbox(frame, width=26, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderMartTextYScrollbar.set)
     RenderMartText.pack(side = LEFT)
 
-    RenderMartTextScrollbar['command'] = RenderMartText.yview
-    RenderMartTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderMartTextYScrollbar['command'] = RenderMartText.yview
+    RenderMartTextYScrollbar.pack(side=RIGHT, fill=BOTH)
+
 
     frame.pack()
-    frame.place(x = 10, y = 252)
+    frame.place(x = 7, y = 252)
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartEntry():
