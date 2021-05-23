@@ -3,6 +3,10 @@ from tkinter import font
 import tkinter.messagebox
 from xml.dom.minidom import *
 import urllib.request
+import requests
+import json
+from PIL import Image, ImageTk
+from io import BytesIO
 
 BG_COLOR = 'light blue'
 
@@ -191,6 +195,7 @@ def SearchResultRenderText():
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
+    global goodsLabel
     goodsImg = PhotoImage(file="defaultGoodsImage.png").subsample(3)
     goodsLabel = Label(g_Tk, image=goodsImg)
     goodsLabel.image = goodsImg
@@ -279,7 +284,7 @@ def SelectButtonAction():
     entpid = martNameId.get(InputMartEntry.get())
     print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
-    gmServerValue = "&goodInspectDay=" + "20100205" + "&entpId=" + urlencode(entpid)
+    gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + urlencode(entpid)
     gmAreaData = openAPItoXML(gmServerUrl, serverKey, gmServerValue)
     gmReq = (getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
     print(gmReq)
@@ -290,8 +295,36 @@ def SelectButtonAction():
         RenderGMText.insert(END, gmReq[i])
 
 # 사진 보기 버튼 누르면 실행되는 함수
+def save_image(image_url, file_name):
+    img_response = requests.get(image_url)
+    if img_response.status_code == 200:
+        with open(file_name, "wb") as fp:
+            fp.write(img_response.content)
+
 def ImageButtonAction():
-    pass
+    global goodsLabel
+    tofind = "오리온 초코파이"
+    url = "https://dapi.kakao.com/v2/search/image"
+    headers = {
+        "Authorization" : "KakaoAK 67db11fcdbb05a32b9788d0ea29fe7f5"
+    }
+    data = {
+        "query" : tofind,
+        "sort" : "accuracy"
+    }
+
+    response = requests.post(url, headers=headers, data=data)
+    if response.status_code != 200:
+        print("error! because ",  response.json())
+    else:
+        print(list(response.json().values())[0][0])
+        file_name = "{0}.gif".format(tofind)
+        save_image(list(response.json().values())[0][0]['image_url'], file_name)
+
+    goodsImage = ImageTk.PhotoImage(Image.open(file_name))
+    goodsLabel.configure(image=goodsImage)
+    goodsLabel.image = goodsImage
+
 
 # 장바구니 버튼 누르면 실행되는 함수
 def BskButtonAction():
@@ -335,7 +368,7 @@ def SendEmail():
     port = "587"
     htmlFileName = "totalGoodsInfo.xml"
 
-    senderAddr = "bout3298@gmail.com" # 보내는 사람 email 주소.
+    senderAddr = "dltnals5809@gmail.com" # 보내는 사람 email 주소.
     recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
 
     msg = MIMEBase("multipart", "alternative")
@@ -357,7 +390,7 @@ def SendEmail():
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("bout3298@gmail.com","jj357741")
+    s.login("dltnals5809@gmail.com","비밀번호")
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
 
