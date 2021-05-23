@@ -6,7 +6,6 @@ import urllib.request
 import requests
 import json
 from PIL import Image, ImageTk
-from io import BytesIO
 
 BG_COLOR = 'light blue'
 
