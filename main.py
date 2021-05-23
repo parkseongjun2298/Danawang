@@ -44,12 +44,14 @@ def getParsingGoodsData(xmlData, motherData):
     goodsList = doc.getElementsByTagName(motherData)
     goodsSize = len(goodsList)
     goodslist = []
-    global goodsContentData
+    global goodsContentData, goodsNameId
     goodsContentData = []
+    goodsNameId = {}
 
     for index in range(goodsSize):
         mphmsName = goodsList[index].getElementsByTagName("goodName")
         mphmsId = goodsList[index].getElementsByTagName("goodId")
+        goodsNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
         goodslist.append(str(mphmsName[0].firstChild.data + " (" + mphmsId[0].firstChild.data + ")"))
         goodsContentData.append([str(mphmsName[0].firstChild.data), str(mphmsId[0].firstChild.data)])
     return goodslist
@@ -60,14 +62,16 @@ def getParsingMartData(xmlData, motherData):
     MartList = doc.getElementsByTagName(motherData)
     MartSize = len(MartList)
     martlist = []
-    global martContentData
+    global martContentData, martNameId
     martContentData = ""
+    martNameId = {}
 
     for index in range(MartSize):
         mphmsName = MartList[index].getElementsByTagName("entpName")
         mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
         mphmsId = MartList[index].getElementsByTagName("entpId")
         martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
+        martNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
         martContentData += str(mphmsName[0].firstChild.data)
         martContentData += str(mphmsAddr[0].firstChild.data)
         martContentData += str(mphmsId[0].firstChild.data)
@@ -89,7 +93,6 @@ def getParsingGMData(xmlData, motherData):
         mphmsPrice = gmList[index].getElementsByTagName("goodPrice")
         for goods in goodsContentData:
             if mphmsId[0].firstChild.data in goods:
-                print(goods)
                 gmName = str(goods[0])
 
         gmlist.append(str(gmName + " : " + mphmsPrice[0].firstChild.data + "원"))
@@ -250,10 +253,10 @@ def InitInputMartEntry():
 
 # 장바구니 버튼
 def InitSbskButton():
-    TempFont = font.Font(g_Tk, size=13, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택", command = SelectButtonAction)
+    TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
+    selectbtn = Button(g_Tk, width = 10, height=3, font=TempFont, text="판매점\n선택", command = SelectButtonAction)
     selectbtn.pack()
-    selectbtn.place(x=245, y=305)
+    selectbtn.place(x=330, y=305)
 
     sbskImg = PhotoImage(file="장바구니.png").subsample(2)
     sbskbtn = Button(g_Tk, image=sbskImg)
@@ -261,16 +264,34 @@ def InitSbskButton():
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
 
+# 사진 보기 버튼
+def InitShowImageButton():
+    TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
+    selectbtn = Button(g_Tk, width = 10, height=3, font=TempFont, text="사진\n보기", command = ImageButtonAction)
+    selectbtn.pack()
+    selectbtn.place(x=250, y=305)
+
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
-    global RenderGMText
-    entpid = InputMartEntry.get()
+    global RenderGMText, martNameId
+    RenderGMText.delete(0, END)
+#    temp = InputMartEntry.get()
+    entpid = martNameId.get(InputMartEntry.get())
+    print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
-    gmServerValue = "&goodInspectDay=" + "20100205" + "&entpId=" + "100" #urlencode(entpid)
+    gmServerValue = "&goodInspectDay=" + "20100205" + "&entpId=" + urlencode(entpid)
     gmAreaData = openAPItoXML(gmServerUrl, serverKey, gmServerValue)
     gmReq = (getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
     print(gmReq)
-    RenderGMText.insert(END, gmReq)
+    if gmReq == []:
+        RenderGMText.insert(END, "해당 판매점은 검색할 수 없습니다.")
+        RenderGMText.insert(END, "다른 판매점을 선택해주세요!\n")
+    for i in range(len(gmReq)):
+        RenderGMText.insert(END, gmReq[i])
+
+# 사진 보기 버튼 누르면 실행되는 함수
+def ImageButtonAction():
+    pass
 
 # 장바구니 버튼 누르면 실행되는 함수
 def BskButtonAction():
@@ -351,6 +372,7 @@ InitButton()
 SearchResultRenderText()
 InitRenderGMText()
 InitInputMartEntry()
+InitShowImageButton()
 InitSbskButton()
 
 g_Tk.mainloop()
