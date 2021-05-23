@@ -13,7 +13,6 @@ g_Tk['bg'] = BG_COLOR
 
 var1 = IntVar()
 var2 = IntVar()
-searchText = StringVar()
 
 serverKey = "bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh/O8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA=="
 
@@ -39,20 +38,23 @@ def openAPItoXML(server, key, value):
         data = f.read(10000000).decode('utf-8') # 300000bytes 를 utf-8로 변환하여 읽어온다.  변환이 없을경우 unicode로 받아온다.
     return data
 
+# 상픔 정보 파싱
 def getParsingGoodsData(xmlData, motherData):
     doc = parseString(xmlData)
     goodsList = doc.getElementsByTagName(motherData)
     goodsSize = len(goodsList)
     goodslist = []
     global goodsContentData
-    goodsContentData = ""
+    goodsContentData = []
 
     for index in range(goodsSize):
-        mphms = goodsList[index].getElementsByTagName("goodName")
-        goodslist.append(str("상품명 : " + mphms[0].firstChild.data))
-        goodsContentData += str("상품명 : " + mphms[0].firstChild.data) + str('\n')
+        mphmsName = goodsList[index].getElementsByTagName("goodName")
+        mphmsId = goodsList[index].getElementsByTagName("goodId")
+        goodslist.append(str(mphmsName[0].firstChild.data + " (" + mphmsId[0].firstChild.data + ")"))
+        goodsContentData.append([str(mphmsName[0].firstChild.data), str(mphmsId[0].firstChild.data)])
     return goodslist
 
+# 판매점 정보 파싱
 def getParsingMartData(xmlData, motherData):
     doc = parseString(xmlData)
     MartList = doc.getElementsByTagName(motherData)
@@ -64,16 +66,51 @@ def getParsingMartData(xmlData, motherData):
     for index in range(MartSize):
         mphmsName = MartList[index].getElementsByTagName("entpName")
         mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
-        martlist.append(str("판매점 이름 : " + mphmsName[0].firstChild.data + ' \n' + "판매점 주소 : " + mphmsAddr[0].firstChild.data))
-        martContentData += (str("판매점 이름 : " + mphmsName[0].firstChild.data + ' \n' + "판매점 주소 : " + mphmsAddr[0].firstChild.data + '\n'))
-
-        # martlist.append(str("판매점 주소 : " + mphms[0].firstChild.data))
-        # martContentData += str("판매점 주소 : " + mphms[0].firstChild.data) + str('\n\n')
-
-        # mphms = MartList[index].getElementsByTagName("areaDetailCode")
-        # martlist.append(str("( " + mphms[0].firstChild.data) + str("  )"))
-        # martContentData += str("( " + mphms[0].firstChild.data) + str("  )\n")        
+        mphmsId = MartList[index].getElementsByTagName("entpId")
+        martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
+        martContentData += str(mphmsName[0].firstChild.data)
+        martContentData += str(mphmsAddr[0].firstChild.data)
+        martContentData += str(mphmsId[0].firstChild.data)
+      
     return martlist
+
+# 판매점 내 상품 정보 파싱
+
+def getParsingGMData(xmlData, motherData):
+    doc = parseString(xmlData)
+    gmList = doc.getElementsByTagName(motherData)
+    gmSize = len(gmList)
+    gmlist = []
+    global gmContentData, goodsContentData
+    gmContentData = ""
+
+    for index in range(gmSize):
+        mphmsId = gmList[index].getElementsByTagName("goodId")
+        mphmsPrice = gmList[index].getElementsByTagName("goodPrice")
+        for goods in goodsContentData:
+            if mphmsId[0].firstChild.data in goods:
+                print(goods)
+                gmName = str(goods[0])
+
+        gmlist.append(str(gmName + " : " + mphmsPrice[0].firstChild.data + "원"))
+        gmContentData += str(gmName)
+        gmContentData += str(mphmsPrice[0].firstChild.data)
+      
+    return gmlist
+
+def getParsingAllData():
+    global goodsReq, martReq
+
+    goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
+    goodsServerValue = ""
+    goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
+    goodsReq = (getParsingGoodsData(goodsAreaData, "item"))
+
+    MartServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey="
+    MartServerValue = ""
+    MartAreaData = openAPItoXML(MartServerUrl, serverKey, MartServerValue)
+    martReq = (getParsingMartData(MartAreaData, "iros.openapi.service.vo.entpInfoVO"))
+
 
 # DANAWANG~ text 함수
 def InitTopText():
@@ -109,7 +146,7 @@ def InitInputEntry():
 
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
-    global RenderText
+    global RenderText, goodsReq, martReq
     RenderText.delete(0, END)
 
     sText = InputEntry.get()
@@ -117,29 +154,18 @@ def SearchButtonAction():
 
    # 마트 검색 체크
     if var1.get() == 1 and var2.get() == 0:
-        MartServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey="
-        MartServerValue = ""
-        MartAreaData = openAPItoXML(MartServerUrl, serverKey, MartServerValue)
-        martReq = (getParsingMartData(MartAreaData, "iros.openapi.service.vo.entpInfoVO"))
         for item in martReq:
             if sText in item:
                 print(item)
-                RenderText.insert(0, item)
+                RenderText.insert(END, item) 
 
 
     # 상품 검색 체크
     if var2.get() == 1 and var1.get() == 0:
-        goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
-        goodsServerValue = ""
-        goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
-        goodsReq = (getParsingGoodsData(goodsAreaData, "item"))
         for item in goodsReq:
             if sText in item:
                 print(item)
-                RenderText.insert(0, item)  
-
-
-    #SearchResultRenderText()
+                RenderText.insert(END, item) 
 
 # 마트/상품 검색한 것 보여주는 함수
 def SearchResultRenderText():
@@ -169,7 +195,6 @@ def RenderGoodsImage():
     goodsLabel.place(x=15, y=125)
 
 # 지도, 메일, 텔레그램 이미지 넣은 버튼 만드는 함수
-
 def InitButton():
     mapImg = PhotoImage(file="map.png")
     Mapbtn = Button(g_Tk, image=mapImg)
@@ -190,20 +215,20 @@ def InitButton():
     Telegrambtn.place(x=387, y=525)
 
 # 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
-def InitRenderMartText():
-    global RenderMartText
+def InitRenderGMText():
+    global RenderGMText
 
     frame = Frame(g_Tk)
 
-    RenderMartTextYScrollbar = Scrollbar(frame)
-    RenderMartTextYScrollbar.pack(side = RIGHT, fill = Y)
+    RenderGMTextYScrollbar = Scrollbar(frame)
+    RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(frame, size=10, family='Consolas')
-    RenderMartText = Listbox(frame, width=26, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderMartTextYScrollbar.set)
-    RenderMartText.pack(side = LEFT)
+    RenderGMText = Listbox(frame, width=26, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    RenderGMText.pack(side = LEFT)
 
-    RenderMartTextYScrollbar['command'] = RenderMartText.yview
-    RenderMartTextYScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderGMTextYScrollbar['command'] = RenderGMText.yview
+    RenderGMTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
 
     frame.pack()
@@ -226,7 +251,7 @@ def InitInputMartEntry():
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(g_Tk, size=13, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택")
+    selectbtn = Button(g_Tk, width = 16, font=TempFont, text="판매점 선택", command = SelectButtonAction)
     selectbtn.pack()
     selectbtn.place(x=245, y=305)
 
@@ -235,6 +260,21 @@ def InitSbskButton():
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
+
+# 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
+def SelectButtonAction():
+    global RenderGMText
+    entpid = InputMartEntry.get()
+    gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
+    gmServerValue = "&goodInspectDay=" + "20100205" + "&entpId=" + "100" #urlencode(entpid)
+    gmAreaData = openAPItoXML(gmServerUrl, serverKey, gmServerValue)
+    gmReq = (getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
+    print(gmReq)
+    RenderGMText.insert(END, gmReq)
+
+# 장바구니 버튼 누르면 실행되는 함수
+def BskButtonAction():
+    pass
 
 #이메일창 띄우는 함수
 def SendEmailTK():
@@ -302,13 +342,14 @@ def SendEmail():
 
 
 InitTopText()
+getParsingAllData()
 MartSearchCheckBox()
 InitInputEntry()
 InitSearchButton()
 RenderGoodsImage()
 InitButton()
 SearchResultRenderText()
-InitRenderMartText()
+InitRenderGMText()
 InitInputMartEntry()
 InitSbskButton()
 
