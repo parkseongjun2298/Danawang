@@ -135,13 +135,13 @@ def InitSearchButton():
 
 # 마트/상품 검색 버튼
 def MartSearchCheckBox():
-    TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
+    TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
     chkbox = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1)
     chkbox2 = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
-    chkbox.place(x=26, y=60)
-    chkbox2.place(x=26, y=90)
+    chkbox.place(x=26, y=45)
+    chkbox2.place(x=26, y=70)
 
 # 마트/상품 검색 Entry
 def InitInputEntry():
@@ -184,14 +184,14 @@ def SearchResultRenderText():
     RenderTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(rframe, size=10, family='Consolas')
-    RenderText = Listbox(rframe, width=47, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextYScrollbar.set)
+    RenderText = Listbox(rframe, width=63, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextYScrollbar.set)
     RenderText.pack(side = TOP)
 
     RenderTextYScrollbar['command'] = RenderText.yview
     RenderTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     rframe.pack()
-    rframe.place(x = 118, y = 95)
+    rframe.place(x = 32, y = 95)
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
@@ -232,7 +232,7 @@ def InitRenderGMText():
     RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(frame, size=10, family='Consolas')
-    RenderGMText = Listbox(frame, width=26, height=23, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    RenderGMText = Listbox(frame, width=29, height=22, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
     RenderGMText.pack(side = LEFT)
 
     RenderGMTextYScrollbar['command'] = RenderGMText.yview
@@ -240,7 +240,7 @@ def InitRenderGMText():
 
 
     frame.pack()
-    frame.place(x = 7, y = 252)
+    frame.place(x = 7, y = 260)
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartEntry():
@@ -309,8 +309,7 @@ def ImageButtonAction():
         "Authorization" : "KakaoAK 67db11fcdbb05a32b9788d0ea29fe7f5"
     }
     data = {
-        "query" : tofind,
-        "sort" : "accuracy"
+        "query" : tofind
     }
 
     response = requests.post(url, headers=headers, data=data)
@@ -400,7 +399,7 @@ getParsingAllData()
 MartSearchCheckBox()
 InitInputEntry()
 InitSearchButton()
-RenderGoodsImage()
+#RenderGoodsImage()
 InitButton()
 SearchResultRenderText()
 InitRenderGMText()
