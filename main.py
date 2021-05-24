@@ -1,9 +1,7 @@
 from tkinter import *
 from tkinter import font
 import tkinter.messagebox
-from xml.dom.minidom import *
-import urllib.request
-import requests
+import parsing
 import json
 from PIL import Image, ImageTk
 
@@ -16,107 +14,6 @@ g_Tk['bg'] = BG_COLOR
 
 var1 = IntVar()
 var2 = IntVar()
-
-serverKey = "bsE5AeiHGFzKvS7n2oM6rZ8IQEOVLh/O8gKrORcpl3fl2ut8D2TfLcTIbYTmwFOvj3tCfdUBxigtsKCz16bNwA=="
-
-def base64_Encode(s):
-    return base64.b64encode(s.encode('utf-8'))
-
-def Base64_Decode(b):
-    return base64.b64decode(b).decode('utf-8')
-
-def urlencode(string):
-    return urllib.parse.quote(string)
-
-def urldecode(string):
-    return urllib.parse.quote(string)
-
-def openAPItoXML(server, key, value):
-    opener = urllib.request.build_opener()
-    opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36')]
-    # ↑ User-Agent를 입력하지 않을경우 naver.com 에서 정상적인 접근이 아닌것으로 판단하여 차단을 한다.
-    data = ""
-    urlData = server + key + value
-    with opener.open(urlData) as f:
-        data = f.read(10000000).decode('utf-8') # 300000bytes 를 utf-8로 변환하여 읽어온다.  변환이 없을경우 unicode로 받아온다.
-    return data
-
-# 상픔 정보 파싱
-def getParsingGoodsData(xmlData, motherData):
-    doc = parseString(xmlData)
-    goodsList = doc.getElementsByTagName(motherData)
-    goodsSize = len(goodsList)
-    goodslist = []
-    global goodsContentData, goodsNameId
-    goodsContentData = []
-    goodsNameId = {}
-
-    for index in range(goodsSize):
-        mphmsName = goodsList[index].getElementsByTagName("goodName")
-        mphmsId = goodsList[index].getElementsByTagName("goodId")
-        goodsNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
-        goodslist.append(str(mphmsName[0].firstChild.data + " (" + mphmsId[0].firstChild.data + ")"))
-        goodsContentData.append([str(mphmsName[0].firstChild.data), str(mphmsId[0].firstChild.data)])
-    return goodslist
-
-# 판매점 정보 파싱
-def getParsingMartData(xmlData, motherData):
-    doc = parseString(xmlData)
-    MartList = doc.getElementsByTagName(motherData)
-    MartSize = len(MartList)
-    martlist = []
-    global martContentData, martNameId
-    martContentData = ""
-    martNameId = {}
-
-    for index in range(MartSize):
-        mphmsName = MartList[index].getElementsByTagName("entpName")
-        mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
-        mphmsId = MartList[index].getElementsByTagName("entpId")
-        martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
-        martNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
-        martContentData += str(mphmsName[0].firstChild.data)
-        martContentData += str(mphmsAddr[0].firstChild.data)
-        martContentData += str(mphmsId[0].firstChild.data)
-      
-    return martlist
-
-# 판매점 내 상품 정보 파싱
-
-def getParsingGMData(xmlData, motherData):
-    doc = parseString(xmlData)
-    gmList = doc.getElementsByTagName(motherData)
-    gmSize = len(gmList)
-    gmlist = []
-    global gmContentData, goodsContentData
-    gmContentData = ""
-
-    for index in range(gmSize):
-        mphmsId = gmList[index].getElementsByTagName("goodId")
-        mphmsPrice = gmList[index].getElementsByTagName("goodPrice")
-        for goods in goodsContentData:
-            if mphmsId[0].firstChild.data in goods:
-                gmName = str(goods[0])
-
-        gmlist.append(str(gmName + " : " + mphmsPrice[0].firstChild.data + "원"))
-        gmContentData += str(gmName)
-        gmContentData += str(mphmsPrice[0].firstChild.data)
-      
-    return gmlist
-
-def getParsingAllData():
-    global goodsReq, martReq
-
-    goodsServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductInfoSvc.do?ServiceKey="
-    goodsServerValue = ""
-    goodsAreaData = openAPItoXML(goodsServerUrl, serverKey, goodsServerValue)
-    goodsReq = (getParsingGoodsData(goodsAreaData, "item"))
-
-    MartServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getStoreInfoSvc.do?ServiceKey="
-    MartServerValue = ""
-    MartAreaData = openAPItoXML(MartServerUrl, serverKey, MartServerValue)
-    martReq = (getParsingMartData(MartAreaData, "iros.openapi.service.vo.entpInfoVO"))
-
 
 # DANAWANG~ text 함수
 def InitTopText():
@@ -152,7 +49,9 @@ def InitInputEntry():
 
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
-    global RenderText, goodsReq, martReq
+    global RenderText
+    global parsing
+
     RenderText.delete(0, END)
 
     sText = InputEntry.get()
@@ -160,7 +59,7 @@ def SearchButtonAction():
 
    # 마트 검색 체크
     if var1.get() == 1 and var2.get() == 0:
-        for item in martReq:
+        for item in parsing.martReq:
             if sText in item:
                 print(item)
                 RenderText.insert(END, item) 
@@ -168,7 +67,7 @@ def SearchButtonAction():
 
     # 상품 검색 체크
     if var2.get() == 1 and var1.get() == 0:
-        for item in goodsReq:
+        for item in parsing.goodsReq:
             if sText in item:
                 print(item)
                 RenderText.insert(END, item) 
@@ -277,15 +176,16 @@ def InitShowImageButton():
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
-    global RenderGMText, martNameId
+    global RenderGMText
+    global parsing
     RenderGMText.delete(0, END)
 #    temp = InputMartEntry.get()
-    entpid = martNameId.get(InputMartEntry.get())
+    entpid = parsing.martNameId.get(InputMartEntry.get())
     print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
-    gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + urlencode(entpid)
-    gmAreaData = openAPItoXML(gmServerUrl, serverKey, gmServerValue)
-    gmReq = (getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
+    gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + parsing.urlencode(entpid)
+    gmAreaData = parsing.openAPItoXML(gmServerUrl, parsing.serverKey, gmServerValue)
+    gmReq = (parsing.getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
     print(gmReq)
     if gmReq == []:
         RenderGMText.insert(END, "해당 판매점은 검색할 수 없습니다.")
@@ -316,7 +216,7 @@ def ImageButtonAction():
         print("error! because ",  response.json())
     else:
         print(list(response.json().values())[0][0])
-        file_name = "{0}.gif".format(tofind)
+        file_name = "{0}.jpg".format(tofind)
         save_image(list(response.json().values())[0][0]['image_url'], file_name)
 
     goodsImage = ImageTk.PhotoImage(Image.open(file_name))
@@ -394,7 +294,7 @@ def SendEmail():
 
 
 InitTopText()
-getParsingAllData()
+parsing.getParsingAllData()
 MartSearchCheckBox()
 InitInputEntry()
 InitSearchButton()
