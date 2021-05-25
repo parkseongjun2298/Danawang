@@ -1,9 +1,10 @@
 from tkinter import *
 from tkinter import font
+from tkinter import ttk
 import tkinter.messagebox
-import parsing
-import json
 from PIL import Image, ImageTk
+import parsing
+import renderImage
 
 BG_COLOR = 'light blue'
 
@@ -15,6 +16,37 @@ g_Tk['bg'] = BG_COLOR
 var1 = IntVar()
 var2 = IntVar()
 
+notebook = tkinter.ttk.Notebook(g_Tk, width = 505, height = 600)
+style = ttk.Style()
+style.theme_create("yummy", parent = "alt", settings={
+    "TNotebook" : {"configure" :{"tabmargins": [2, 5, 2, 0], "background" : BG_COLOR } },
+        "TNotebook.Tab": {
+            "configure": {"padding": [5, 1], "background": "SteelBlue1" },
+            "map":       {"background": [("selected", "RoyalBlue1")],
+                          "expand": [("selected", [1, 1, 1, 0])] } } } )
+
+style.theme_use("yummy")
+
+note = ttk.Notebook(g_Tk)
+
+frame1 = ttk.Frame(note, width=505, height=500, style = "TNotebook")
+note.add(frame1, text="메인")
+
+frame2 = ttk.Frame(note, width=505, height=500, style = "TNotebook")
+note.add(frame2, text="장바구니")
+
+note.pack(expand=1, fill=BOTH, padx=5, pady=5)
+
+#notebook['background'] = 'royalblue'
+#notebook.pack(side=BOTTOM)
+
+# frame1 = Frame(g_Tk)
+# frame1['bg'] = BG_COLOR
+# notebook.add(frame1, text="메인")
+
+# frame2 = Frame(g_Tk)
+# notebook.add(frame2, text="장바구니")
+
 # DANAWANG~ text 함수
 def InitTopText():
     TempFont = font.Font(g_Tk, size=24, weight='bold', family='Consolas')
@@ -24,16 +56,16 @@ def InitTopText():
 
 # 검색 버튼
 def InitSearchButton():
-    TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
-    SearchButton = Button(g_Tk, font=TempFont, text="검색", command=SearchButtonAction)
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    SearchButton = Button(frame1, font=TempFont, text="검색", command=SearchButtonAction)
     SearchButton.pack()
     SearchButton.place(x=440, y=60)
 
 # 마트/상품 검색 버튼
 def MartSearchCheckBox():
-    TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
-    chkbox = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1)
-    chkbox2 = Checkbutton(g_Tk, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
+    TempFont = font.Font(frame1, size=11, weight='bold', family='Consolas')
+    chkbox = Checkbutton(frame1, font=TempFont, bg = BG_COLOR, text='마트 검색', variable=var1)
+    chkbox2 = Checkbutton(frame1, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
     chkbox.place(x=26, y=45)
@@ -42,8 +74,8 @@ def MartSearchCheckBox():
 # 마트/상품 검색 Entry
 def InitInputEntry():
     global InputEntry
-    TempFont = font.Font(g_Tk, size=11, weight='bold', family='Consolas')
-    InputEntry = Entry(g_Tk, font=TempFont, width=38, borderwidth=6, relief='ridge')
+    TempFont = font.Font(frame1, size=11, weight='bold', family='Consolas')
+    InputEntry = Entry(frame1, font=TempFont, width=38, borderwidth=6, relief='ridge')
     InputEntry.pack()
     InputEntry.place(x=120, y=60)
 
@@ -76,7 +108,7 @@ def SearchButtonAction():
 def SearchResultRenderText():
     global RenderText
 
-    rframe = Frame(g_Tk)
+    rframe = Frame(frame1)
 
     RenderTextYScrollbar = Scrollbar(rframe)
     RenderTextYScrollbar.pack(side = RIGHT, fill = Y)
@@ -95,7 +127,7 @@ def SearchResultRenderText():
 def RenderGoodsImage():
     global goodsLabel
     goodsImg = PhotoImage(file="defaultGoodsImage.png").subsample(3)
-    goodsLabel = Label(g_Tk, image=goodsImg)
+    goodsLabel = Label(frame1, image=goodsImg)
     goodsLabel.image = goodsImg
     goodsLabel.pack()
     goodsLabel.place(x=15, y=125)
@@ -103,19 +135,19 @@ def RenderGoodsImage():
 # 지도, 메일, 텔레그램 이미지 넣은 버튼 만드는 함수
 def InitButton():
     mapImg = PhotoImage(file="map.png")
-    Mapbtn = Button(g_Tk, image=mapImg)
+    Mapbtn = Button(frame1, image=mapImg)
     Mapbtn.image = mapImg
     Mapbtn.pack()
     Mapbtn.place(x=240, y=525)
 
     mailImg = PhotoImage(file="gmail.png").subsample(9, 9)
-    Mailbtn = Button(g_Tk, image=mailImg,command=SendEmailTK)
+    Mailbtn = Button(frame1, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
     Mailbtn.place(x=320, y=525)
 
     telegramImg = PhotoImage(file="telegram.png").subsample(4, 4)
-    Telegrambtn = Button(g_Tk, image=telegramImg)
+    Telegrambtn = Button(frame1, image=telegramImg)
     Telegrambtn.image = telegramImg
     Telegrambtn.pack()
     Telegrambtn.place(x=387, y=525)
@@ -124,53 +156,53 @@ def InitButton():
 def InitRenderGMText():
     global RenderGMText
 
-    frame = Frame(g_Tk)
+    gmframe = Frame(frame1)
 
-    RenderGMTextYScrollbar = Scrollbar(frame)
+    RenderGMTextYScrollbar = Scrollbar(gmframe)
     RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
-    TempFont = font.Font(frame, size=10, family='Consolas')
-    RenderGMText = Listbox(frame, width=29, height=22, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    TempFont = font.Font(gmframe, size=10, family='Consolas')
+    RenderGMText = Listbox(gmframe, width=29, height=22, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
     RenderGMText.pack(side = LEFT)
 
     RenderGMTextYScrollbar['command'] = RenderGMText.yview
     RenderGMTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
 
-    frame.pack()
-    frame.place(x = 7, y = 260)
+    gmframe.pack()
+    gmframe.place(x = 7, y = 260)
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartEntry():
     global InputMartEntry
 
-    TempFont = font.Font(g_Tk, size=12, weight='bold', family='Consolas')
-    MainText = Label(g_Tk, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    MainText = Label(frame1, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
     MainText.pack()
     MainText.place(x=245, y=252)
 
-    TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    InputMartEntry = Entry(g_Tk, font=TempFont, width=31, borderwidth=6, relief='ridge')
+    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
+    InputMartEntry = Entry(frame1, font=TempFont, width=31, borderwidth=6, relief='ridge')
     InputMartEntry.pack()
     InputMartEntry.place(x=245, y=273)
 
 # 장바구니 버튼
 def InitSbskButton():
-    TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 10, height=3, font=TempFont, text="판매점\n선택", command = SelectButtonAction)
+    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
+    selectbtn = Button(frame1, width = 10, height=3, font=TempFont, text="판매점\n선택", command = SelectButtonAction)
     selectbtn.pack()
     selectbtn.place(x=330, y=305)
 
     sbskImg = PhotoImage(file="장바구니.png").subsample(2)
-    sbskbtn = Button(g_Tk, image=sbskImg)
+    sbskbtn = Button(frame1, image=sbskImg)
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
 
 # 사진 보기 버튼
 def InitShowImageButton():
-    TempFont = font.Font(g_Tk, size=10, weight='bold', family='Consolas')
-    selectbtn = Button(g_Tk, width = 10, height=3, font=TempFont, text="사진\n보기", command = ImageButtonAction)
+    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
+    selectbtn = Button(frame1, width = 10, height=3, font=TempFont, text="사진\n보기", command = ImageButtonAction)
     selectbtn.pack()
     selectbtn.place(x=250, y=305)
 
@@ -194,34 +226,39 @@ def SelectButtonAction():
         RenderGMText.insert(END, gmReq[i])
 
 # 사진 보기 버튼 누르면 실행되는 함수
-def save_image(image_url, file_name):
-    img_response = requests.get(image_url)
-    if img_response.status_code == 200:
-        with open(file_name, "wb") as fp:
-            fp.write(img_response.content)
 
 def ImageButtonAction():
-    global goodsLabel
     tofind = "오리온 초코파이"
-    url = "https://dapi.kakao.com/v2/search/image"
-    headers = {
-        "Authorization" : "KakaoAK 67db11fcdbb05a32b9788d0ea29fe7f5"
-    }
-    data = {
-        "query" : tofind
-    }
+    renderImage.MakeImage(tofind)
+   
+    imagew = Tk()
+    imagew.title("Show Image")
 
-    response = requests.post(url, headers=headers, data=data)
-    if response.status_code != 200:
-        print("error! because ",  response.json())
-    else:
-        print(list(response.json().values())[0][0])
-        file_name = "{0}.jpg".format(tofind)
-        save_image(list(response.json().values())[0][0]['image_url'], file_name)
+    imagew.geometry('600x400')
 
-    goodsImage = ImageTk.PhotoImage(Image.open(file_name))
-    goodsLabel.configure(image=goodsImage)
-    goodsLabel.image = goodsImage
+    TempFont = font.Font(imagew, size=20, weight='bold', family='Consolas')
+    MainText = Label(imagew, font=TempFont,text="{0}의 이미지".format(tofind))
+    MainText.pack(side=TOP)
+    #MainText.place(x=5)
+
+    #newImageLabel = Label(imagew, width = 500, height = 350)
+    # goodsImage = ImageTk.PhotoImage(Image.open("map.png"))
+    # newImageLabel.configure(image=goodsImage)
+    # newImageLabel.image = goodsImage
+
+    # newImage.pack(side=LEFT)
+
+    img = ImageTk.PhotoImage(Image.open("{0}.gif".format(tofind)))
+    newImageLabel = Label(imagew, width = 500, height = 350, image = img)
+    newImage.pack(side=LEFT)
+    # newImageLabel.configure(image=img)
+    # newImageLabel.image = img
+
+    # goodsImage = ImageTk.PhotoImage(Image.open(file_name))
+    # goodsLabel.configure(image=goodsImage)
+    # goodsLabel.image = goodsImage
+
+    imagew.mainloop()
 
 
 # 장바구니 버튼 누르면 실행되는 함수
