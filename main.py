@@ -68,8 +68,8 @@ def MartSearchCheckBox():
     chkbox2 = Checkbutton(frame1, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
-    chkbox.place(x=26, y=45)
-    chkbox2.place(x=26, y=70)
+    chkbox.place(x=20, y=45)
+    chkbox2.place(x=20, y=70)
 
 # 마트/상품 검색 Entry
 def InitInputEntry():
@@ -105,7 +105,7 @@ def SearchButtonAction():
                 RenderText.insert(END, item) 
 
 # 마트/상품 검색한 것 보여주는 함수
-def SearchResultRenderText():
+def RenderSearchResultText():
     global RenderText
 
     rframe = Frame(frame1)
@@ -114,14 +114,14 @@ def SearchResultRenderText():
     RenderTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(rframe, size=10, family='Consolas')
-    RenderText = Listbox(rframe, width=63, height=9, borderwidth=6, relief='ridge', yscrollcommand=RenderTextYScrollbar.set)
+    RenderText = Listbox(rframe, width=65, height=9, borderwidth=4, relief='ridge', yscrollcommand=RenderTextYScrollbar.set)
     RenderText.pack(side = TOP)
 
     RenderTextYScrollbar['command'] = RenderText.yview
     RenderTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     rframe.pack()
-    rframe.place(x = 32, y = 95)
+    rframe.place(x = 10, y = 95)
 
 # 상품 이미지 관련 함수
 def RenderGoodsImage():
@@ -162,7 +162,7 @@ def InitRenderGMText():
     RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(gmframe, size=10, family='Consolas')
-    RenderGMText = Listbox(gmframe, width=29, height=22, borderwidth=6, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    RenderGMText = Listbox(gmframe, width=29, height=21, borderwidth=4, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
     RenderGMText.pack(side = LEFT)
 
     RenderGMTextYScrollbar['command'] = RenderGMText.yview
@@ -170,7 +170,7 @@ def InitRenderGMText():
 
 
     gmframe.pack()
-    gmframe.place(x = 7, y = 260)
+    gmframe.place(x = 7, y = 250)
 
 # 장바구니를 들고갈 마트 입력 Entry, 안내문 label
 def InitInputMartEntry():
@@ -179,7 +179,7 @@ def InitInputMartEntry():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     MainText = Label(frame1, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
     MainText.pack()
-    MainText.place(x=245, y=252)
+    MainText.place(x=245, y=248)
 
     TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
     InputMartEntry = Entry(frame1, font=TempFont, width=31, borderwidth=6, relief='ridge')
@@ -194,7 +194,7 @@ def InitSbskButton():
     selectbtn.place(x=330, y=305)
 
     sbskImg = PhotoImage(file="장바구니.png").subsample(2)
-    sbskbtn = Button(frame1, image=sbskImg)
+    sbskbtn = Button(frame1, image=sbskImg, command = BskButtonAction)
     sbskbtn.image = sbskImg
     sbskbtn.pack()
     sbskbtn.place(x=410, y=305)
@@ -210,6 +210,8 @@ def InitShowImageButton():
 def SelectButtonAction():
     global RenderGMText
     global parsing
+    global gmReq
+
     RenderGMText.delete(0, END)
 #    temp = InputMartEntry.get()
     entpid = parsing.martNameId.get(InputMartEntry.get())
@@ -225,8 +227,51 @@ def SelectButtonAction():
     for i in range(len(gmReq)):
         RenderGMText.insert(END, gmReq[i])
 
-# 사진 보기 버튼 누르면 실행되는 함수
 
+# 장바구니 버튼 누르면 실행되는 함수
+def BskButtonAction():
+    global gmReq, RenderGMText
+
+    selected = RenderGMText.curselection()
+    s = selected[0]
+    selectedGoods = gmReq[s]
+    print(selectedGoods)
+    RenderBskText.insert(END, selectedGoods)
+
+
+#-------------------------------------------------------------------------------------
+#                           frame2
+#-------------------------------------------------------------------------------------
+
+def initBskText():
+    TempFont = font.Font(frame2, size=14, weight='bold', family='Consolas')
+    MainText = Label(frame2, font=TempFont, text="[장바구니 리스트]", bg = BG_COLOR)
+    MainText.pack()
+    MainText.place(x=160, y=20)
+
+def RenderBskText():
+    global RenderBskText
+
+    bskframe = Frame(frame2)
+
+    RenderBskTextYScrollbar = Scrollbar(bskframe)
+    RenderBskTextYScrollbar.pack(side = RIGHT, fill = Y)
+
+    TempFont = font.Font(bskframe, size=10, family='Consolas')
+    RenderBskText = Listbox(bskframe, width=65, height=12, borderwidth=4, relief='ridge', yscrollcommand=RenderBskTextYScrollbar.set)
+    RenderBskText.pack(side = TOP)
+
+    RenderBskTextYScrollbar['command'] = RenderBskText.yview
+    RenderBskTextYScrollbar.pack(side=RIGHT, fill=BOTH)
+
+    bskframe.pack()
+    bskframe.place(x = 6, y = 60)
+
+#-------------------------------------------------------------------------------------
+#                          부가기능
+#-------------------------------------------------------------------------------------
+
+# 사진 보기 버튼 누르면 실행되는 함수
 def ImageButtonAction():
     tofind = "오리온 초코파이"
     renderImage.MakeImage(tofind)
@@ -259,11 +304,6 @@ def ImageButtonAction():
     # goodsLabel.image = goodsImage
 
     imagew.mainloop()
-
-
-# 장바구니 버튼 누르면 실행되는 함수
-def BskButtonAction():
-    pass
 
 #이메일창 띄우는 함수
 def SendEmailTK():
@@ -337,10 +377,13 @@ InitInputEntry()
 InitSearchButton()
 #RenderGoodsImage()
 InitButton()
-SearchResultRenderText()
+RenderSearchResultText()
 InitRenderGMText()
 InitInputMartEntry()
 InitShowImageButton()
 InitSbskButton()
+
+initBskText()
+RenderBskText()
 
 g_Tk.mainloop()
