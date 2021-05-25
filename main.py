@@ -162,7 +162,7 @@ def InitRenderGMText():
     RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(gmframe, size=10, family='Consolas')
-    RenderGMText = Listbox(gmframe, width=29, height=21, borderwidth=4, relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    RenderGMText = Listbox(gmframe, width=29, height=21, borderwidth=4, selectmode="extended", relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
     RenderGMText.pack(side = LEFT)
 
     RenderGMTextYScrollbar['command'] = RenderGMText.yview
@@ -243,7 +243,7 @@ def BskButtonAction():
 #                           frame2
 #-------------------------------------------------------------------------------------
 
-def initBskText():
+def InitBskText():
     TempFont = font.Font(frame2, size=14, weight='bold', family='Consolas')
     MainText = Label(frame2, font=TempFont, text="[장바구니 리스트]", bg = BG_COLOR)
     MainText.pack()
@@ -266,6 +266,21 @@ def RenderBskText():
 
     bskframe.pack()
     bskframe.place(x = 6, y = 60)
+
+# 장바구니 내 품목 선택 삭제
+def InitBskDelButton():
+    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
+    SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
+    SearchButton.pack()
+    SearchButton.place(x=200, y=250)
+
+def deleteBskGoods():
+    global RenderBskText
+
+    selected = RenderBskText.curselection()
+    delgoods = RenderBskText.index(selected[0])
+    RenderBskText.delete(delgoods)
+
 
 #-------------------------------------------------------------------------------------
 #                          부가기능
@@ -383,7 +398,8 @@ InitInputMartEntry()
 InitShowImageButton()
 InitSbskButton()
 
-initBskText()
+InitBskText()
 RenderBskText()
+InitBskDelButton()
 
 g_Tk.mainloop()
