@@ -243,12 +243,16 @@ def BskButtonAction():
     selected = RenderGMText.curselection()
     s = selected[0]
     selectedGoods = gmReq[s]
+    selectedGoodsName = parsing.gmContentData[0][s]
+    selectedGoodsPrice = int(parsing.gmContentData[1][s])
     
-    #selectedGoodsPrice = int(parsing.gmContentData[1][s])
+   
     
-    BskArr.insert(BskArrnum,gmReq[s])
-    #BskPriceArr.insert(BskArrnum,selectedGoodsPrice)
+    BskArr.insert(BskArrnum,selectedGoodsName)
+    BskPriceArr.insert(BskArrnum,selectedGoodsPrice)
     print(selectedGoods)
+    print(selectedGoodsName)
+    print(selectedGoodsPrice)
     inNum+=1
     BskArrnum+=1
     RenderBskText.insert(END, selectedGoods)
@@ -321,15 +325,15 @@ class MainGUI:
         
         ch=inNum
         #counts[ch]=판매가격 가져오기
-        counts[ch]=randint(0,1000)
+        counts[ch]=BskPriceArr[ch]
         barwidth=(width-20)/10
         maxcount=int(max(counts))
         for i in range(10):
             self.canvas.create_rectangle(10+i*barwidth, height-(height-10)*counts[i]/maxcount, 10+(i+1)*barwidth, height-10, tags='histogram')
             #text=상품이름
-            self.canvas.create_text(20+i*barwidth+10,height-5,text=BskArr[i],tags='histogram')
+            self.canvas.create_text(20+i*barwidth+10,height-5,text=i+1,tags='histogram')
             #text=str(counts[i]) 말고 판매가격 
-            self.canvas.create_text(20+i*barwidth+10,height-(height-10)*counts[i]/maxcount-5,text=BskArr[i],tags='histogram')
+            self.canvas.create_text(20+i*barwidth+10,height-(height-10)*counts[i]/maxcount-5,text=BskPriceArr[i],tags='histogram')
             
     def __init__(self):
         
