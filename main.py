@@ -7,6 +7,10 @@ from PIL import Image, ImageTk
 import parsing
 import renderImage
 from random import*
+import smtplib
+
+from email.mime.text import MIMEText
+
 
 BG_COLOR = 'light blue'
 
@@ -291,7 +295,7 @@ def InitBskDelButton():
     TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
     SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
     SearchButton.pack()
-    SearchButton.place(x=200, y=250)
+    SearchButton.place(x=180, y=263)
     
 
 def deleteBskGoods():
@@ -418,14 +422,15 @@ def SendEmail():
     import mysmtplib
     from email.mime.base import MIMEBase
     from email.mime.text import MIMEText
+    global BskArr,BskArrnum,BskPriceArr
     GetEmailLabel=EmailLabel.get()
 
     # global value
     host = "smtp.gmail.com"  # Gmail STMP 서버 주소.
     port = "587"
-    htmlFileName = "totalGoodsInfo.xml"
+    #htmlFileName = "totalGoodsInfo.xml"
 
-    senderAddr = "dltnals5809@gmail.com" # 보내는 사람 email 주소.
+    senderAddr = "bout3298@gmail.com" # 보내는 사람 email 주소.
     recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
 
     msg = MIMEBase("multipart", "alternative")
@@ -434,20 +439,34 @@ def SendEmail():
     msg['To'] = recipientAddr
 
     # MIME 문서를 생성합니다.
-    htmlFD = open(htmlFileName, 'rb')
-    HtmlPart = MIMEText(htmlFD.read(), 'html', _charset='UTF-8')
-    htmlFD.close()
+    #htmlFD = open(htmlFileName, 'rb')
+    #HtmlPart = MIMEText(htmlFD.read(), 'html', _charset='UTF-8')
+    #htmlFD.close()
 
     # 만들었던 mime을 MIMEBase에 첨부 시킨다.
-    msg.attach(HtmlPart)
+    #msg.attach(HtmlPart)
+    Gmailtext=""
+    GmailtextPrice=""
+    for i in BskArr:
+        Gmailtext+=str(i)
+    content=Gmailtext
 
+    for i in BskPriceArr:
+        GmailtextPrice+=str(i)
+    contentprice=GmailtextPrice
+
+    
     # 메일을 발송한다.
     s = mysmtplib.MySMTP(host, port)
     # s.set_debuglevel(1)        # 디버깅이 필요할 경우 주석을 푼다.
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("dltnals5809@gmail.com","비밀번호")
+    s.login("bout3298@gmail.com","jj357741")
+    msg=MIMEText(str(content)+str(contentprice))
+    msg['Subject'] = '장바구니 내용입니다.'
+
+
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
 
