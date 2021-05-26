@@ -147,19 +147,19 @@ def InitButton():
     Mapbtn = Button(frame1, image=mapImg)
     Mapbtn.image = mapImg
     Mapbtn.pack()
-    Mapbtn.place(x=240, y=525)
+    Mapbtn.place(x=250, y=525)
 
-    mailImg = PhotoImage(file="gmail.png").subsample(9, 9)
+    mailImg = PhotoImage(file="gmail.png").subsample(5,8)
     Mailbtn = Button(frame1, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
-    Mailbtn.place(x=320, y=525)
+    Mailbtn.place(x=367, y=360)
 
     telegramImg = PhotoImage(file="telegram.png").subsample(4, 4)
     Telegrambtn = Button(frame1, image=telegramImg)
     Telegrambtn.image = telegramImg
     Telegrambtn.pack()
-    Telegrambtn.place(x=387, y=525)
+    Telegrambtn.place(x=325, y=528)
 
 # 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
 def InitRenderGMText():
@@ -197,21 +197,20 @@ def InitInputMartEntry():
 
 # 장바구니 버튼
 def InitSbskButton():
-    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 10, height=3, font=TempFont, text="판매점\n선택", command = SelectButtonAction)
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction)
     selectbtn.pack()
-    selectbtn.place(x=330, y=305)
+    selectbtn.place(x=365, y=305)
 
-    sbskImg = PhotoImage(file="장바구니.png").subsample(2)
-    sbskbtn = Button(frame1, image=sbskImg, command = BskButtonAction)
-    sbskbtn.image = sbskImg
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    sbskbtn = Button(frame1, width=11, height=3, font = TempFont, text="장바구니담기!", command = BskButtonAction)
     sbskbtn.pack()
-    sbskbtn.place(x=410, y=305)
+    sbskbtn.place(x=250, y=360)
 
 # 사진 보기 버튼
 def InitShowImageButton():
-    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 10, height=3, font=TempFont, text="사진\n보기", command = ImageButtonAction)
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction)
     selectbtn.pack()
     selectbtn.place(x=250, y=305)
 
@@ -236,9 +235,10 @@ def SelectButtonAction():
     for i in range(len(gmReq)):
         RenderGMText.insert(END, gmReq[i])
 
-BskArr=[0]*10
-BskArrnum=0
-BskPriceArr=[0]*10
+BskArr=[]
+BskArrnum = 0
+BskPriceArr=[]
+
 # 장바구니 버튼 누르면 실행되는 함수
 def BskButtonAction():
     global gmReq, RenderGMText, parsing
@@ -250,17 +250,15 @@ def BskButtonAction():
     selectedGoodsName = parsing.gmContentData[0][s]
     selectedGoodsPrice = int(parsing.gmContentData[1][s])
     
-   
-    
-    BskArr.insert(BskArrnum,selectedGoodsName)
-    BskPriceArr.insert(BskArrnum,selectedGoodsPrice)
+    BskArr.append(selectedGoodsName)
+    BskPriceArr.append(selectedGoodsPrice)
     print(selectedGoods)
     print(selectedGoodsName)
     print(selectedGoodsPrice)
     inNum+=1
     BskArrnum+=1
-    RenderBskText.insert(END, selectedGoods)
-    MainGUI()
+    RenderBskText.insert(END, str("[{0}] ".format(BskArrnum)) + selectedGoods)
+    MainGUI(BskArrnum)
 
 
 #-------------------------------------------------------------------------------------
@@ -290,61 +288,61 @@ def RenderBskText():
     bskframe.pack()
     bskframe.place(x = 6, y = 60)
 
-# 장바구니 내 품목 선택 삭제
-def InitBskDelButton():
-    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
-    SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
-    SearchButton.pack()
-    SearchButton.place(x=180, y=263)
+# # 장바구니 내 품목 선택 삭제
+# def InitBskDelButton():
+#     TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
+#     SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
+#     SearchButton.pack()
+#     SearchButton.place(x=180, y=263)
     
 
-def deleteBskGoods():
-    global RenderBskText
-    global inNum
-    global BskArr,BskArrnum
+# def deleteBskGoods():
+#     global RenderBskText
+#     global inNum
+#     global BskArr, BskPriceArr, BskArrnum
 
-    selected = RenderBskText.curselection()
-    delgoods = RenderBskText.index(selected[0])
-    RenderBskText.delete(delgoods)
-    inNum-=1
-    #선택한거 배열에서  지우기
-    BskArrnum-=1
-    
+#     selected = RenderBskText.curselection()
+#     delgoods = RenderBskText.index(selected[0])
+#     RenderBskText.delete(delgoods)
+#     inNum-=1
+#     #선택한거 배열에서  지우기
+#     BskArrnum-=1
+#     del BskArr[selected[0]]
+#     del BskPriceArr[selected[0]]
+#     MainGUI(selected[0])
 
 width=450
 height=200
 
-counts=[0]*10
+counts=[]
+
 #10말고 장바구니안 상품개수만큼
 class MainGUI:
-    def displayhistogram(self):
+    def displayhistogram(self, cnt):
         global gmReq, RenderGMText
         global RenderBskText
         global inNum
         global BskArr,BskArrnum,BskPriceArr
         self.canvas.delete('histogram')
         
-        
-        
-        
-        ch=inNum
+        ch=len(BskArr) - 1
         #counts[ch]=판매가격 가져오기
-        counts[ch]=BskPriceArr[ch]
-        barwidth=(width-20)/10
+        counts.append(BskPriceArr[cnt - 1])
+        barwidth=(width-20)/len(BskArr)
         maxcount=int(max(counts))
-        for i in range(10):
-            self.canvas.create_rectangle(10+i*barwidth, height-(height-10)*counts[i]/maxcount, 10+(i+1)*barwidth, height-10, tags='histogram')
+        for i in range(len(BskArr)):
+            self.canvas.create_rectangle(10+i*barwidth, height-(height-10)*counts[i]/maxcount, 10+(i+1)*barwidth, height-10, tags='histogram', fill=BG_COLOR)
             #text=상품이름
             self.canvas.create_text(20+i*barwidth+10,height-5,text=i+1,tags='histogram')
             #text=str(counts[i]) 말고 판매가격 
             self.canvas.create_text(20+i*barwidth+10,height-(height-10)*counts[i]/maxcount-5,text=BskPriceArr[i],tags='histogram')
             
-    def __init__(self):
+    def __init__(self, cnt):
         
         self.canvas=Canvas(frame2,width=width,height=height,bg='white')
         self.canvas.pack()
         self.canvas.place(x=22.5,y=350)
-        self.displayhistogram()
+        self.displayhistogram(cnt)
         
            
 
@@ -430,13 +428,8 @@ def SendEmail():
     port = "587"
     #htmlFileName = "totalGoodsInfo.xml"
 
-    senderAddr = "bout3298@gmail.com" # 보내는 사람 email 주소.
+    senderAddr = "dltnals5809@gmail.com" # 보내는 사람 email 주소.
     recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
-
-    msg = MIMEBase("multipart", "alternative")
-    msg['Subject'] = "장바구니 내용"
-    msg['From'] = senderAddr
-    msg['To'] = recipientAddr
 
     # MIME 문서를 생성합니다.
     #htmlFD = open(htmlFileName, 'rb')
@@ -446,26 +439,25 @@ def SendEmail():
     # 만들었던 mime을 MIMEBase에 첨부 시킨다.
     #msg.attach(HtmlPart)
     Gmailtext=""
-    GmailtextPrice=""
-    for i in BskArr:
-        Gmailtext+=str(i)
-    content=Gmailtext
 
-    for i in BskPriceArr:
-        GmailtextPrice+=str(i)
-    contentprice=GmailtextPrice
+    for i in range(len(BskArr)):
+        Gmailtext += str("[{0}] {1} : {2}원\n\n".format(i+1, BskArr[i], BskPriceArr[i]))
 
-    
+    #msg = MIMEBase("multipart", "alternative")
+    msg = MIMEText(Gmailtext)
+    msg['Subject'] = "장바구니 내용"
+    msg['From'] = senderAddr
+    msg['To'] = recipientAddr
+
+    print(msg)
+
     # 메일을 발송한다.
     s = mysmtplib.MySMTP(host, port)
     # s.set_debuglevel(1)        # 디버깅이 필요할 경우 주석을 푼다.
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("bout3298@gmail.com","jj357741")
-    msg=MIMEText(str(content)+str(contentprice))
-    msg['Subject'] = '장바구니 내용입니다.'
-
+    s.login("dltnals5809@gmail.com","sjs928750123!")
 
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
@@ -486,7 +478,7 @@ InitSbskButton()
 
 InitBskText()
 RenderBskText()
-InitBskDelButton()
+# InitBskDelButton()
 
 
 
