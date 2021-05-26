@@ -1,3 +1,4 @@
+
 from tkinter import *
 from tkinter import font
 from tkinter import ttk
@@ -5,6 +6,7 @@ import tkinter.messagebox
 from PIL import Image, ImageTk
 import parsing
 import renderImage
+from random import*
 
 BG_COLOR = 'light blue'
 
@@ -36,6 +38,9 @@ frame2 = ttk.Frame(note, width=505, height=500, style = "TNotebook")
 note.add(frame2, text="장바구니")
 
 note.pack(expand=1, fill=BOTH, padx=5, pady=5)
+
+global inNum
+inNum=-1
 
 #notebook['background'] = 'royalblue'
 #notebook.pack(side=BOTTOM)
@@ -227,16 +232,27 @@ def SelectButtonAction():
     for i in range(len(gmReq)):
         RenderGMText.insert(END, gmReq[i])
 
-
+BskArr=[0]*10
+BskArrnum=0
+BskPriceArr=[0]*10
 # 장바구니 버튼 누르면 실행되는 함수
 def BskButtonAction():
-    global gmReq, RenderGMText
-
+    global gmReq, RenderGMText, parsing
+    global inNum
+    global BskArr,BskArrnum,BskPriceArr
     selected = RenderGMText.curselection()
     s = selected[0]
     selectedGoods = gmReq[s]
+    
+    #selectedGoodsPrice = int(parsing.gmContentData[1][s])
+    
+    BskArr.insert(BskArrnum,gmReq[s])
+    #BskPriceArr.insert(BskArrnum,selectedGoodsPrice)
     print(selectedGoods)
+    inNum+=1
+    BskArrnum+=1
     RenderBskText.insert(END, selectedGoods)
+    MainGUI()
 
 
 #-------------------------------------------------------------------------------------
@@ -251,7 +267,6 @@ def InitBskText():
 
 def RenderBskText():
     global RenderBskText
-
     bskframe = Frame(frame2)
 
     RenderBskTextYScrollbar = Scrollbar(bskframe)
@@ -273,13 +288,61 @@ def InitBskDelButton():
     SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
     SearchButton.pack()
     SearchButton.place(x=200, y=250)
+    
 
 def deleteBskGoods():
     global RenderBskText
+    global inNum
+    global BskArr,BskArrnum
 
     selected = RenderBskText.curselection()
     delgoods = RenderBskText.index(selected[0])
     RenderBskText.delete(delgoods)
+    inNum-=1
+    #선택한거 배열에서  지우기
+    BskArrnum-=1
+    
+
+width=450
+height=200
+
+counts=[0]*10
+#10말고 장바구니안 상품개수만큼
+class MainGUI:
+    def displayhistogram(self):
+        global gmReq, RenderGMText
+        global RenderBskText
+        global inNum
+        global BskArr,BskArrnum,BskPriceArr
+        self.canvas.delete('histogram')
+        
+        
+        
+        
+        ch=inNum
+        #counts[ch]=판매가격 가져오기
+        counts[ch]=randint(0,1000)
+        barwidth=(width-20)/10
+        maxcount=int(max(counts))
+        for i in range(10):
+            self.canvas.create_rectangle(10+i*barwidth, height-(height-10)*counts[i]/maxcount, 10+(i+1)*barwidth, height-10, tags='histogram')
+            #text=상품이름
+            self.canvas.create_text(20+i*barwidth+10,height-5,text=BskArr[i],tags='histogram')
+            #text=str(counts[i]) 말고 판매가격 
+            self.canvas.create_text(20+i*barwidth+10,height-(height-10)*counts[i]/maxcount-5,text=BskArr[i],tags='histogram')
+            
+    def __init__(self):
+        
+        self.canvas=Canvas(frame2,width=width,height=height,bg='white')
+        self.canvas.pack()
+        self.canvas.place(x=22.5,y=350)
+        self.displayhistogram()
+        
+           
+
+
+
+    
 
 
 #-------------------------------------------------------------------------------------
@@ -401,5 +464,7 @@ InitSbskButton()
 InitBskText()
 RenderBskText()
 InitBskDelButton()
+
+
 
 g_Tk.mainloop()
