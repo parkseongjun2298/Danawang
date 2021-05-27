@@ -153,7 +153,7 @@ def InitButton():
     Mailbtn = Button(frame1, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
-    Mailbtn.place(x=367, y=360)
+    Mailbtn.place(x=367, y=320)
 
     telegramImg = PhotoImage(file="telegram.png").subsample(4, 4)
     Telegrambtn = Button(frame1, image=telegramImg)
@@ -181,49 +181,40 @@ def InitRenderGMText():
     gmframe.pack()
     gmframe.place(x = 7, y = 250)
 
-# 장바구니를 들고갈 마트 입력 Entry, 안내문 label
-def InitInputMartEntry():
-    global InputMartEntry
-
-    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    MainText = Label(frame1, font=TempFont, bg = BG_COLOR, text="판매점 이름을 입력하세요")
-    MainText.pack()
-    MainText.place(x=245, y=248)
-
-    TempFont = font.Font(frame1, size=10, weight='bold', family='Consolas')
-    InputMartEntry = Entry(frame1, font=TempFont, width=31, borderwidth=6, relief='ridge')
-    InputMartEntry.pack()
-    InputMartEntry.place(x=245, y=273)
-
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction)
     selectbtn.pack()
-    selectbtn.place(x=365, y=305)
+    selectbtn.place(x=365, y=260)
 
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     sbskbtn = Button(frame1, width=11, height=3, font = TempFont, text="장바구니담기!", command = BskButtonAction)
     sbskbtn.pack()
-    sbskbtn.place(x=250, y=360)
+    sbskbtn.place(x=250, y=320)
 
 # 사진 보기 버튼
 def InitShowImageButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction)
     selectbtn.pack()
-    selectbtn.place(x=250, y=305)
+    selectbtn.place(x=250, y=260)
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
-    global RenderGMText
+    global RenderGMText, RenderText, gmReq
     global parsing
     global gmReq
 
+    selected = RenderText.curselection()
+    s = selected[0]
+    entpid = parsing.martContentData[2][s]
+    print(entpid)
+
     RenderGMText.delete(0, END)
 #    temp = InputMartEntry.get()
-    entpid = parsing.martNameId.get(InputMartEntry.get())
-    print(entpid)
+    # entpid = parsing.martNameId.get(entpid)
+    # print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
     gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + parsing.urlencode(entpid)
     gmAreaData = parsing.openAPItoXML(gmServerUrl, parsing.serverKey, gmServerValue)
@@ -288,28 +279,28 @@ def RenderBskText():
     bskframe.pack()
     bskframe.place(x = 6, y = 60)
 
-# # 장바구니 내 품목 선택 삭제
-# def InitBskDelButton():
-#     TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
-#     SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
-#     SearchButton.pack()
-#     SearchButton.place(x=180, y=263)
+# 장바구니 내 품목 선택 삭제
+def InitBskDelButton():
+    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
+    SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
+    SearchButton.pack()
+    SearchButton.place(x=180, y=263)
     
 
-# def deleteBskGoods():
-#     global RenderBskText
-#     global inNum
-#     global BskArr, BskPriceArr, BskArrnum
+def deleteBskGoods():
+    global RenderBskText
+    global inNum
+    global BskArr, BskPriceArr, BskArrnum
 
-#     selected = RenderBskText.curselection()
-#     delgoods = RenderBskText.index(selected[0])
-#     RenderBskText.delete(delgoods)
-#     inNum-=1
-#     #선택한거 배열에서  지우기
-#     BskArrnum-=1
-#     del BskArr[selected[0]]
-#     del BskPriceArr[selected[0]]
-#     MainGUI(selected[0])
+    selected = RenderBskText.curselection()
+    delgoods = RenderBskText.index(selected[0])
+    RenderBskText.delete(delgoods)
+    inNum-=1
+    #선택한거 배열에서  지우기
+    BskArrnum-=1
+    del BskArr[selected[0]]
+    del BskPriceArr[selected[0]]
+    MainGUI(selected[0])
 
 width=450
 height=200
@@ -345,19 +336,17 @@ class MainGUI:
         self.displayhistogram(cnt)
         
            
-
-
-
-    
-
-
 #-------------------------------------------------------------------------------------
 #                          부가기능
 #-------------------------------------------------------------------------------------
 
 # 사진 보기 버튼 누르면 실행되는 함수
 def ImageButtonAction():
-    tofind = "오리온 초코파이"
+    global RenderGMText, parsing
+    s = RenderGMText.curselection()
+    tofind = parsing.gmContentData[0][s[0]]
+    print(tofind)
+
     renderImage.MakeImage(tofind)
    
     imagew = Tk()
@@ -377,11 +366,19 @@ def ImageButtonAction():
 
     # newImage.pack(side=LEFT)
 
-    img = ImageTk.PhotoImage(Image.open("{0}.gif".format(tofind)))
-    newImageLabel = Label(imagew, width = 500, height = 350, image = img)
-    newImage.pack(side=LEFT)
-    # newImageLabel.configure(image=img)
+    image = Image.open("{0}.gif".format(tofind))
+    image = image.resize((20, 20))
+    image = ImageTk.PhotoImage(image)
+
+    canv = Canvas(imagew, width=80, height=80, bg='white')
+    canv.pack()
+    
+    img = PhotoImage(file="{0}.gif".format(tofind))
+
+    canv.create_image(20,20, anchor=NW, image=img)
+    # newImageLabel = Label(imagew, width = 500, height = 350, image = img)
     # newImageLabel.image = img
+    # newImageLabel.pack(side=LEFT)
 
     # goodsImage = ImageTk.PhotoImage(Image.open(file_name))
     # goodsLabel.configure(image=goodsImage)
@@ -472,13 +469,12 @@ InitSearchButton()
 InitButton()
 RenderSearchResultText()
 InitRenderGMText()
-InitInputMartEntry()
 InitShowImageButton()
 InitSbskButton()
 
 InitBskText()
 RenderBskText()
-# InitBskDelButton()
+InitBskDelButton()
 
 
 

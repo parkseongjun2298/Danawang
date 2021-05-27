@@ -51,7 +51,7 @@ def getParsingMartData(xmlData, motherData):
     MartSize = len(MartList)
     martlist = []
     global martContentData, martNameId
-    martContentData = ""
+    martContentData = [[] for i in range(3)]
     martNameId = {}
 
     for index in range(MartSize):
@@ -60,16 +60,13 @@ def getParsingMartData(xmlData, motherData):
         mphmsId = MartList[index].getElementsByTagName("entpId")
         martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
         martNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
-        martContentData += str(mphmsName[0].firstChild.data)
-        martContentData += str(mphmsAddr[0].firstChild.data)
-        martContentData += str(mphmsId[0].firstChild.data)
+        martContentData[0].append(str(mphmsName[0].firstChild.data))
+        martContentData[1].append(str(mphmsAddr[0].firstChild.data))
+        martContentData[2].append(str(mphmsId[0].firstChild.data))
       
     return martlist
 
 # 판매점 내 상품 정보 파싱
-
-
-
 def getParsingGMData(xmlData, motherData):
     global goodsContentData, gmContentData
     doc = parseString(xmlData)
@@ -90,7 +87,6 @@ def getParsingGMData(xmlData, motherData):
         gmContentData[1].append(mphmsPrice[0].firstChild.data)
 
     return gmlist
-
 
 
 
