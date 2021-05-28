@@ -238,7 +238,8 @@ BskPriceArr=[]
 def BskButtonAction():
     global gmReq, RenderGMText, parsing
     global inNum
-    global BskArr,BskArrnum,BskPriceArr
+    global BskArr,BskArrnum,BskPriceArr, selectedGoodsName, selectedGoodsPrice
+
     selected = RenderGMText.curselection()
     s = selected[0]
     selectedGoods = gmReq[s]
@@ -252,8 +253,8 @@ def BskButtonAction():
     print(selectedGoodsPrice)
     inNum+=1
     BskArrnum+=1
-    RenderBskText.insert(END, str("[{0}] ".format(BskArrnum)) + selectedGoods)
-    MainGUI(BskArrnum)
+    RenderBskText.insert(END, selectedGoods)
+    HistogramGui()
 
 
 #-------------------------------------------------------------------------------------
@@ -294,51 +295,50 @@ def InitBskDelButton():
 def deleteBskGoods():
     global RenderBskText
     global inNum
-    global BskArr, BskPriceArr, BskArrnum
+    global BskArr, BskPriceArr, BskArrnum, selectedGoodsName, selectedGoodsPrice
 
     selected = RenderBskText.curselection()
+    s = selected[0]
     delgoods = RenderBskText.index(selected[0])
-    RenderBskText.delete(delgoods)
-    inNum-=1
-    #선택한거 배열에서  지우기
-    BskArrnum-=1
-    del BskArr[selected[0]]
-    del BskPriceArr[selected[0]]
-    MainGUI(selected[0])
 
-width=450
-height=200
+    inNum-=1
+    BskArrnum-=1
+    del BskArr[s]
+    del BskPriceArr[s]
+
+    RenderBskText.delete(delgoods)
+
+    HistogramGui()
+
+c_width=450
+c_height=200
 
 counts=[]
+        
+def HistogramGui():
+    canvas = Canvas(frame2, width = c_width, height = c_height, bg = BG_COLOR)
+    canvas.pack()
+    canvas.place(x = 22.5, y = 350)
 
-#10말고 장바구니안 상품개수만큼
-class MainGUI:
-    def displayhistogram(self, cnt):
-        global gmReq, RenderGMText
-        global RenderBskText
-        global inNum
-        global BskArr,BskArrnum,BskPriceArr
-        self.canvas.delete('histogram')
-        
-        ch=len(BskArr) - 1
-        #counts[ch]=판매가격 가져오기
-        counts.append(BskPriceArr[cnt - 1])
-        barwidth=(width-20)/len(BskArr)
-        maxcount=int(max(counts))
-        for i in range(len(BskArr)):
-            self.canvas.create_rectangle(10+i*barwidth, height-(height-10)*counts[i]/maxcount, 10+(i+1)*barwidth, height-10, tags='histogram', fill=BG_COLOR)
-            #text=상품이름
-            self.canvas.create_text(20+i*barwidth+10,height-5,text=i+1,tags='histogram')
-            #text=str(counts[i]) 말고 판매가격 
-            self.canvas.create_text(20+i*barwidth+10,height-(height-10)*counts[i]/maxcount-5,text=BskPriceArr[i],tags='histogram')
-            
-    def __init__(self, cnt):
-        
-        self.canvas=Canvas(frame2,width=width,height=height,bg='white')
-        self.canvas.pack()
-        self.canvas.place(x=22.5,y=350)
-        self.displayhistogram(cnt)
-        
+    y_stretch = 4
+    y_gap = 10
+    x_stretch = 10
+    x_width = 30
+    x_gap = 20
+
+    print(BskPriceArr)
+
+    for x, y in enumerate(BskPriceArr):
+        # calculate reactangle coordinates
+        x0 = x * x_stretch + x * x_width + x_gap
+        y0 = c_height - (y / 300 * y_stretch + y_gap)
+        x1 = x * x_stretch + x * x_width + x_width + x_gap
+        y1 = c_height - y_gap
+        # Here we draw the bar
+        canvas.create_rectangle(x0, y0, x1, y1, fill="RoyalBlue1")
+        canvas.create_text(x0+2, y0, anchor=SW, text=str(y))
+        # 내역 삭제하면 인덱스는 그대로인데 (생성 당시 인덱스를 넣어주기 때문) 삭제되면 히스토그램에는 삭제된것 그대로 반영
+        canvas.create_text(x0+2, y1+15, anchor=SW, text=str(x+1))
            
 #-------------------------------------------------------------------------------------
 #                          부가기능
