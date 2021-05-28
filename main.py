@@ -92,25 +92,29 @@ def InitInputEntry():
 def SearchButtonAction():
     global RenderText
     global parsing
+    global martSelectedData
 
     RenderText.delete(0, END)
 
     sText = InputEntry.get()
     s = []
+    martSelectedData = [[] for i in range(3)]
 
    # 마트 검색 체크
     if var1.get() == 1 and var2.get() == 0:
-        for item in parsing.martReq:
-            if sText in item:
-                print(item)
-                RenderText.insert(END, item) 
+        for i in range(len(parsing.martContentData[0])):
+            if sText in parsing.martContentData[0][i] or sText in parsing.martContentData[1][i]:
+                martSelectedData[0].append(parsing.martContentData[0][i])
+                martSelectedData[1].append(parsing.martContentData[1][i])
+                martSelectedData[2].append(parsing.martContentData[2][i])
+                textMessage = str("이름 : " + parsing.martContentData[0][i] + "  위치 : " + parsing.martContentData[1][i] + "\n")
+                RenderText.insert(END, textMessage) 
 
 
     # 상품 검색 체크
     if var2.get() == 1 and var1.get() == 0:
         for item in parsing.goodsReq:
             if sText in item:
-                print(item)
                 RenderText.insert(END, item) 
 
 # 마트/상품 검색한 것 보여주는 함수
@@ -202,14 +206,14 @@ def InitShowImageButton():
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
-    global RenderGMText, RenderText, gmReq
+    global RenderGMText, RenderText, gmReq, entpname, martSelectedData
     global parsing
-    global gmReq
 
     selected = RenderText.curselection()
     s = selected[0]
-    entpid = parsing.martContentData[2][s]
-    print(entpid)
+    entpid = martSelectedData[2][s]
+    entpname = martSelectedData[0][s]
+    print(entpid, entpname)
 
     RenderGMText.delete(0, END)
 #    temp = InputMartEntry.get()
@@ -219,7 +223,7 @@ def SelectButtonAction():
     gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + parsing.urlencode(entpid)
     gmAreaData = parsing.openAPItoXML(gmServerUrl, parsing.serverKey, gmServerValue)
     gmReq = (parsing.getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
-    print(gmReq)
+    #print(gmReq)
     if gmReq == []:
         RenderGMText.insert(END, "해당 판매점은 검색할 수 없습니다.")
         RenderGMText.insert(END, "다른 판매점을 선택해주세요!\n")
@@ -391,7 +395,7 @@ def SendEmailTK():
     nw = Tk()
     nw.title("Send Email")
 
-    nw.geometry('300x300+300+100')
+    nw.geometry('300x150+400+300')
 
     TempFont = font.Font(nw, size=20, weight='bold', family='Consolas')
     MainText = Label(nw, font=TempFont,text="이메일을 입력하시오!!")
@@ -417,7 +421,7 @@ def SendEmail():
     import mysmtplib
     from email.mime.base import MIMEBase
     from email.mime.text import MIMEText
-    global BskArr,BskArrnum,BskPriceArr
+    global BskArr,BskArrnum,BskPriceArr, entpname
     GetEmailLabel=EmailLabel.get()
 
     # global value
@@ -437,8 +441,9 @@ def SendEmail():
     #msg.attach(HtmlPart)
     Gmailtext=""
 
+    Gmailtext += str("<" + entpname + ">에서 담은 장바구니 내역입니다.\n\n")
     for i in range(len(BskArr)):
-        Gmailtext += str("[{0}] {1} : {2}원\n\n".format(i+1, BskArr[i], BskPriceArr[i]))
+        Gmailtext += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
 
     #msg = MIMEBase("multipart", "alternative")
     msg = MIMEText(Gmailtext)
