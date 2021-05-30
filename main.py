@@ -140,15 +140,6 @@ def RenderSearchResultText():
     rframe.pack()
     rframe.place(x = 10, y = 95)
 
-# 상품 이미지 관련 함수
-def RenderGoodsImage():
-    global goodsLabel
-    goodsImg = PhotoImage(file="defaultGoodsImage.png").subsample(3)
-    goodsLabel = Label(frame1, image=goodsImg)
-    goodsLabel.image = goodsImg
-    goodsLabel.pack()
-    goodsLabel.place(x=15, y=125)
-
 # 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
 def InitRenderGMText():
     global RenderGMText
@@ -190,7 +181,7 @@ def InitSbskButton():
 
     # 지도 버튼 생성
 def InitMapButton():
-    mapImg = PhotoImage(file="지도.png").subsample(5, 8)
+    mapImg = PhotoImage(file="image/지도.png").subsample(5, 8)
     Mapbtn = Button(frame1, image=mapImg)
     Mapbtn.image = mapImg
     Mapbtn.pack()
@@ -337,13 +328,13 @@ def deleteBskGoods():
     HistogramGui()
 
 def InitMailgramButton():
-    mailImg = PhotoImage(file="gmail.png").subsample(5,8)
+    mailImg = PhotoImage(file="image/gmail.png").subsample(5,8)
     Mailbtn = Button(frame2, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
     Mailbtn.place(x=190, y=260)
 
-    telegramImg = PhotoImage(file="텔레그램.png").subsample(3, 2)
+    telegramImg = PhotoImage(file="image/텔레그램.png").subsample(3, 2)
     Telegrambtn = Button(frame2, image=telegramImg)
     Telegrambtn.image = telegramImg
     Telegrambtn.pack()
@@ -358,7 +349,6 @@ def ImageButtonAction():
     global RenderText, RenderGMText, parsing, goodsSelectedData
     rts = RenderText.curselection()
     gms = RenderGMText.curselection()
-    print(rts, gms, len(rts), len(gms))
     tofind = ""
     if len(gms) != 0:   # 마트 내 상품 선택 시
         tofind = parsing.gmContentData[0][gms[0]]

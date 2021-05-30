@@ -23,6 +23,6 @@ def MakeImage(tofind):
         print("error! because ",  response.json())
     else:
         print(list(response.json().values())[0][0])
-        file_name = "{0}.gif".format(tofind)
+        file_name = "{0}.png".format(tofind)
         save_image(list(response.json().values())[0][0]['image_url'], file_name)
 
