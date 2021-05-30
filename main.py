@@ -10,7 +10,8 @@ from random import*
 import smtplib
 
 from email.mime.text import MIMEText
-
+from selenium import webdriver
+from bs4 import BeautifulSoup as soups
 
 BG_COLOR = 'light blue'
 
@@ -351,7 +352,7 @@ def ImageButtonAction():
     tofind = parsing.gmContentData[0][s[0]]
     print(tofind)
 
-    renderImage.MakeImage(tofind)
+    #renderImage.MakeImage(tofind)
    
     imagew = Tk()
     imagew.title("Show Image")
@@ -361,34 +362,45 @@ def ImageButtonAction():
     TempFont = font.Font(imagew, size=20, weight='bold', family='Consolas')
     MainText = Label(imagew, font=TempFont,text="{0}의 이미지".format(tofind))
     MainText.pack(side=TOP)
-    #MainText.place(x=5)
+    
 
-    #newImageLabel = Label(imagew, width = 500, height = 350)
-    # goodsImage = ImageTk.PhotoImage(Image.open("map.png"))
-    # newImageLabel.configure(image=goodsImage)
-    # newImageLabel.image = goodsImage
+    #image = Image.open("{0}.gif".format(tofind))
+    #image = image.resize((20, 20))
+    #image = ImageTk.PhotoImage(image)
+    search_name = tofind
+    search_limit = int(1)
+    search_path = "Your Path"
+    search_selenium(search_name, search_path, search_limit)
+    
 
-    # newImage.pack(side=LEFT)
-
-    image = Image.open("{0}.gif".format(tofind))
-    image = image.resize((20, 20))
-    image = ImageTk.PhotoImage(image)
-
-    canv = Canvas(imagew, width=80, height=80, bg='white')
+    canv = Canvas(imagew, width=300, height=200)
     canv.pack()
     
-    img = PhotoImage(file="{0}.gif".format(tofind))
+    img = PhotoImage(file="./img/0.png",master=imagew)
 
-    canv.create_image(20,20, anchor=NW, image=img)
-    # newImageLabel = Label(imagew, width = 500, height = 350, image = img)
-    # newImageLabel.image = img
-    # newImageLabel.pack(side=LEFT)
-
-    # goodsImage = ImageTk.PhotoImage(Image.open(file_name))
-    # goodsLabel.configure(image=goodsImage)
-    # goodsLabel.image = goodsImage
+    canv.create_image(0,0, anchor=NW, image=img)
+   
 
     imagew.mainloop()
+    
+def search_selenium(search_name, search_path, search_limit):
+    search_url = "https://www.google.com/search?q=" + str(search_name) + "&hl=ko&tbm=isch"
+
+    browser = webdriver.Chrome('c:/chromedriver.exe')
+    browser.get(search_url)
+
+    image_count = len(browser.find_elements_by_tag_name("img"))
+
+    print("로드된 이미지 개수 : ", image_count)
+
+    browser.implicitly_wait(2)
+
+    for i in range(search_limit):
+        image = browser.find_elements_by_tag_name("img")[i]
+        image.screenshot("./img/" + str(i) + ".png")
+
+    browser.close()
+    
 
 #이메일창 띄우는 함수
 def SendEmailTK():
