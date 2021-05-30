@@ -8,6 +8,7 @@ import parsing
 import renderImage
 from random import*
 import smtplib
+import pickle
 
 from email.mime.text import MIMEText
 from selenium import webdriver
@@ -93,13 +94,14 @@ def InitInputEntry():
 def SearchButtonAction():
     global RenderText
     global parsing
-    global martSelectedData
+    global martSelectedData, goodsSelectedData
 
     RenderText.delete(0, END)
 
     sText = InputEntry.get()
     s = []
     martSelectedData = [[] for i in range(3)]
+    goodsSelectedData = []
 
    # 마트 검색 체크
     if var1.get() == 1 and var2.get() == 0:
@@ -114,8 +116,9 @@ def SearchButtonAction():
 
     # 상품 검색 체크
     if var2.get() == 1 and var1.get() == 0:
-        for item in parsing.goodsReq:
+        for item in parsing.goodsContentData[0]:
             if sText in item:
+                goodsSelectedData.append(item)
                 RenderText.insert(END, item) 
 
 # 마트/상품 검색한 것 보여주는 함수
@@ -146,26 +149,6 @@ def RenderGoodsImage():
     goodsLabel.pack()
     goodsLabel.place(x=15, y=125)
 
-# 지도, 메일, 텔레그램 이미지 넣은 버튼 만드는 함수
-def InitButton():
-    mapImg = PhotoImage(file="map.png")
-    Mapbtn = Button(frame1, image=mapImg)
-    Mapbtn.image = mapImg
-    Mapbtn.pack()
-    Mapbtn.place(x=250, y=525)
-
-    mailImg = PhotoImage(file="gmail.png").subsample(5,8)
-    Mailbtn = Button(frame1, image=mailImg,command=SendEmailTK)
-    Mailbtn.image = mailImg
-    Mailbtn.pack()
-    Mailbtn.place(x=367, y=320)
-
-    telegramImg = PhotoImage(file="telegram.png").subsample(4, 4)
-    Telegrambtn = Button(frame1, image=telegramImg)
-    Telegrambtn.image = telegramImg
-    Telegrambtn.pack()
-    Telegrambtn.place(x=325, y=528)
-
 # 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
 def InitRenderGMText():
     global RenderGMText
@@ -176,7 +159,7 @@ def InitRenderGMText():
     RenderGMTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(gmframe, size=10, family='Consolas')
-    RenderGMText = Listbox(gmframe, width=29, height=21, borderwidth=4, selectmode="extended", relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
+    RenderGMText = Listbox(gmframe, width=32, height=21, borderwidth=4, selectmode="extended", relief='ridge', yscrollcommand=RenderGMTextYScrollbar.set)
     RenderGMText.pack(side = LEFT)
 
     RenderGMTextYScrollbar['command'] = RenderGMText.yview
@@ -186,24 +169,32 @@ def InitRenderGMText():
     gmframe.pack()
     gmframe.place(x = 7, y = 250)
 
-# 장바구니 버튼
-def InitSbskButton():
-    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction)
-    selectbtn.pack()
-    selectbtn.place(x=365, y=260)
-
-    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    sbskbtn = Button(frame1, width=11, height=3, font = TempFont, text="장바구니담기!", command = BskButtonAction)
-    sbskbtn.pack()
-    sbskbtn.place(x=250, y=320)
-
 # 사진 보기 버튼
 def InitShowImageButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction)
     selectbtn.pack()
-    selectbtn.place(x=250, y=260)
+    selectbtn.place(x=265, y=260)
+
+# 장바구니 버튼
+def InitSbskButton():
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction)
+    selectbtn.pack()
+    selectbtn.place(x=380, y=260)
+
+    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    sbskbtn = Button(frame1, width=11, height=3, font = TempFont, text="장바구니담기!", command = BskButtonAction)
+    sbskbtn.pack()
+    sbskbtn.place(x=265, y=320)
+
+    # 지도 버튼 생성
+def InitMapButton():
+    mapImg = PhotoImage(file="지도.png").subsample(5, 8)
+    Mapbtn = Button(frame1, image=mapImg)
+    Mapbtn.image = mapImg
+    Mapbtn.pack()
+    Mapbtn.place(x=380, y= 320)
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
@@ -217,7 +208,7 @@ def SelectButtonAction():
     print(entpid, entpname)
 
     RenderGMText.delete(0, END)
-#    temp = InputMartEntry.get()
+    # temp = InputMartEntry.get()
     # entpid = parsing.martNameId.get(entpid)
     # print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
@@ -263,10 +254,10 @@ def BskButtonAction():
 #-------------------------------------------------------------------------------------
 
 def InitBskText():
-    TempFont = font.Font(frame2, size=14, weight='bold', family='Consolas')
-    MainText = Label(frame2, font=TempFont, text="[장바구니 리스트]", bg = BG_COLOR)
+    TempFont = font.Font(frame2, size=13, weight='bold', family='Consolas')
+    MainText = Label(frame2, font=TempFont, text="<장바구니 리스트>", bg = BG_COLOR)
     MainText.pack()
-    MainText.place(x=160, y=20)
+    MainText.place(x=170, y=20)
 
 def RenderBskText():
     global RenderBskText
@@ -283,14 +274,48 @@ def RenderBskText():
     RenderBskTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     bskframe.pack()
-    bskframe.place(x = 6, y = 60)
+    bskframe.place(x = 6, y = 45)
 
+c_width=450
+c_height=230
+
+counts=[]
+        
+def HistogramGui():
+    canvas = Canvas(frame2, width = c_width, height = c_height, bg = BG_COLOR)
+    canvas.pack()
+    canvas.place(x = 22.5, y = 350)
+
+    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
+    HgramText = Label(frame2, font=TempFont, text="[장바구니 내 상품 가격]", bg = BG_COLOR)
+    HgramText.pack()
+    HgramText.place(x=160, y=335)
+
+    y_stretch = 4
+    y_gap = 10
+    x_stretch = 10
+    x_width = 30
+    x_gap = 20
+
+    print(BskPriceArr)
+
+    for x, y in enumerate(BskPriceArr):
+        # calculate reactangle coordinates
+        x0 = x * x_stretch + x * x_width + x_gap
+        y0 = c_height - (y / 300 * y_stretch + y_gap)
+        x1 = x * x_stretch + x * x_width + x_width + x_gap
+        y1 = c_height - y_gap
+        # Here we draw the bar
+        canvas.create_rectangle(x0, y0, x1, y1, fill="RoyalBlue1")
+        canvas.create_text(x0+2, y0, anchor=SW, text=str(y))
+        canvas.create_text(x0+2, y1+15, anchor=SW, text=str(x+1))
+           
 # 장바구니 내 품목 선택 삭제
 def InitBskDelButton():
     TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
-    SearchButton = Button(frame2, font=TempFont,  text="해당 품목 삭제",command=deleteBskGoods)
+    SearchButton = Button(frame2, font=TempFont, width = 12, height = 3, text="해당 품목 삭제",command=deleteBskGoods)
     SearchButton.pack()
-    SearchButton.place(x=180, y=263)
+    SearchButton.place(x=30, y=260)
     
 
 def deleteBskGoods():
@@ -311,93 +336,68 @@ def deleteBskGoods():
 
     HistogramGui()
 
-c_width=450
-c_height=200
+def InitMailgramButton():
+    mailImg = PhotoImage(file="gmail.png").subsample(5,8)
+    Mailbtn = Button(frame2, image=mailImg,command=SendEmailTK)
+    Mailbtn.image = mailImg
+    Mailbtn.pack()
+    Mailbtn.place(x=190, y=260)
 
-counts=[]
-        
-def HistogramGui():
-    canvas = Canvas(frame2, width = c_width, height = c_height, bg = BG_COLOR)
-    canvas.pack()
-    canvas.place(x = 22.5, y = 350)
+    telegramImg = PhotoImage(file="텔레그램.png").subsample(3, 2)
+    Telegrambtn = Button(frame2, image=telegramImg)
+    Telegrambtn.image = telegramImg
+    Telegrambtn.pack()
+    Telegrambtn.place(x=330, y=260)           
 
-    y_stretch = 4
-    y_gap = 10
-    x_stretch = 10
-    x_width = 30
-    x_gap = 20
-
-    print(BskPriceArr)
-
-    for x, y in enumerate(BskPriceArr):
-        # calculate reactangle coordinates
-        x0 = x * x_stretch + x * x_width + x_gap
-        y0 = c_height - (y / 300 * y_stretch + y_gap)
-        x1 = x * x_stretch + x * x_width + x_width + x_gap
-        y1 = c_height - y_gap
-        # Here we draw the bar
-        canvas.create_rectangle(x0, y0, x1, y1, fill="RoyalBlue1")
-        canvas.create_text(x0+2, y0, anchor=SW, text=str(y))
-        # 내역 삭제하면 인덱스는 그대로인데 (생성 당시 인덱스를 넣어주기 때문) 삭제되면 히스토그램에는 삭제된것 그대로 반영
-        canvas.create_text(x0+2, y1+15, anchor=SW, text=str(x+1))
-           
 #-------------------------------------------------------------------------------------
 #                          부가기능
 #-------------------------------------------------------------------------------------
 
 # 사진 보기 버튼 누르면 실행되는 함수
 def ImageButtonAction():
-    global RenderGMText, parsing
-    s = RenderGMText.curselection()
-    tofind = parsing.gmContentData[0][s[0]]
+    global RenderText, RenderGMText, parsing, goodsSelectedData
+    rts = RenderText.curselection()
+    gms = RenderGMText.curselection()
+    print(rts, gms, len(rts), len(gms))
+    tofind = ""
+    if len(gms) != 0:   # 마트 내 상품 선택 시
+        tofind = parsing.gmContentData[0][gms[0]]
+    if len(rts) != 0:   # 상품 검색시
+        tofind = goodsSelectedData[rts[0]]
+
     print(tofind)
 
     #renderImage.MakeImage(tofind)
-   
-    imagew = Tk()
-    imagew.title("Show Image")
 
-    imagew.geometry('600x400')
-
-    TempFont = font.Font(imagew, size=20, weight='bold', family='Consolas')
-    MainText = Label(imagew, font=TempFont,text="{0}의 이미지".format(tofind))
-    MainText.pack(side=TOP)
-    
-
-    #image = Image.open("{0}.gif".format(tofind))
-    #image = image.resize((20, 20))
-    #image = ImageTk.PhotoImage(image)
     search_name = tofind
-    search_limit = int(1)
     search_path = "Your Path"
-    search_selenium(search_name, search_path, search_limit)
+    search_selenium(search_name, search_path)
     
+    img = PhotoImage(file="./img/0.png").zoom(2)
+    ImageLabel = Label(frame1, width = 130, height = 130, image = img, bg = BG_COLOR)
+    ImageLabel.image = img
+    ImageLabel.pack()
+    ImageLabel.place(x=300, y=400)
 
-    canv = Canvas(imagew, width=300, height=200)
-    canv.pack()
-    
-    img = PhotoImage(file="./img/0.png",master=imagew)
+def search_selenium(search_name, search_path):
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    options.add_argument('window-size=1920x1080')
+    options.add_argument('disable-gpu')
+    options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36")
 
-    canv.create_image(0,0, anchor=NW, image=img)
-   
 
-    imagew.mainloop()
-    
-def search_selenium(search_name, search_path, search_limit):
     search_url = "https://www.google.com/search?q=" + str(search_name) + "&hl=ko&tbm=isch"
 
-    browser = webdriver.Chrome('c:/chromedriver.exe')
+    browser = webdriver.Chrome('chromedriver.exe', options=options)
     browser.get(search_url)
 
     image_count = len(browser.find_elements_by_tag_name("img"))
 
-    print("로드된 이미지 개수 : ", image_count)
-
     browser.implicitly_wait(2)
 
-    for i in range(search_limit):
-        image = browser.find_elements_by_tag_name("img")[i]
-        image.screenshot("./img/" + str(i) + ".png")
+    image = browser.find_elements_by_tag_name("img")[0]
+    image.screenshot("./img/0.png")
 
     browser.close()
     
@@ -471,7 +471,7 @@ def SendEmail():
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("dltnals5809@gmail.com","sjs928750123!")
+    s.login("dltnals5809@gmail.com", pickle.load(open("userpw.plk", "rb")))
 
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
@@ -483,7 +483,7 @@ MartSearchCheckBox()
 InitInputEntry()
 InitSearchButton()
 #RenderGoodsImage()
-InitButton()
+InitMapButton()
 RenderSearchResultText()
 InitRenderGMText()
 InitShowImageButton()
@@ -492,7 +492,7 @@ InitSbskButton()
 InitBskText()
 RenderBskText()
 InitBskDelButton()
-
+InitMailgramButton()
 
 
 g_Tk.mainloop()

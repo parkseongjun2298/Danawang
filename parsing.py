@@ -33,15 +33,19 @@ def getParsingGoodsData(xmlData, motherData):
     goodsSize = len(goodsList)
     goodslist = []
     global goodsContentData, goodsNameId
-    goodsContentData = []
+    goodsContentData = [[] for i in range(2)]
     goodsNameId = {}
 
     for index in range(goodsSize):
         mphmsName = goodsList[index].getElementsByTagName("goodName")
         mphmsId = goodsList[index].getElementsByTagName("goodId")
+        
         goodsNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
         goodslist.append(str(mphmsName[0].firstChild.data + " (" + mphmsId[0].firstChild.data + ")"))
-        goodsContentData.append([str(mphmsName[0].firstChild.data), str(mphmsId[0].firstChild.data)])
+        
+        goodsContentData[0].append(str(mphmsName[0].firstChild.data))
+        goodsContentData[1].append(str(mphmsId[0].firstChild.data))
+
     return goodslist
 
 # 판매점 정보 파싱
@@ -51,15 +55,17 @@ def getParsingMartData(xmlData, motherData):
     MartSize = len(MartList)
     martlist = []
     global martContentData, martNameId
-    martContentData = [[] for i in range(3)]
+    martContentData = [[] for i in range(4)]
     martNameId = {}
 
     for index in range(MartSize):
         mphmsName = MartList[index].getElementsByTagName("entpName")
         mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
         mphmsId = MartList[index].getElementsByTagName("entpId")
+
         martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
         martNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
+        
         martContentData[0].append(str(mphmsName[0].firstChild.data))
         martContentData[1].append(str(mphmsAddr[0].firstChild.data))
         martContentData[2].append(str(mphmsId[0].firstChild.data))
@@ -73,14 +79,17 @@ def getParsingGMData(xmlData, motherData):
     gmList = doc.getElementsByTagName(motherData)
     gmSize = len(gmList)
     gmlist = []
+    gmName = ""
     gmContentData = [[] for i in range(2)]
+    print(len(goodsContentData))
 
     for index in range(gmSize):
         mphmsId = gmList[index].getElementsByTagName("goodId")
         mphmsPrice = gmList[index].getElementsByTagName("goodPrice")
-        for goods in goodsContentData:
-            if mphmsId[0].firstChild.data in goods:
-                gmName = str(goods[0])
+
+        for j in range(len(goodsContentData[1])):
+            if mphmsId[0].firstChild.data in goodsContentData[1][j]:
+                gmName = str(goodsContentData[0][j])
 
         gmlist.append(str(gmName + " : " + mphmsPrice[0].firstChild.data + "원"))
         gmContentData[0].append(gmName)
