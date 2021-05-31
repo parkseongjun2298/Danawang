@@ -118,7 +118,10 @@ def SearchButtonAction():
                 martSelectedData[3].append(parsing.martContentData[3][i])
                 martSelectedData[4].append(parsing.martContentData[4][i])
                 martSelectedData[5].append(parsing.martContentData[5][i])
-                textMessage = str(parsing.martContentData[0][i] + " : " + parsing.martContentData[1][i] + " (" + parsing.martContentData[3][i] + ")\n")
+                if parsing.martContentData[4][i] == "위도 정보 없음":
+                   textMessage = str(parsing.martContentData[0][i] + " : " + parsing.martContentData[1][i] + " (" + parsing.martContentData[3][i] + ") 지도 X \n")
+                else:
+                   textMessage = str(parsing.martContentData[0][i] + " : " + parsing.martContentData[1][i] + " (" + parsing.martContentData[3][i] + ") 지도 O \n")
                 RenderText.insert(END, textMessage) 
 
 
@@ -197,19 +200,18 @@ def InitMapButton():
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
-    global RenderGMText, RenderText, gmReq, entpname, martSelectedData
+    global RenderGMText, RenderText, gmReq, entpname, martSelectedData, gmSelectedData
     global parsing
 
     selected = RenderText.curselection()
     s = selected[0]
+    gmSelectedData = [[] for i in range(3)]
     entpid = martSelectedData[2][s]
-    entpname = martSelectedData[0][s]
-    print(entpid, entpname)
+    gmSelectedData[0] = martSelectedData[0][s]
+    gmSelectedData[1] = martSelectedData[1][s]
+    gmSelectedData[2] = martSelectedData[3][s]
 
     RenderGMText.delete(0, END)
-    # temp = InputMartEntry.get()
-    # entpid = parsing.martNameId.get(entpid)
-    # print(entpid)
     gmServerUrl = "http://openapi.price.go.kr/openApiImpl/ProductPriceInfoService/getProductPriceInfoSvc.do?serviceKey="
     gmServerValue = "&goodInspectDay=" + "20210514" + "&entpId=" + parsing.urlencode(entpid)
     gmAreaData = parsing.openAPItoXML(gmServerUrl, parsing.serverKey, gmServerValue)
@@ -238,9 +240,7 @@ def BskButtonAction():
     
     BskArr.append(selectedGoodsName)
     BskPriceArr.append(selectedGoodsPrice)
-    print(selectedGoods)
-    print(selectedGoodsName)
-    print(selectedGoodsPrice)
+
     inNum+=1
     BskArrnum+=1
     RenderBskText.insert(END, selectedGoods)
@@ -294,8 +294,6 @@ def HistogramGui():
     x_stretch = 10
     x_width = 30
     x_gap = 20
-
-    print(BskPriceArr)
 
     for x, y in enumerate(BskPriceArr):
         # calculate reactangle coordinates
@@ -362,15 +360,13 @@ def ImageButtonAction():
     if len(rts) != 0:   # 상품 검색시
         tofind = goodsSelectedData[rts[0]]
 
-    print(tofind)
-
     #renderImage.MakeImage(tofind)
 
     search_name = tofind
     search_path = "Your Path"
     search_selenium(search_name, search_path)
     
-    img = PhotoImage(file="./img/0.png").zoom(2)
+    img = PhotoImage(file="./image/0.png").zoom(2)
     ImageLabel = Label(frame1, width = 130, height = 130, image = img, bg = BG_COLOR)
     ImageLabel.image = img
     ImageLabel.pack()
@@ -394,13 +390,15 @@ def search_selenium(search_name, search_path):
     browser.implicitly_wait(2)
 
     image = browser.find_elements_by_tag_name("img")[0]
-    image.screenshot("./img/0.png")
+    image.screenshot("./image/0.png")
 
     browser.close()
     
 
 #이메일창 띄우는 함수
 def SendEmailTK():
+    global nw
+
     nw = Tk()
     nw.title("Send Email")
 
@@ -430,7 +428,7 @@ def SendEmail():
     import mysmtplib
     from email.mime.base import MIMEBase
     from email.mime.text import MIMEText
-    global BskArr,BskArrnum,BskPriceArr, entpname
+    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw
     GetEmailLabel=EmailLabel.get()
 
     # global value
@@ -443,7 +441,8 @@ def SendEmail():
 
     Gmailtext=""
 
-    Gmailtext += str("<" + entpname + ">에서 담은 장바구니 내역입니다.\n\n")
+    Gmailtext += str("<" + gmSelectedData[0] + ">에서 담은 장바구니 내역입니다.\n")
+    Gmailtext += str("위치 : " + gmSelectedData[1] + "\n전화번호 : " + gmSelectedData[2]+'\n\n')
     for i in range(len(BskArr)):
         Gmailtext += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
 
@@ -452,8 +451,6 @@ def SendEmail():
     msg['Subject'] = "장바구니 내용"
     msg['From'] = senderAddr
     msg['To'] = recipientAddr
-
-    print(msg)
 
     # 메일을 발송한다.
     s = mysmtplib.MySMTP(host, port)
@@ -465,6 +462,8 @@ def SendEmail():
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
 
+    nw.destroy()
+
 # 지도 관련 함수들
 
 def MapButtonAction():
@@ -475,11 +474,10 @@ def MapButtonAction():
     mapFrame.pack()
 
 
-    selected = RenderText.curselection()
-    s = selected[0]
-    martname = martSelectedData[0][s]
-    latitude = martSelectedData[4][s]
-    longtitude = martSelectedData[5][s]
+    s = RenderText.curselection()
+    martname = martSelectedData[0][s[0]]
+    latitude = martSelectedData[4][s[0]]
+    longtitude = martSelectedData[5][s[0]]
 
     if latitude == "위도 정보 없음" and longtitude == "경도 정보 없음":
         tkinter.messagebox.showinfo("sorry,,","위도 경도 정보가 없어요!\n다른 판매점을 선택해주세요!\n")

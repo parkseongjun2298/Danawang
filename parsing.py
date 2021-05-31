@@ -96,9 +96,6 @@ def getParsingMartData(xmlData, motherData):
         else:
             martContentData[5].append(str("경도 정보 없음")) 
 
-    for i in range(100):
-        print(martContentData[4][i], martContentData[5][i])
-
     return martlist
 
 # 판매점 내 상품 정보 파싱
@@ -110,7 +107,6 @@ def getParsingGMData(xmlData, motherData):
     gmlist = []
     gmName = ""
     gmContentData = [[] for i in range(2)]
-    print(len(goodsContentData))
 
     for index in range(gmSize):
         mphmsId = gmList[index].getElementsByTagName("goodId")
