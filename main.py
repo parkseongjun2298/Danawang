@@ -14,6 +14,11 @@ from email.mime.text import MIMEText
 from selenium import webdriver
 from bs4 import BeautifulSoup as soups
 
+import threading
+import sys
+import folium
+from cefpython3 import cefpython as cef
+
 BG_COLOR = 'light blue'
 
 g_Tk = Tk()
@@ -100,7 +105,7 @@ def SearchButtonAction():
 
     sText = InputEntry.get()
     s = []
-    martSelectedData = [[] for i in range(3)]
+    martSelectedData = [[] for i in range(6)]
     goodsSelectedData = []
 
    # 마트 검색 체크
@@ -110,7 +115,10 @@ def SearchButtonAction():
                 martSelectedData[0].append(parsing.martContentData[0][i])
                 martSelectedData[1].append(parsing.martContentData[1][i])
                 martSelectedData[2].append(parsing.martContentData[2][i])
-                textMessage = str("이름 : " + parsing.martContentData[0][i] + "  위치 : " + parsing.martContentData[1][i] + "\n")
+                martSelectedData[3].append(parsing.martContentData[3][i])
+                martSelectedData[4].append(parsing.martContentData[4][i])
+                martSelectedData[5].append(parsing.martContentData[5][i])
+                textMessage = str(parsing.martContentData[0][i] + " : " + parsing.martContentData[1][i] + " (" + parsing.martContentData[3][i] + ")\n")
                 RenderText.insert(END, textMessage) 
 
 
@@ -182,7 +190,7 @@ def InitSbskButton():
     # 지도 버튼 생성
 def InitMapButton():
     mapImg = PhotoImage(file="image/지도.png").subsample(5, 8)
-    Mapbtn = Button(frame1, image=mapImg)
+    Mapbtn = Button(frame1, image=mapImg, command = MapButtonAction)
     Mapbtn.image = mapImg
     Mapbtn.pack()
     Mapbtn.place(x=380, y= 320)
@@ -208,8 +216,7 @@ def SelectButtonAction():
     gmReq = (parsing.getParsingGMData(gmAreaData, "iros.openapi.service.vo.goodPriceVO"))
     #print(gmReq)
     if gmReq == []:
-        RenderGMText.insert(END, "해당 판매점은 검색할 수 없습니다.")
-        RenderGMText.insert(END, "다른 판매점을 선택해주세요!\n")
+        tkinter.messagebox.showinfo("sorry,,", "해당 판매점의 상품 판매 정보가 없어요!\n다른 판매점을 선택해주세요!\n")
     for i in range(len(gmReq)):
         RenderGMText.insert(END, gmReq[i])
 
@@ -434,13 +441,6 @@ def SendEmail():
     senderAddr = "dltnals5809@gmail.com" # 보내는 사람 email 주소.
     recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
 
-    # MIME 문서를 생성합니다.
-    #htmlFD = open(htmlFileName, 'rb')
-    #HtmlPart = MIMEText(htmlFD.read(), 'html', _charset='UTF-8')
-    #htmlFD.close()
-
-    # 만들었던 mime을 MIMEBase에 첨부 시킨다.
-    #msg.attach(HtmlPart)
     Gmailtext=""
 
     Gmailtext += str("<" + entpname + ">에서 담은 장바구니 내역입니다.\n\n")
@@ -457,7 +457,6 @@ def SendEmail():
 
     # 메일을 발송한다.
     s = mysmtplib.MySMTP(host, port)
-    # s.set_debuglevel(1)        # 디버깅이 필요할 경우 주석을 푼다.
     s.ehlo()
     s.starttls()
     s.ehlo()
@@ -466,6 +465,55 @@ def SendEmail():
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
 
+# 지도 관련 함수들
+
+def MapButtonAction():
+    global martSelectedData, mapFrame
+
+    mapWindow = Toplevel()
+    mapFrame = Frame(mapWindow, width=800, height = 600)
+    mapFrame.pack()
+
+
+    selected = RenderText.curselection()
+    s = selected[0]
+    martname = martSelectedData[0][s]
+    latitude = martSelectedData[4][s]
+    longtitude = martSelectedData[5][s]
+
+    if latitude == "위도 정보 없음" and longtitude == "경도 정보 없음":
+        tkinter.messagebox.showinfo("sorry,,","위도 경도 정보가 없어요!\n다른 판매점을 선택해주세요!\n")
+        mapWindow.destroy()
+    else:
+        Pressed(martname, latitude, longtitude)
+
+    mapWindow.mainloop()
+
+# cef모듈로 브라우저 실행
+def showMap(frame):
+    sys.excepthook = cef.ExceptHook
+    window_info = cef.WindowInfo(frame.winfo_id())
+    window_info.SetAsChild(frame.winfo_id(), [0,0,800,600])
+    cef.Initialize()
+    browser = cef.CreateBrowserSync(window_info, url='file:///map.html')
+    cef.MessageLoop()
+
+
+def Pressed(martname, latitude, longtitude):
+    # 지도 저장
+    # 위도 경도 지정
+    global martSelectedData, mapFrame
+
+    m = folium.Map(location=[latitude, longtitude], zoom_start=13)
+    # 마커 지정
+    folium.Marker([latitude, longtitude], popup=martname).add_to(m)
+    # html 파일로 저장
+    m.save('map.html')
+
+    # 브라우저를 위한 쓰레드 생성
+    thread = threading.Thread(target=showMap, args=(mapFrame,))
+    thread.daemon = True
+    thread.start()
 
 InitTopText()
 parsing.getParsingAllData()

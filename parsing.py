@@ -55,13 +55,25 @@ def getParsingMartData(xmlData, motherData):
     MartSize = len(MartList)
     martlist = []
     global martContentData, martNameId
-    martContentData = [[] for i in range(4)]
+    martContentData = [[] for i in range(6)]
     martNameId = {}
+
+    mphmsTelno = ""
+    mphmsXcoord = ""
+    mphmsYcoord = ""
 
     for index in range(MartSize):
         mphmsName = MartList[index].getElementsByTagName("entpName")
         mphmsAddr = MartList[index].getElementsByTagName("plmkAddrBasic")
         mphmsId = MartList[index].getElementsByTagName("entpId")
+        if MartList[index].getElementsByTagName("entpTelno") != None:
+            mphmsTelno = MartList[index].getElementsByTagName("entpTelno")
+        if MartList[index].getElementsByTagName("xMapCoord") != None:
+            mphmsXcoord = MartList[index].getElementsByTagName("xMapCoord")
+        if MartList[index].getElementsByTagName("yMapCoord") != None:
+            mphmsYcoord = MartList[index].getElementsByTagName('yMapCoord')
+        
+        #print("len(mphmsTelno) : ", len(mphmsTelno))
 
         martlist.append(str(mphmsName[0].firstChild.data + " (" + mphmsAddr[0].firstChild.data + ")" + " (" + mphmsId[0].firstChild.data + ")"))
         martNameId[mphmsName[0].firstChild.data] = mphmsId[0].firstChild.data
@@ -69,7 +81,24 @@ def getParsingMartData(xmlData, motherData):
         martContentData[0].append(str(mphmsName[0].firstChild.data))
         martContentData[1].append(str(mphmsAddr[0].firstChild.data))
         martContentData[2].append(str(mphmsId[0].firstChild.data))
-      
+        if len(mphmsTelno) == 1:
+            martContentData[3].append(str(mphmsTelno[0].firstChild.data))
+        else:
+            martContentData[3].append(str("전화번호 정보 없음")) 
+
+        if len(mphmsXcoord) == 1:
+            martContentData[4].append(str(mphmsXcoord[0].firstChild.data))
+        else:
+            martContentData[4].append(str("위도 정보 없음")) 
+
+        if len(mphmsYcoord) == 1:
+            martContentData[5].append(str(mphmsYcoord[0].firstChild.data))
+        else:
+            martContentData[5].append(str("경도 정보 없음")) 
+
+    for i in range(100):
+        print(martContentData[4][i], martContentData[5][i])
+
     return martlist
 
 # 판매점 내 상품 정보 파싱
