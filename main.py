@@ -75,7 +75,7 @@ def InitSearchButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     SearchButton = Button(frame1, font=TempFont, text="검색", command=SearchButtonAction)
     SearchButton.pack()
-    SearchButton.place(x=440, y=60)
+    SearchButton.place(x=440, y=53)
 
 # 마트/상품 검색 버튼
 def MartSearchCheckBox():
@@ -84,8 +84,8 @@ def MartSearchCheckBox():
     chkbox2 = Checkbutton(frame1, font=TempFont, bg = BG_COLOR, text='상품 검색', variable=var2)
     chkbox.pack()
     chkbox2.pack()
-    chkbox.place(x=20, y=45)
-    chkbox2.place(x=20, y=70)
+    chkbox.place(x=20, y=42)
+    chkbox2.place(x=20, y=65)
 
 # 마트/상품 검색 Entry
 def InitInputEntry():
@@ -93,7 +93,7 @@ def InitInputEntry():
     TempFont = font.Font(frame1, size=11, weight='bold', family='Consolas')
     InputEntry = Entry(frame1, font=TempFont, width=38, borderwidth=6, relief='ridge')
     InputEntry.pack()
-    InputEntry.place(x=120, y=60)
+    InputEntry.place(x=120, y=53)
 
 # 마트/상품 검색 시 실행되는 함수
 def SearchButtonAction():
@@ -149,7 +149,7 @@ def RenderSearchResultText():
     RenderTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     rframe.pack()
-    rframe.place(x = 10, y = 95)
+    rframe.place(x = 7, y = 93)
 
 # 마트 선택 후 해당 마트에서 파는 상품 보여주는 곳
 def InitRenderGMText():
@@ -174,19 +174,25 @@ def InitRenderGMText():
 # 사진 보기 버튼
 def InitShowImageButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction)
+    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction, activebackground=BG_COLOR)
+    selectbtn['bg'] = 'white'
     selectbtn.pack()
     selectbtn.place(x=265, y=260)
 
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction)
+    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction, activebackground=BG_COLOR)
+    selectbtn['bg'] = 'white'
     selectbtn.pack()
     selectbtn.place(x=380, y=260)
 
-    TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    sbskbtn = Button(frame1, width=11, height=3, font = TempFont, text="장바구니담기!", command = BskButtonAction)
+    #TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
+    bskImg = PhotoImage(file="image/장바구니.png").zoom(10)
+    bskImg = bskImg.subsample(50, 80)
+    sbskbtn = Button(frame1,image = bskImg, command = BskButtonAction, activebackground=BG_COLOR)
+    sbskbtn.image = bskImg
+    sbskbtn['bg'] = 'white'
     sbskbtn.pack()
     sbskbtn.place(x=265, y=320)
 
@@ -253,10 +259,10 @@ def BskButtonAction():
 #-------------------------------------------------------------------------------------
 
 def InitBskText():
-    TempFont = font.Font(frame2, size=13, weight='bold', family='Consolas')
+    TempFont = font.Font(frame2, size=14, weight='bold', family='Consolas')
     MainText = Label(frame2, font=TempFont, text="<장바구니 리스트>", bg = BG_COLOR)
     MainText.pack()
-    MainText.place(x=170, y=10)
+    MainText.place(x=170, y=15)
 
 def RenderBskText():
     global RenderBskText
@@ -265,15 +271,15 @@ def RenderBskText():
     RenderBskTextYScrollbar = Scrollbar(bskframe)
     RenderBskTextYScrollbar.pack(side = RIGHT, fill = Y)
 
-    TempFont = font.Font(bskframe, size=10, family='Consolas')
-    RenderBskText = Listbox(bskframe, font = TempFont, width=65, height=12, borderwidth=4, relief='ridge', yscrollcommand=RenderBskTextYScrollbar.set)
+    TempFont = font.Font(bskframe, size=11, family='Consolas')
+    RenderBskText = Listbox(bskframe, font = TempFont, width=56, height=10, borderwidth=4, relief='ridge', yscrollcommand=RenderBskTextYScrollbar.set)
     RenderBskText.pack(side = TOP)
 
     RenderBskTextYScrollbar['command'] = RenderBskText.yview
     RenderBskTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     bskframe.pack()
-    bskframe.place(x = 6, y = 35)
+    bskframe.place(x = 13, y = 45)
 
 c_width=450
 c_height=230
@@ -283,16 +289,16 @@ counts=[]
 def RenderBskTotalText():
     global BskArr, BskPriceArr, BskArrnum, totalSum
 
-    TempFont = font.Font(frame2, size=12, family='Consolas')
+    TempFont = font.Font(frame2, size=13,  weight='bold',family='Consolas')
     totalSum = sum(BskPriceArr)
 
     NumText = Label(frame2, font=TempFont, text="총 수량 : {0}".format(BskArrnum), bg = BG_COLOR)
     NumText.pack()
-    NumText.place(x=30, y=240)
+    NumText.place(x=15, y=253)
 
     TotalText = Label(frame2, font=TempFont, text="총액 : {0}".format(totalSum), bg = BG_COLOR)
     TotalText.pack()
-    TotalText.place(x=150, y=240)
+    TotalText.place(x=15, y=285)
 
         
 def HistogramGui():
@@ -300,10 +306,10 @@ def HistogramGui():
     canvas.pack()
     canvas.place(x = 22.5, y = 350)
 
-    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
+    TempFont = font.Font(frame2, size=14, weight='bold', family='Consolas')
     HgramText = Label(frame2, font=TempFont, text="[장바구니 내 상품 가격]", bg = BG_COLOR)
     HgramText.pack()
-    HgramText.place(x=160, y=335)
+    HgramText.place(x=150, y=323)
 
     y_stretch = 4
     y_gap = 10
@@ -324,10 +330,13 @@ def HistogramGui():
            
 # 장바구니 내 품목 선택 삭제
 def InitBskDelButton():
-    TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
-    SearchButton = Button(frame2, font=TempFont, width = 12, height = 3, text="해당 품목 삭제",command=deleteBskGoods)
-    SearchButton.pack()
-    SearchButton.place(x=30, y=270)
+    delImg = PhotoImage(file="image/삭제.png").zoom(10)
+    delImg = delImg.subsample(70, 80)
+    DelButton = Button(frame2, image = delImg,command=deleteBskGoods, activebackground=BG_COLOR)
+    DelButton.image = delImg
+    DelButton['bg'] = 'white'
+    DelButton.pack()
+    DelButton.place(x=150, y=250)
     
 
 def deleteBskGoods():
@@ -347,19 +356,21 @@ def deleteBskGoods():
     RenderBskText.delete(delgoods)
 
     HistogramGui()
+    RenderBskTotalText()
 
 def InitMailgramButton():
-    mailImg = PhotoImage(file="image/gmail.png").subsample(5,8)
+    mailImg = PhotoImage(file="image/gmail.png").subsample(7,8)
     Mailbtn = Button(frame2, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
-    Mailbtn.place(x=190, y=270)
+    Mailbtn.place(x=230, y=250)
 
-    telegramImg = PhotoImage(file="image/텔레그램.png").subsample(3, 2)
-    Telegrambtn = Button(frame2, image=telegramImg)
+    telegramImg = PhotoImage(file="image/텔레그램.png").subsample(9, 10)
+    Telegrambtn = Button(frame2, image=telegramImg, activebackground=BG_COLOR)
     Telegrambtn.image = telegramImg
+    Telegrambtn['bg'] = BG_COLOR
     Telegrambtn.pack()
-    Telegrambtn.place(x=330, y=270)           
+    Telegrambtn.place(x=345, y=250)           
 
 #-------------------------------------------------------------------------------------
 #                          부가기능
