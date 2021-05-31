@@ -244,6 +244,7 @@ def BskButtonAction():
     inNum+=1
     BskArrnum+=1
     RenderBskText.insert(END, selectedGoods)
+    RenderBskTotalText()
     HistogramGui()
 
 
@@ -255,7 +256,7 @@ def InitBskText():
     TempFont = font.Font(frame2, size=13, weight='bold', family='Consolas')
     MainText = Label(frame2, font=TempFont, text="<장바구니 리스트>", bg = BG_COLOR)
     MainText.pack()
-    MainText.place(x=170, y=20)
+    MainText.place(x=170, y=10)
 
 def RenderBskText():
     global RenderBskText
@@ -265,19 +266,34 @@ def RenderBskText():
     RenderBskTextYScrollbar.pack(side = RIGHT, fill = Y)
 
     TempFont = font.Font(bskframe, size=10, family='Consolas')
-    RenderBskText = Listbox(bskframe, width=65, height=12, borderwidth=4, relief='ridge', yscrollcommand=RenderBskTextYScrollbar.set)
+    RenderBskText = Listbox(bskframe, font = TempFont, width=65, height=12, borderwidth=4, relief='ridge', yscrollcommand=RenderBskTextYScrollbar.set)
     RenderBskText.pack(side = TOP)
 
     RenderBskTextYScrollbar['command'] = RenderBskText.yview
     RenderBskTextYScrollbar.pack(side=RIGHT, fill=BOTH)
 
     bskframe.pack()
-    bskframe.place(x = 6, y = 45)
+    bskframe.place(x = 6, y = 35)
 
 c_width=450
 c_height=230
 
 counts=[]
+
+def RenderBskTotalText():
+    global BskArr, BskPriceArr, BskArrnum, totalSum
+
+    TempFont = font.Font(frame2, size=12, family='Consolas')
+    totalSum = sum(BskPriceArr)
+
+    NumText = Label(frame2, font=TempFont, text="총 수량 : {0}".format(BskArrnum), bg = BG_COLOR)
+    NumText.pack()
+    NumText.place(x=30, y=240)
+
+    TotalText = Label(frame2, font=TempFont, text="총액 : {0}".format(totalSum), bg = BG_COLOR)
+    TotalText.pack()
+    TotalText.place(x=150, y=240)
+
         
 def HistogramGui():
     canvas = Canvas(frame2, width = c_width, height = c_height, bg = BG_COLOR)
@@ -311,7 +327,7 @@ def InitBskDelButton():
     TempFont = font.Font(frame2, size=12, weight='bold', family='Consolas')
     SearchButton = Button(frame2, font=TempFont, width = 12, height = 3, text="해당 품목 삭제",command=deleteBskGoods)
     SearchButton.pack()
-    SearchButton.place(x=30, y=260)
+    SearchButton.place(x=30, y=270)
     
 
 def deleteBskGoods():
@@ -337,13 +353,13 @@ def InitMailgramButton():
     Mailbtn = Button(frame2, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
-    Mailbtn.place(x=190, y=260)
+    Mailbtn.place(x=190, y=270)
 
     telegramImg = PhotoImage(file="image/텔레그램.png").subsample(3, 2)
     Telegrambtn = Button(frame2, image=telegramImg)
     Telegrambtn.image = telegramImg
     Telegrambtn.pack()
-    Telegrambtn.place(x=330, y=260)           
+    Telegrambtn.place(x=330, y=270)           
 
 #-------------------------------------------------------------------------------------
 #                          부가기능
@@ -428,7 +444,7 @@ def SendEmail():
     import mysmtplib
     from email.mime.base import MIMEBase
     from email.mime.text import MIMEText
-    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw
+    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw, totalSum
     GetEmailLabel=EmailLabel.get()
 
     # global value
@@ -445,6 +461,7 @@ def SendEmail():
     Gmailtext += str("위치 : " + gmSelectedData[1] + "\n전화번호 : " + gmSelectedData[2]+'\n\n')
     for i in range(len(BskArr)):
         Gmailtext += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
+    Gmailtext += str("\n총 수량 : {0}\n총액 : {1}\n".format(BskArrnum, totalSum))
 
     #msg = MIMEBase("multipart", "alternative")
     msg = MIMEText(Gmailtext)
@@ -527,6 +544,7 @@ InitSbskButton()
 
 InitBskText()
 RenderBskText()
+RenderBskTotalText()
 InitBskDelButton()
 InitMailgramButton()
 
