@@ -1,4 +1,3 @@
-
 from tkinter import *
 from tkinter import font
 from tkinter import ttk
@@ -366,7 +365,7 @@ def InitMailgramButton():
     Mailbtn.place(x=230, y=250)
 
     telegramImg = PhotoImage(file="image/텔레그램.png").subsample(9, 10)
-    Telegrambtn = Button(frame2, image=telegramImg,command=SendTelegram, activebackground=BG_COLOR)
+    Telegrambtn = Button(frame2, image=telegramImg,command=handleTelegramBot, activebackground=BG_COLOR)
     Telegrambtn.image = telegramImg
     Telegrambtn['bg'] = BG_COLOR
     Telegrambtn.pack()
@@ -541,21 +540,88 @@ def Pressed(martname, latitude, longtitude):
     thread.daemon = True
     thread.start()
 
-def SendTelegram():
-    import telepot
-    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw, totalSum
+import noti
+import telepot
+
+
+def sendMessage(text):
     bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
     bot.getMe()
-    Gmailtext=""
+    bot.sendMessage('1871728424', text)
 
-    Gmailtext += str("<" + gmSelectedData[0] + ">에서 담은 장바구니 내역입니다.\n")
-    Gmailtext += str("위치 : " + gmSelectedData[1] + "\n전화번호 : " + gmSelectedData[2]+'\n\n')
+def sendMartTelegram(martName):
+    martText = ""
+    for i in range(len(parsing.martContentData[0])):
+        if martName in parsing.martContentData[0][i] or martName in parsing.martContentData[1][i]:
+            martText += str(parsing.martContentData[0][i]+'\n')
+            martText += str(parsing.martContentData[1][i]+'\n')
+            martText += str(parsing.martContentData[2][i]+'\n')
+            martText += str(parsing.martContentData[3][i]+'\n\n')
+    sendMessage(martText)
+            
+
+
+def sendGoodsTelegram(goodName):
+   for item in parsing.goodsContentData[0]:
+        if goodName in item:
+            sendMessage(item)
+
+
+def sendBskTelegram():
+    import telepot
+    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw, totalSum
+    TelegramText=""
+
+    TelegramText += str("<" + gmSelectedData[0] + ">에서 담은 장바구니 내역입니다.\n")
+    TelegramText += str("위치 : " + gmSelectedData[1] + "\n전화번호 : " + gmSelectedData[2]+'\n\n')
     for i in range(len(BskArr)):
-        Gmailtext += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
-    Gmailtext += str("\n총 수량 : {0}\n총액 : {1}\n".format(BskArrnum, totalSum))
+        TelegramText += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
+    TelegramText += str("\n총 수량 : {0}\n총액 : {1}\n".format(BskArrnum, totalSum))
 
+    sendMessage(TelegramText)   
+
+def handle(msg):
+    content_type, chat_type, chat_id = telepot.glance(msg)
+    if content_type != 'text':
+        noti.sendMessage(noti.chat_id, '텍스트를 입력해주세요!!')
+        return
+
+    bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
+
+    text = msg['text']
+    args = text.split(' ')
+
+    if text.startswith('판매점') and len(args) > 1:
+        print('try to 판매점', args[1])
+        sendMartTelegram(args[1])
+
+    elif text.startswith('상품')  and len(args)>1:
+        print('try to 상품', args[1])
+        sendGoodsTelegram(args[1])
+
+    elif text.startswith('장바구니'):
+        print('try to 장바구니')
+        sendBskTelegram()
+
+    elif text == '종료':
+        sendMessage("""그동안 고마웠슈.....""")
+
+    else:
+        sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
+
+def handleTelegramBot():
+    import time
     
-    bot.sendMessage('1871728424',Gmailtext)    
+    bot = telepot.Bot(noti.TOKEN)
+    print( bot.getMe() )
+
+    sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
+    bot.message_loop(handle)
+
+    print('Listening...')
+
+    while 1:
+      time.sleep(10)
 
 
 InitTopText()
