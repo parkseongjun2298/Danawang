@@ -366,7 +366,7 @@ def InitMailgramButton():
     Mailbtn.place(x=230, y=250)
 
     telegramImg = PhotoImage(file="image/텔레그램.png").subsample(9, 10)
-    Telegrambtn = Button(frame2, image=telegramImg, activebackground=BG_COLOR)
+    Telegrambtn = Button(frame2, image=telegramImg,command=SendTelegram, activebackground=BG_COLOR)
     Telegrambtn.image = telegramImg
     Telegrambtn['bg'] = BG_COLOR
     Telegrambtn.pack()
@@ -540,6 +540,23 @@ def Pressed(martname, latitude, longtitude):
     thread = threading.Thread(target=showMap, args=(mapFrame,))
     thread.daemon = True
     thread.start()
+
+def SendTelegram():
+    import telepot
+    global BskArr,BskArrnum,BskPriceArr, gmSelectedData, nw, totalSum
+    bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
+    bot.getMe()
+    Gmailtext=""
+
+    Gmailtext += str("<" + gmSelectedData[0] + ">에서 담은 장바구니 내역입니다.\n")
+    Gmailtext += str("위치 : " + gmSelectedData[1] + "\n전화번호 : " + gmSelectedData[2]+'\n\n')
+    for i in range(len(BskArr)):
+        Gmailtext += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
+    Gmailtext += str("\n총 수량 : {0}\n총액 : {1}\n".format(BskArrnum, totalSum))
+
+    
+    bot.sendMessage('1871728424',Gmailtext)    
+
 
 InitTopText()
 parsing.getParsingAllData()
