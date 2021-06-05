@@ -549,16 +549,17 @@ def sendMartTelegram(martName):
 
     for r in res_list:
         #print(str(datetime.now()).split('.')[0], r)
-        if len(r + martText) + 1 > noti.MAX_MSG_LENGTH:
-            noti.sendMessage(martText)
-            martText = r + '\n'
-        else:
-            martText += r + '\n'
+        # if len(r + martText) + 1 > noti.MAX_MSG_LENGTH:
+        #     noti.sendMessage(martText)
+        #     martText = r + '\n'
+        # else:
+        #     martText += r + '\n'
+        martText = r + '\n'
 
-    if martText:
-        noti.sendMessage(martText)
-    else:
-        noti.sendMessage('판매점 이름을 잘못 입력하셨습니다.')
+        if martText:
+            noti.sendMessage(martText)
+        else:
+            noti.sendMessage('판매점 이름을 잘못 입력하셨습니다.')
 
 
 def sendGoodsTelegram(goodName):

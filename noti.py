@@ -26,14 +26,14 @@ def getMartData(martName):
 	res_body = urlopen(url).read()
 	#print(res_body)
 	soup = BeautifulSoup(res_body, 'html.parser')
-	items = soup.findAll("iros.openapi.service.vo.entpInfoVO")
+	items = soup.findAll('iros.openapi.service.vo.entpinfovo')
 	#print(items)
 	for item in items:
 		item = re.sub('<.*?>', '|', item.text)
-		parsed = item.split('|')
+		tempparsed = item.split('|')
+		parsed = tempparsed[0].split('\n')
 		try:
-			martInfo = parsed[1]
-			#'상호명 : ' + parsed[1] + '\n주소 : ' + parsed[7] # + parsed[8] + '\n전화번호 : ' + parsed[5]
+			martInfo = '상호명 : ' + parsed[2] + '\n주소 : ' + parsed[8] + parsed[9]
 		except IndexError:
 			martInfo = item.replace('|', ',')
 
@@ -59,9 +59,10 @@ def getGoodsData(goodName):
 	items = soup.findAll('item')
 	for item in items:
 		item = re.sub('<.*?>', '|', item.text)
-		parsed = item.split('|')
+		tempparsed = item.split('|')
+		parsed = tempparsed[0].split('\n')
 		try:
-			goodsInfo = parsed[0] + '\n'
+			goodsInfo = '상품명 :' + parsed[2] + '\n용량 : ' + parsed[7] + parsed[8]
 		except IndexError:
 			goodsInfo = item.replace('|', ',')
 
