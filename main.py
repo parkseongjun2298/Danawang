@@ -17,6 +17,7 @@ import threading
 import sys
 import folium
 from cefpython3 import cefpython as cef
+import noti
 
 BG_COLOR = 'light blue'
 
@@ -540,31 +541,48 @@ def Pressed(martname, latitude, longtitude):
     thread.daemon = True
     thread.start()
 
-import noti
 import telepot
 
-
-def sendMessage(text):
-    bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
-    bot.getMe()
-    bot.sendMessage('1871728424', text)
-
 def sendMartTelegram(martName):
+    res_list = noti.getMartData(martName)
     martText = ""
-    for i in range(len(parsing.martContentData[0])):
-        if martName in parsing.martContentData[0][i] or martName in parsing.martContentData[1][i]:
-            martText += str(parsing.martContentData[0][i]+'\n')
-            martText += str(parsing.martContentData[1][i]+'\n')
-            martText += str(parsing.martContentData[2][i]+'\n')
-            martText += str(parsing.martContentData[3][i]+'\n\n')
-    sendMessage(martText)
-            
+
+    for r in res_list:
+        #print(str(datetime.now()).split('.')[0], r)
+        if len(r + martText) + 1 > noti.MAX_MSG_LENGTH:
+            noti.sendMessage(martText)
+            martText = r + '\n'
+        else:
+            martText += r + '\n'
+
+    if martText:
+        noti.sendMessage(martText)
+    else:
+        noti.sendMessage('판매점 이름을 잘못 입력하셨습니다.')
 
 
 def sendGoodsTelegram(goodName):
-   for item in parsing.goodsContentData[0]:
-        if goodName in item:
-            sendMessage(item)
+    res_list = noti.getGoodsData(goodName)
+    goodsText = ""
+
+    for r in res_list:
+        # if (len(r + goodsText) + 1 ) > noti.MAX_MSG_LENGTH:
+        #     noti.sendMessage(goodsText)
+        #     goodsText = r + '\n'
+        # else:
+        #     goodsText += r + '\n'
+        goodsText = r + '\n'
+
+        if goodsText:
+            noti.sendMessage(goodsText)
+        else:
+            noti.sendMessage('해당 상품이 존재하지 않습니다.')
+
+    # for item in parsing.goodsContentData[0]:
+    #     if goodName in item:
+    #         noti.sendMessage(item)
+
+    #noti.sendMessage(item)
 
 
 def sendBskTelegram():
@@ -578,15 +596,13 @@ def sendBskTelegram():
         TelegramText += str("[{0}] {1} : {2}원\n".format(i+1, BskArr[i], BskPriceArr[i]))
     TelegramText += str("\n총 수량 : {0}\n총액 : {1}\n".format(BskArrnum, totalSum))
 
-    sendMessage(TelegramText)   
+    noti.sendMessage(TelegramText)   
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     if content_type != 'text':
-        noti.sendMessage(noti.chat_id, '텍스트를 입력해주세요!!')
+        noti.sendMessage('텍스트를 입력해주세요!!')
         return
-
-    bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
 
     text = msg['text']
     args = text.split(' ')
@@ -604,18 +620,18 @@ def handle(msg):
         sendBskTelegram()
 
     elif text == '종료':
-        sendMessage("""그동안 고마웠슈.....""")
+        noti.sendMessage("""그동안 고마웠슈.....""")
 
     else:
-        sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
+        noti.sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
 
 def handleTelegramBot():
     import time
     
-    bot = telepot.Bot(noti.TOKEN)
+    bot = telepot.Bot('1814031402:AAGMfkJuVXJjp_WT5MYPaFme8BmA7CvwrX8')
     print( bot.getMe() )
 
-    sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
+    noti.sendMessage("""안녕하세요!\n판매점 & 상품 검색 및 온라인 장바구니 서비스 DANAWANG 입니다.\n\n 판매점 + 검색 키워드\n상품 + 검색 키워드\n 장바구니\n중 하나를 입력해주세요!\n""") 
     bot.message_loop(handle)
 
     print('Listening...')
