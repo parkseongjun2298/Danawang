@@ -65,10 +65,10 @@ inNum=-1
 
 # DANAWANG~ text 함수
 def InitTopText():
-    TempFont = font.Font(g_Tk, size=24, weight='bold', family='Consolas')
+    TempFont = font.Font(g_Tk, size=25, weight='bold', family='Consolas')
     MainText = Label(g_Tk, font=TempFont, text="[Danawang~]", bg = BG_COLOR)
     MainText.pack()
-    MainText.place(x=160)
+    MainText.place(x=155)
 
 # 검색 버튼
 def InitSearchButton():
@@ -174,18 +174,18 @@ def InitRenderGMText():
 # 사진 보기 버튼
 def InitShowImageButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="사진보기", command = ImageButtonAction, activebackground=BG_COLOR)
+    selectbtn = Button(frame1, width = 11, height=3, font=TempFont, text="사진보기", command = ImageButtonAction, activebackground=BG_COLOR)
     selectbtn['bg'] = 'white'
     selectbtn.pack()
-    selectbtn.place(x=265, y=260)
+    selectbtn.place(x=265, y=255)
 
 # 장바구니 버튼
 def InitSbskButton():
     TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
-    selectbtn = Button(frame1, width = 11, height=2, font=TempFont, text="판매점선택", command = SelectButtonAction, activebackground=BG_COLOR)
+    selectbtn = Button(frame1, width = 11, height=3, font=TempFont, text="판매점선택", command = SelectButtonAction, activebackground=BG_COLOR)
     selectbtn['bg'] = 'white'
     selectbtn.pack()
-    selectbtn.place(x=380, y=260)
+    selectbtn.place(x=380, y=255)
 
     #TempFont = font.Font(frame1, size=12, weight='bold', family='Consolas')
     bskImg = PhotoImage(file="image/장바구니.png").zoom(10)
@@ -194,7 +194,7 @@ def InitSbskButton():
     sbskbtn.image = bskImg
     sbskbtn['bg'] = 'white'
     sbskbtn.pack()
-    sbskbtn.place(x=265, y=320)
+    sbskbtn.place(x=265, y=335)
 
     # 지도 버튼 생성
 def InitMapButton():
@@ -202,7 +202,7 @@ def InitMapButton():
     Mapbtn = Button(frame1, image=mapImg, command = MapButtonAction)
     Mapbtn.image = mapImg
     Mapbtn.pack()
-    Mapbtn.place(x=380, y= 320)
+    Mapbtn.place(x=380, y= 335)
 
 # 판매점 선택 버튼 누르면 실행되는 함수 - 해당 판매점에서 판매하는 상품 조회
 def SelectButtonAction():
@@ -294,11 +294,11 @@ def RenderBskTotalText():
 
     NumText = Label(frame2, font=TempFont, text="총 수량 : {0}".format(BskArrnum), bg = BG_COLOR)
     NumText.pack()
-    NumText.place(x=15, y=253)
+    NumText.place(x=20, y=253)
 
     TotalText = Label(frame2, font=TempFont, text="총액 : {0}".format(totalSum), bg = BG_COLOR)
     TotalText.pack()
-    TotalText.place(x=15, y=285)
+    TotalText.place(x=20, y=285)
 
         
 def HistogramGui():
@@ -336,7 +336,7 @@ def InitBskDelButton():
     DelButton.image = delImg
     DelButton['bg'] = 'white'
     DelButton.pack()
-    DelButton.place(x=150, y=250)
+    DelButton.place(x=210, y=250)
     
 
 def deleteBskGoods():
@@ -363,14 +363,14 @@ def InitMailgramButton():
     Mailbtn = Button(frame2, image=mailImg,command=SendEmailTK)
     Mailbtn.image = mailImg
     Mailbtn.pack()
-    Mailbtn.place(x=230, y=250)
+    Mailbtn.place(x=300, y=250)
 
     telegramImg = PhotoImage(file="image/텔레그램.png").subsample(9, 10)
     Telegrambtn = Button(frame2, image=telegramImg,command=handleTelegramBot, activebackground=BG_COLOR)
     Telegrambtn.image = telegramImg
-    Telegrambtn['bg'] = BG_COLOR
+    Telegrambtn['bg'] = 'white'
     Telegrambtn.pack()
-    Telegrambtn.place(x=345, y=250)           
+    Telegrambtn.place(x=390, y=250)           
 
 #-------------------------------------------------------------------------------------
 #                          부가기능
@@ -392,12 +392,18 @@ def ImageButtonAction():
     search_name = tofind
     search_path = "Your Path"
     search_selenium(search_name, search_path)
+
+    frameImg = PhotoImage(file = 'image/액자.png').subsample(8, 6)
+    frameLabel = Label(frame1, width = 160, height = 160, image = frameImg, bg = BG_COLOR)
+    frameLabel.image = frameImg
+    frameLabel.pack()
+    frameLabel.place(x=290, y=420)
     
     img = PhotoImage(file="./image/0.png").zoom(2)
-    ImageLabel = Label(frame1, width = 130, height = 130, image = img, bg = BG_COLOR)
+    ImageLabel = Label(frame1, width = 100, height = 100, image = img)
     ImageLabel.image = img
     ImageLabel.pack()
-    ImageLabel.place(x=300, y=400)
+    ImageLabel.place(x=320, y=450)
 
 def search_selenium(search_name, search_path):
     options = webdriver.ChromeOptions()
