@@ -52,9 +52,8 @@ def getGoodsData(goodName):
 	res_list = []
 	temp_list = []
 	url = goodsBaseurl+KEY
-	#print(url)
 	res_body = urlopen(url).read()
-	#print(res_body)
+
 	soup = BeautifulSoup(res_body, 'html.parser')
 	items = soup.findAll('item')
 	for item in items:

@@ -53,16 +53,6 @@ note.pack(expand=1, fill=BOTH, padx=5, pady=5)
 global inNum
 inNum=-1
 
-#notebook['background'] = 'royalblue'
-#notebook.pack(side=BOTTOM)
-
-# frame1 = Frame(g_Tk)
-# frame1['bg'] = BG_COLOR
-# notebook.add(frame1, text="메인")
-
-# frame2 = Frame(g_Tk)
-# notebook.add(frame2, text="장바구니")
-
 # DANAWANG~ text 함수
 def InitTopText():
     TempFont = font.Font(g_Tk, size=25, weight='bold', family='Consolas')
@@ -554,12 +544,6 @@ def sendMartTelegram(martName):
     martText = ""
 
     for r in res_list:
-        #print(str(datetime.now()).split('.')[0], r)
-        # if len(r + martText) + 1 > noti.MAX_MSG_LENGTH:
-        #     noti.sendMessage(martText)
-        #     martText = r + '\n'
-        # else:
-        #     martText += r + '\n'
         martText = r + '\n'
 
         if martText:
@@ -573,24 +557,12 @@ def sendGoodsTelegram(goodName):
     goodsText = ""
 
     for r in res_list:
-        # if (len(r + goodsText) + 1 ) > noti.MAX_MSG_LENGTH:
-        #     noti.sendMessage(goodsText)
-        #     goodsText = r + '\n'
-        # else:
-        #     goodsText += r + '\n'
         goodsText = r + '\n'
 
         if goodsText:
             noti.sendMessage(goodsText)
         else:
             noti.sendMessage('해당 상품이 존재하지 않습니다.')
-
-    # for item in parsing.goodsContentData[0]:
-    #     if goodName in item:
-    #         noti.sendMessage(item)
-
-    #noti.sendMessage(item)
-
 
 def sendBskTelegram():
     import telepot
