@@ -18,6 +18,7 @@ import sys
 import folium
 from cefpython3 import cefpython as cef
 import noti
+import spam
 
 BG_COLOR = 'light blue'
 
@@ -237,12 +238,15 @@ def BskButtonAction():
     BskArr.append(selectedGoodsName)
     BskPriceArr.append(selectedGoodsPrice)
 
+    bskDict = {}
+    for i in range(len(BskArr)):
+        bskDict[BskArr[i]] = BskPriceArr[i]
+
     inNum+=1
     BskArrnum+=1
     RenderBskText.insert(END, selectedGoods)
     RenderBskTotalText()
     HistogramGui()
-
 
 #-------------------------------------------------------------------------------------
 #                           frame2
@@ -460,7 +464,7 @@ def SendEmail():
     #htmlFileName = "totalGoodsInfo.xml"
 
     senderAddr = "dltnals5809@gmail.com" # 보내는 사람 email 주소.
-    recipientAddr =GetEmailLabel  # 받는 사람 email 주소.
+    recipientAddr = GetEmailLabel  # 받는 사람 email 주소.
 
     Gmailtext=""
 
@@ -481,7 +485,7 @@ def SendEmail():
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("dltnals5809@gmail.com", pickle.load(open("userpw.plk", "rb")))
+    s.login("dltnals5809@gmail.com", spam.getPw())
 
     s.sendmail(senderAddr, [recipientAddr], msg.as_string())
     s.close()
