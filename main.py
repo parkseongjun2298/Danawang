@@ -13,6 +13,7 @@ from email.mime.text import MIMEText
 from selenium import webdriver
 from bs4 import BeautifulSoup as soups
 
+
 import threading
 import sys
 import folium
