@@ -7,7 +7,6 @@ import parsing
 import renderImage
 from random import*
 import smtplib
-import pickle
 
 from email.mime.text import MIMEText
 from selenium import webdriver
